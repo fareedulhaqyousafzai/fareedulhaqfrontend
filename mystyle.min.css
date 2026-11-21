@@ -366,24 +366,6 @@ body.light-mode .main-heading::before {
 body.light-mode .main-heading::after {
   background: linear-gradient(90deg, rgba(2, 132, 199, 0.7) 0%, transparent 100%);
 }
-
-@media (max-width: 768px) {
-  .main-heading {
-    gap: 1.4rem;
-    font-size: 2.2rem;
-    letter-spacing: 0.2rem;
-  }
-
-  .main-heading::before,
-  .main-heading::after {
-    max-width: 5.5rem;
-  }
-
-  .header-divider {
-    margin: 0 auto 4rem auto;
-  }
-}
-
 /* =========================================
    OPEN-STAGE ORBITAL LOADER
 ========================================= */
@@ -1294,18 +1276,6 @@ body.light-mode .custom-shape-divider-bottom-1716734170::after {
     height: 280px;
   }
 }
-
-@media (max-width: 600px) {
-  .content-section {
-    padding: 2.6rem 2rem;
-    border-radius: 20px;
-  }
-
-  .hero-img-container {
-    width: 240px;
-    height: 240px;
-  }
-}
 /* =========================================
    ABOUT SECTION (2-COLUMN EDITORIAL GLASS PANEL)
 ========================================= */
@@ -1651,52 +1621,6 @@ body.light-mode .service-item:hover .focus-icon {
   color: #ffffff;
   box-shadow: none;
 }
-
-/* =========================================
-   MOBILE RESPONSIVE ABOUT
-========================================= */
-@media (max-width: 920px) {
-  .about-panel {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 3.2rem 2.8rem;
-  }
-
-  .about-copy {
-    max-width: 100%;
-  }
-
-  .about-right {
-    padding-left: 0;
-    padding-top: 2.6rem;
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  body.light-mode .about-right {
-    border-top-color: rgba(28, 53, 79, 0.1);
-  }
-}
-
-@media (max-width: 600px) {
-  .about-section {
-    padding: 7rem 5%;
-  }
-
-  .about-panel {
-    padding: 2.6rem 2rem;
-    gap: 2.4rem;
-  }
-
-  .about-headline {
-    font-size: 2.2rem;
-  }
-
-  .service-item {
-    padding: 1.3rem 0.6rem;
-    margin: 0 -0.6rem;
-  }
-}
 .about-panel::before {
   content: "";
   position: absolute;
@@ -1776,13 +1700,7 @@ body.light-mode .availability-content {
   color: #334155;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .about-availability::before,
-  .about-availability::after {
-    display: none;
-  }
-}
+
 
 /* Fix 2: Glow beam wapas upar (navbar aur hero card ke saath match) */
 .about-panel::before {
@@ -2098,42 +2016,6 @@ body.light-mode .timeline-subtitle {
 body.light-mode .timeline-text {
   color: #475569;
 }
-
-@media (max-width: 680px) {
-  .education-section {
-    padding: 8rem 5%;
-  }
-
-  .timeline-item {
-    padding-left: 6.2rem;
-  }
-
-  .timeline-icon {
-    width: 4.2rem;
-    height: 4.2rem;
-    font-size: 1.6rem;
-  }
-
-  .timeline-container::before {
-    left: 2.1rem;
-  }
-
-  .timeline-item::after {
-    left: 4.2rem;
-    width: 2rem;
-  }
-
-  .timeline-content.glass-card {
-    padding: 2rem 2.2rem;
-  }
-
-  .timeline-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-  }
-}
-
 /* =========================================
    SKILLS ORBS (ODD TOP-LEFT / EVEN TOP-RIGHT)
 ========================================= */
@@ -3031,28 +2913,6 @@ body.light-mode .btn-live:hover i,
 body.light-mode .btn-code:hover i {
   color: #ffffff;
 }
-
-@media (max-width: 1100px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 680px) {
-  .projects-section {
-    padding: 8rem 5% 6rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tab-content-box {
-    height: auto;
-    min-height: 64px;
-  }
-}
-
 /* =========================================
    CONTACT SECTION (ODD LEFT-LIT / EVEN RIGHT-LIT)
 ========================================= */
@@ -3278,33 +3138,6 @@ body.light-mode .social-github:hover i {
   box-shadow: none;
 }
 
-@media (max-width: 1120px) {
-  .contact-container {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 540px) {
-  .contact-section {
-    padding: 8rem 5% 8rem;
-  }
-
-  .contact-card {
-    padding: 1.2rem 1.8rem 1.2rem 1.2rem;
-    min-height: 6.4rem;
-  }
-
-  .contact-card i {
-    width: 3.8rem;
-    height: 3.8rem;
-    font-size: 1.65rem;
-  }
-
-  .contact-card span {
-    font-size: 1.15rem;
-  }
-}
-
 /* =========================================
    FOOTER SECTION (TOP-CENTER BALANCED GLASS)
 ========================================= */
@@ -3497,31 +3330,6 @@ body.light-mode .scroll-top:hover {
   background: linear-gradient(135deg, #0284c7, #1095d5);
   border-color: #0284c7;
   color: #ffffff;
-}
-
-@media (max-width: 600px) {
-  .footer-section {
-    padding: 4.5rem 5% 2.6rem;
-  }
-
-  .footer-section::before {
-    width: 80%;
-  }
-
-  .footer-para {
-    font-size: 1.2rem;
-  }
-
-  .footer-built {
-    font-size: 1.05rem;
-  }
-
-  .scroll-top {
-    width: 46px;
-    height: 46px;
-    top: -23px;
-    font-size: 1.4rem;
-  }
 }
 /* ======================================================= */
 /*  17. LAPTOP (1024px - 1279px)
