@@ -3229,3 +3229,102 @@ body.light-mode .scroll-top:hover {
     width: 72%;
   }
 }
+/* =======================================================
+   MOBILE (max-width: 768px) — NAVBAR & TOGGLE
+======================================================= */
+@media (max-width: 768px) {
+  .container-nav {
+    width: 92%;
+    top: 14px;
+    height: 5.4rem;
+    padding: 0 1.8rem;
+  }
+
+  .portfolio-logo {
+    font-size: 2.3rem;
+    flex-shrink: 0;
+  }
+
+  /* Floating Smoked-Glass Dropdown */
+  nav {
+    position: absolute;
+    right: 0;
+    top: 6.4rem;
+    z-index: 120;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 19rem;
+    padding: 1rem;
+    border-radius: 18px;
+    background: var(--glass-bg-center);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-border-top);
+    box-shadow: var(--glass-shadow);
+  }
+
+  nav ul.nav-active {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav li a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.4rem;
+    font-size: 1.35rem;
+    border-radius: 12px;
+  }
+
+  /* Right Side Controls: Theme Switch + Hamburger */
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .theme-switch .slider {
+    width: 5.4rem;
+    height: 2.8rem;
+  }
+
+  .theme-switch .slider::before,
+  .theme-switch .slider i {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .theme_toggle:checked + .slider::before {
+    transform: translateX(2.5rem);
+  }
+
+  #toggle_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 2.2rem;
+    color: var(--font-color);
+    cursor: pointer;
+    border-radius: 10px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.25s ease, background 0.25s ease;
+  }
+
+  #toggle_button:hover {
+    background: rgba(56, 189, 248, 0.12);
+    color: #38bdf8;
+  }
+}
