@@ -1566,6 +1566,7 @@ body.light-mode .about-availability::after {
 ========================================= */
 .education-section {
   width: 100%;
+  height: 100vh;
   padding: 6rem 5% 6.5rem;
   scroll-margin-top: 45px;
   background: transparent;
@@ -3147,4 +3148,84 @@ body.light-mode .scroll-top:hover {
   background: linear-gradient(135deg, #0284c7, #1095d5);
   border-color: #0284c7;
   color: #ffffff;
+}
+/* =======================================================
+   MOBILE (max-width: 768px) — HERO / MAIN SECTION
+======================================================= */
+@media (max-width: 768px) {
+  .container-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100svh;
+    padding: 9.5rem 5% 4.5rem;
+    gap: 2.6rem;
+  }
+
+  /* Portrait Top Center */
+  .hero-img-container {
+    width: 205px;
+    height: 205px;
+  }
+
+  /* Glass Content Card (No Extra Bottom Stretch) */
+  .content-section {
+    flex: none;
+    width: 100%;
+    max-width: 440px;
+    padding: 2.6rem 2rem;
+    border-radius: 22px;
+  }
+
+  .content-section::before {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48%;
+  }
+
+  /* Single-Line Typing Subheading */
+  .subheading {
+    justify-content: center;
+    font-size: clamp(1.2rem, 3.4vw, 1.75rem);
+    letter-spacing: 1.2px;
+    min-height: 2.6rem;
+    margin-bottom: 0.6rem;
+    white-space: nowrap;
+  }
+
+  /* Single-Line Name */
+  .heading {
+    font-size: clamp(3rem, 8.6vw, 4.4rem);
+    line-height: 1.12;
+  }
+
+  /* Side-by-Side Balanced Buttons */
+  .hero-btn-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2.2rem;
+  }
+
+  .main-contact-btn,
+  .secondary-btn {
+    width: 100%;
+    padding: 1.1rem 0.8rem;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    letter-spacing: 0.06rem;
+    gap: 0.6rem;
+    white-space: nowrap;
+  }
+
+  .main-contact-btn i,
+  .secondary-btn i {
+    font-size: 1.3rem;
+  }
+
+  .custom-shape-divider-bottom-1716734170::after {
+    width: 72%;
+  }
 }
