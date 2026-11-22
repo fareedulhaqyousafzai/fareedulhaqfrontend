@@ -3435,7 +3435,7 @@ body.light-mode .scroll-top:hover {
 
   /* Hero */
 .container-main {
-    min-height: auto;
+    min-height: 100px;
     padding: 8.8rem 5% 4.5rem;
     gap: 2.6rem;
     justify-content: center;
