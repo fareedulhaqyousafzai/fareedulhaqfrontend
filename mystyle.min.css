@@ -1284,13 +1284,14 @@ body.light-mode .custom-shape-divider-bottom-1716734170::after {
 }
 
 .about-headline {
-  font-size: clamp(2.6rem, 3.6vw, 4rem);
+  font-size: clamp(3.6rem, 4.6vw, 5rem);
   line-height: 1.2;
   font-weight: 800;
   text-transform: none;
   color: #ffffff;
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.02rem;
+  text-align: center;
 }
 
 .about-headline span {
@@ -3399,7 +3400,7 @@ body.light-mode .scroll-top:hover {
   }
 
   .about-headline {
-    font-size: clamp(1.8rem, 5vw, 2.1rem);
+    font-size: clamp(2.8rem, 6vw, 3.1rem);
   }
 
   .about-copy {
