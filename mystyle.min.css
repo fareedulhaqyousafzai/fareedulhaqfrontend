@@ -3378,7 +3378,7 @@ body.light-mode .scroll-top:hover {
   .custom-shape-divider-bottom-1716734170::after {
     width: 72%;
   }
-  /* ---------- ABOUT SECTION (COMPACT 768px MOBILE) ---------- */
+/* ---------- ABOUT SECTION (HERO-MATCHED WIDTH) ---------- */
   .about-section {
     padding: 3.6rem 4% 4rem;
     scroll-margin-top: 64px;
@@ -3390,17 +3390,21 @@ body.light-mode .scroll-top:hover {
 
   .about-panel {
     grid-template-columns: 1fr;
-    gap: 1.15rem;
-    padding: 1.6rem 1.5rem;
-    border-radius: 16px;
+    width: 90%;
+    max-width: 325px;
+    margin: 0 auto;
+    gap: 1.2rem;
+    padding: 1.8rem 1.5rem;
+    border-radius: 18px;
   }
 
   .about-header-block {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.65rem;
   }
 
   .about-headline {
-    font-size: clamp(2.8rem, 6vw, 3.1rem);
+    font-size: clamp(2.25rem, 6.4vw, 2.65rem);
+    line-height: 1.15;
   }
 
   .about-copy {
@@ -3466,7 +3470,7 @@ body.light-mode .scroll-top:hover {
     margin-top: 0;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    font-size: 1.05rem;
+    font-size: 1.04rem;
     gap: 0;
   }
 
