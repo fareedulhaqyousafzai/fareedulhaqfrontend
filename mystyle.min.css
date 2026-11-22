@@ -3150,94 +3150,15 @@ body.light-mode .scroll-top:hover {
   color: #ffffff;
 }
 /* =======================================================
-   MOBILE (max-width: 768px) — HERO / MAIN SECTION
+   MOBILE (max-width: 768px) — NAVBAR & HERO SECTION
 ======================================================= */
 @media (max-width: 768px) {
-  .container-main {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100svh;
-    padding: 9.5rem 5% 4.5rem;
-    gap: 2.6rem;
-  }
-
-  /* Portrait Top Center */
-  .hero-img-container {
-    width: 205px;
-    height: 205px;
-  }
-
-  /* Glass Content Card (No Extra Bottom Stretch) */
-  .content-section {
-    flex: none;
-    width: 100%;
-    max-width: 440px;
-    padding: 2.6rem 2rem;
-    border-radius: 22px;
-  }
-
-  .content-section::before {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 48%;
-  }
-
-  /* Single-Line Typing Subheading */
-  .subheading {
-    justify-content: center;
-    font-size: clamp(1.2rem, 3.4vw, 1.75rem);
-    letter-spacing: 1.2px;
-    min-height: 2.6rem;
-    margin-bottom: 0.6rem;
-    white-space: nowrap;
-  }
-
-  /* Single-Line Name */
-  .heading {
-    font-size: clamp(3rem, 8.6vw, 4.4rem);
-    line-height: 1.12;
-  }
-
-  /* Side-by-Side Balanced Buttons */
-  .hero-btn-group {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    width: 100%;
-    margin-top: 2.2rem;
-  }
-
-  .main-contact-btn,
-  .secondary-btn {
-    width: 100%;
-    padding: 1.1rem 0.8rem;
-    border-radius: 10px;
-    font-size: 1.15rem;
-    letter-spacing: 0.06rem;
-    gap: 0.6rem;
-    white-space: nowrap;
-  }
-
-  .main-contact-btn i,
-  .secondary-btn i {
-    font-size: 1.3rem;
-  }
-
-  .custom-shape-divider-bottom-1716734170::after {
-    width: 72%;
-  }
-}
-/* =======================================================
-   MOBILE (max-width: 768px) — NAVBAR & TOGGLE
-======================================================= */
-@media (max-width: 768px) {
+  /* ---------- NAVBAR & TOGGLE ---------- */
   .container-nav {
     width: 92%;
     top: 14px;
     height: 5.4rem;
-    padding: 0 1.8rem;
+    padding: 0 1.6rem;
   }
 
   .portfolio-logo {
@@ -3245,50 +3166,10 @@ body.light-mode .scroll-top:hover {
     flex-shrink: 0;
   }
 
-  /* Floating Smoked-Glass Dropdown */
-  nav {
-    position: absolute;
-    right: 0;
-    top: 6.4rem;
-    z-index: 120;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-    min-width: 19rem;
-    padding: 1rem;
-    border-radius: 18px;
-    background: var(--glass-bg-center);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-top: 1px solid var(--glass-border-top);
-    box-shadow: var(--glass-shadow);
-  }
-
-  nav ul.nav-active {
-    display: flex;
-  }
-
-  nav li {
-    width: 100%;
-  }
-
-  nav li a {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 1.4rem;
-    font-size: 1.35rem;
-    border-radius: 12px;
-  }
-
-  /* Right Side Controls: Theme Switch + Hamburger */
   .nav-controls {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.1rem;
     flex-shrink: 0;
   }
 
@@ -3318,6 +3199,7 @@ body.light-mode .scroll-top:hover {
     color: var(--font-color);
     cursor: pointer;
     border-radius: 10px;
+    outline: none;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     transition: color 0.25s ease, background 0.25s ease;
@@ -3327,8 +3209,12 @@ body.light-mode .scroll-top:hover {
     background: rgba(56, 189, 248, 0.12);
     color: #38bdf8;
   }
-}
-/* Compact Smoked-Glass Dropdown */
+
+  #toggle_button:focus-visible {
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.65);
+  }
+
+  /* Slim Smoked-Glass Dropdown */
   nav {
     position: absolute;
     right: 0;
@@ -3339,9 +3225,9 @@ body.light-mode .scroll-top:hover {
   nav ul {
     display: none;
     flex-direction: column;
-    gap: 0.25rem;
-    min-width: 14.5rem;
-    padding: 0.65rem;
+    gap: 0.2rem;
+    min-width: 12.4rem;
+    padding: 0.5rem;
     border-radius: 14px;
     background: var(--glass-bg-center);
     backdrop-filter: var(--glass-blur);
@@ -3360,10 +3246,92 @@ body.light-mode .scroll-top:hover {
   }
 
   nav li a {
+    display: block;
     width: 100%;
     text-align: center;
-    padding: 0.7rem 1.1rem;
+    padding: 0.6rem 0.9rem;
     font-size: 1.15rem;
+    line-height: 1.25;
     letter-spacing: 0.08rem;
     border-radius: 9px;
   }
+
+  /* ---------- HERO / MAIN SECTION ---------- */
+  .container-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100svh;
+    padding: 8.6rem 4% 4rem;
+    gap: 2.4rem;
+  }
+
+  /* Bigger Balanced Portrait */
+  .hero-img-container {
+    width: clamp(230px, 58vw, 265px);
+    height: clamp(230px, 58vw, 265px);
+  }
+
+  .hero-img {
+    width: 86%;
+    height: 86%;
+  }
+
+  /* Glass Content Card */
+  .content-section {
+    flex: none;
+    width: 100%;
+    max-width: 440px;
+    padding: 2.4rem 1.8rem;
+    border-radius: 20px;
+  }
+
+  .content-section::before {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48%;
+  }
+
+  .subheading {
+    justify-content: center;
+    font-size: clamp(1.25rem, 3.4vw, 1.7rem);
+    letter-spacing: 1.2px;
+    min-height: 2.4rem;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .heading {
+    font-size: clamp(3rem, 8.6vw, 4.2rem);
+    line-height: 1.1;
+  }
+
+  .hero-btn-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .main-contact-btn,
+  .secondary-btn {
+    width: 100%;
+    padding: 1.05rem 0.8rem;
+    border-radius: 10px;
+    font-size: 1.12rem;
+    letter-spacing: 0.06rem;
+    gap: 0.6rem;
+    white-space: nowrap;
+  }
+
+  .main-contact-btn i,
+  .secondary-btn i {
+    font-size: 1.3rem;
+  }
+
+  .custom-shape-divider-bottom-1716734170::after {
+    width: 72%;
+  }
+}
