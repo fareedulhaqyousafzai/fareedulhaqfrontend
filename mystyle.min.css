@@ -3377,4 +3377,113 @@ body.light-mode .scroll-top:hover {
   .custom-shape-divider-bottom-1716734170::after {
     width: 72%;
   }
+  /* ---------- SHARED SECTION HEADINGS (768px) ---------- */
+  .main-heading {
+    gap: 1.4rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .main-heading::before,
+  .main-heading::after {
+    max-width: 6.5rem;
+  }
+
+  .header-divider {
+    margin: 0 auto 2.4rem auto;
+  }
+
+  /* ---------- ABOUT SECTION ---------- */
+  .about-section {
+    padding: 5.5rem 4% 5.5rem;
+    scroll-margin-top: 68px;
+  }
+
+  .about-panel {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    padding: 2.4rem 1.8rem;
+    border-radius: 18px;
+  }
+
+  .about-header-block {
+    margin-bottom: 1.1rem;
+  }
+
+  .about-headline {
+    font-size: clamp(2.1rem, 6vw, 2.6rem);
+  }
+
+  .about-copy {
+    max-width: 100%;
+    margin-bottom: 1.1rem;
+    font-size: 1.35rem;
+    line-height: 1.65;
+  }
+
+  /* Stacked "What I Build" Column */
+  .about-right {
+    padding-left: 0;
+    padding-top: 2rem;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  body.light-mode .about-right {
+    border-top-color: rgba(28, 53, 79, 0.1);
+  }
+
+  .about-services-label {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.14rem;
+  }
+
+  .service-item {
+    gap: 1.2rem;
+    padding: 1.2rem 0.6rem;
+    margin: 0 -0.6rem;
+  }
+
+  .focus-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .focus-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .focus-info h4 {
+    font-size: 1.4rem;
+  }
+
+  .focus-info p {
+    font-size: 1.24rem;
+    line-height: 1.48;
+  }
+
+  /* Bottom Availability Row */
+  .about-availability {
+    margin-top: 0;
+    padding-top: 1.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 1.2rem;
+    gap: 0;
+  }
+
+  body.light-mode .about-availability {
+    border-top-color: rgba(28, 53, 79, 0.1);
+  }
+
+  .about-availability::before,
+  .about-availability::after {
+    display: none;
+  }
+
+  .availability-content {
+    gap: 0.75rem;
+  }
 }
