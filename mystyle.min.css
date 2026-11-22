@@ -3150,14 +3150,56 @@ body.light-mode .scroll-top:hover {
   color: #ffffff;
 }
 /* =======================================================
-   MOBILE (max-width: 768px) — NAVBAR & HERO SECTION
+   MOBILE (max-width: 768px) — LOADER, NAVBAR & HERO
 ======================================================= */
 @media (max-width: 768px) {
+  /* ---------- LOADER / PRELOADER ---------- */
+  .loader-inner {
+    gap: 2.4rem;
+  }
+
+  .logo-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .logo-wrapper::before {
+    width: 115px;
+    height: 115px;
+  }
+
+  .l-logo {
+    font-size: 2.8rem;
+  }
+
+  .ring:nth-child(1) {
+    width: 144px;
+    height: 144px;
+    margin-top: -72px;
+    margin-left: -72px;
+  }
+
+  .ring:nth-child(2) {
+    width: 176px;
+    height: 176px;
+    margin-top: -88px;
+    margin-left: -88px;
+  }
+
+  .l-bar-wrap {
+    width: 135px;
+  }
+
+  .l-dots {
+    margin-top: -1.1rem;
+    gap: 5px;
+  }
+
   /* ---------- NAVBAR & TOGGLE ---------- */
   .container-nav {
     width: 92%;
     top: 14px;
-    height: 5.4rem;
+    height: 5.2rem;
     padding: 0 1.6rem;
   }
 
@@ -3214,11 +3256,11 @@ body.light-mode .scroll-top:hover {
     box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.65);
   }
 
-  /* Slim Smoked-Glass Dropdown */
+  /* Tight Smoked-Glass Dropdown (No Extra Side Space) */
   nav {
     position: absolute;
     right: 0;
-    top: 6rem;
+    top: 5.8rem;
     z-index: 120;
   }
 
@@ -3226,9 +3268,10 @@ body.light-mode .scroll-top:hover {
     display: none;
     flex-direction: column;
     gap: 0.2rem;
-    min-width: 12.4rem;
-    padding: 0.5rem;
-    border-radius: 14px;
+    min-width: 0;
+    width: max-content;
+    padding: 0.4rem;
+    border-radius: 13px;
     background: var(--glass-bg-center);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -3249,11 +3292,11 @@ body.light-mode .scroll-top:hover {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 0.6rem 0.9rem;
-    font-size: 1.15rem;
-    line-height: 1.25;
-    letter-spacing: 0.08rem;
-    border-radius: 9px;
+    padding: 0.55rem 1.1rem;
+    font-size: 1.12rem;
+    line-height: 1.2;
+    letter-spacing: 0.06rem;
+    border-radius: 8px;
   }
 
   /* ---------- HERO / MAIN SECTION ---------- */
@@ -3263,28 +3306,28 @@ body.light-mode .scroll-top:hover {
     align-items: center;
     text-align: center;
     min-height: 100svh;
-    padding: 8.6rem 4% 4rem;
-    gap: 2.4rem;
+    padding: 8.2rem 4% 3.5rem;
+    gap: 2.2rem;
   }
 
-  /* Bigger Balanced Portrait */
+  /* Prominent Portrait */
   .hero-img-container {
-    width: clamp(230px, 58vw, 265px);
-    height: clamp(230px, 58vw, 265px);
+    width: clamp(255px, 70vw, 290px);
+    height: clamp(255px, 70vw, 290px);
   }
 
   .hero-img {
-    width: 86%;
-    height: 86%;
+    width: 90%;
+    height: 90%;
   }
 
-  /* Glass Content Card */
+  /* Compact Balanced Content Card */
   .content-section {
     flex: none;
-    width: 100%;
-    max-width: 440px;
-    padding: 2.4rem 1.8rem;
-    border-radius: 20px;
+    width: 90%;
+    max-width: 325px;
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
   }
 
   .content-section::before {
@@ -3295,40 +3338,40 @@ body.light-mode .scroll-top:hover {
 
   .subheading {
     justify-content: center;
-    font-size: clamp(1.25rem, 3.4vw, 1.7rem);
-    letter-spacing: 1.2px;
-    min-height: 2.4rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(1.12rem, 3.1vw, 1.45rem);
+    letter-spacing: 0.8px;
+    min-height: 2.2rem;
+    margin-bottom: 0.4rem;
     white-space: nowrap;
   }
 
   .heading {
-    font-size: clamp(3rem, 8.6vw, 4.2rem);
+    font-size: clamp(2.8rem, 8vw, 3.7rem);
     line-height: 1.1;
   }
 
   .hero-btn-group {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 0.8rem;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
   }
 
   .main-contact-btn,
   .secondary-btn {
     width: 100%;
-    padding: 1.05rem 0.8rem;
+    padding: 0.95rem 0.6rem;
     border-radius: 10px;
-    font-size: 1.12rem;
-    letter-spacing: 0.06rem;
-    gap: 0.6rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.04rem;
+    gap: 0.5rem;
     white-space: nowrap;
   }
 
   .main-contact-btn i,
   .secondary-btn i {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .custom-shape-divider-bottom-1716734170::after {
