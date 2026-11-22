@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fareed Ul Haq" />
+
+    <title>Fareed Ul Haq | Front-End Developer</title>
+    <meta
+      name="description"
+      content="Front-End Developer Portfolio of Fareed Ul Haq specializing in HTML, CSS, JavaScript, jQuery, Bootstrap, and Responsive Web Design."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, HTML, CSS, JavaScript, jQuery, Bootstrap, Portfolio, Karachi"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fareed Ul Haq | Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Explore my portfolio, skills, and latest front-end projects. Let's build something amazing together."
+    />
+    <meta property="og:image" content="assets/images/fareed-picture.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fareedulhaqyousafzai.github.io/" />
+
+    <!-- Structured Data (SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fareed Ul Haq",
+        "jobTitle": "Front-End Developer",
+        "url": "https://fareedulhaqyousafzai.github.io/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Karachi",
+          "addressCountry": "Pakistan"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/fareedulhaqyousafzai/",
+          "https://github.com/fareedulhaqyousafzai"
+        ]
+      }
+    </script>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231095d5'/><text x='50' y='54' dominant-baseline='middle' text-anchor='middle' font-size='75' font-weight='bold' fill='white' font-family='sans-serif'>F</text></svg>"
+    />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="mystyle.min.css" />
+  </head>
+
+  <body>
+    <!-- ============================================================
+                        LOADER / PRELOADER
+       ============================================================ -->
+    <div id="loader" class="loader-overlay">
+      <div class="loader-inner">
+        <div class="logo-wrapper">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <h2 class="l-logo">Fareed<span>.</span></h2>
+        </div>
+        <div class="l-bar-wrap">
+          <div class="l-bar"></div>
+        </div>
+        <div class="l-dots"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+                        HEADER / NAVBAR
+       ============================================================ -->
+    <header class="container-nav">
+      <div class="portfolio-logo">Fareed<span class="logo-dot">.</span></div>
+
+      <nav aria-label="Main Navigation">
+        <ul id="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link active-link" href="#main-section" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-section">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education-section">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skillset-section">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects-section">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-section">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <label class="theme-switch" for="theme" aria-label="Toggle Light Mode">
+          <input id="theme" class="theme_toggle" type="checkbox" />
+          <div class="slider">
+            <i class="fas fa-moon moon-icon" aria-hidden="true"></i>
+            <i class="fas fa-sun sun-icon" aria-hidden="true"></i>
+          </div>
+        </label>
+        <i
+          class="fas fa-bars toggle_button"
+          id="toggle_button"
+          role="button"
+          tabindex="0"
+          aria-label="Toggle Menu"
+          aria-expanded="false"
+        ></i>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================================================
+                          HERO SECTION
+         ============================================================ -->
+      <section class="container-main" id="main-section">
+        <div
+          class="content-section"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="800"
+        >
+          <div class="subheading">
+            <span class="textEffect"></span><span class="last">|</span>
+          </div>
+          <h1 class="heading">Fareed Ul Haq</h1>
+
+          <div class="hero-btn-group">
+            <a class="main-contact-btn" href="#contact-section">
+              <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Hire Me
+            </a>
+            <a
+              type="application/pdf"
+              class="secondary-btn"
+              href="FareedUlHaq_FrontEnd_Developer.pdf"
+              download="FareedUlHaq_FrontEnd_Developer.pdf"
+            >
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="hero-img-container"
+          data-aos="zoom-in"
+          data-aos-duration="900"
+          data-aos-delay="900"
+        >
+          <div class="img-glow-bg"></div>
+          <img
+            src="assets/images/fareed-picture.webp"
+            alt="Fareed Ul Haq - Front-End Developer"
+            class="hero-img"
+            width="320"
+            height="320"
+            fetchpriority="high"
+          />
+        </div>
+
+        <div class="custom-shape-divider-bottom-1716734170" aria-hidden="true"></div>
+      </section>
+
+      <!-- ============================================================
+                          ABOUT SECTION
+         ============================================================ -->
+      <section class="about-section" id="about-section">
+        <div class="about-shell">
+          <h2 class="main-heading" data-aos="fade-up">About</h2>
+          <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+
+          <div class="about-panel" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-left">
+              <div class="about-header-block">
+                <h3 class="about-headline">
+                  <span>Front-End Developer</span>
+                </h3>
+              </div>
+
+              <p class="about-copy">
+                I build fast, responsive websites with clean layouts and smooth interactions across mobile, tablet, and desktop.
+              </p>
+
+              <p class="about-copy">
+                My core toolkit includes <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>jQuery</span>, and <span>Bootstrap</span>, backed by <span>Git</span> and <span>GitHub</span> for structured, maintainable code.
+              </p>
+            </div>
+
+            <div class="about-right">
+              <span class="about-services-label">What I Build</span>
+
+              <div class="service-list">
+                <div class="service-item">
+                  <div class="focus-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="3" y1="9" x2="21" y2="9"></line>
+                      <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                  </div>
+                  <div class="focus-info">
+                    <h4>Landing Pages</h4>
+                    <p>Fast, focused pages for products, launches, and personal brands.</p>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="focus-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                  <div class="focus-info">
+                    <h4>Business Websites</h4>
+                    <p>Multi-page sites for local brands, menus, and storefront layouts.</p>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="focus-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="focus-info">
+                    <h4>Design to Code</h4>
+                    <p>Turning UI mockups into accurate, interactive web interfaces.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-availability">
+              <div class="availability-content">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Open to front-end developer roles and freelance projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+                          EDUCATION SECTION
+         ============================================================ -->
+      <section class="education-section" id="education-section">
+        <h2 class="main-heading" data-aos="fade-up">Education</h2>
+        <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+
+        <div class="timeline-container">
+          <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">
+                  Advanced Diploma in Software Engineering (ADSE)
+                </h3>
+                <span class="timeline-year">2024</span>
+              </div>
+              <h4 class="timeline-subtitle">
+                ACCP Prime, Aptech Certified Computer Professional
+              </h4>
+              <p class="timeline-text">
+                Aptech Computer Education, North Nazimabad Center
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-aos="fade-up" data-aos-delay="220">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">
+                  Diploma of Associate Engineering (DAE)
+                </h3>
+                <span class="timeline-year">2023</span>
+              </div>
+              <h4 class="timeline-subtitle">Computer Information Technology</h4>
+              <p class="timeline-text">Govt. College of Technology, Karachi</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================================================
+                          SKILLS SECTION
+         ============================================================ -->
+      <section class="skillset-section" id="skillset-section">
+        <h2 class="main-heading" data-aos="fade-up">Skills</h2>
+        <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+
+        <div class="container-skillset">
+          <div class="skill" data-aos="fade-up" data-aos-delay="50">
+            <div class="title-card">
+              <div class="title-overlay" id="html-overlay"></div>
+              <div class="title-circle" id="html-circle">
+                <i class="fa-brands fa-html5 html" aria-hidden="true"></i>
+                <p>HTML</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-aos="fade-up" data-aos-delay="120">
+            <div class="title-card">
+              <div class="title-overlay" id="css-overlay"></div>
+              <div class="title-circle" id="css-circle">
+                <i class="fa-brands fa-css3-alt css" aria-hidden="true"></i>
+                <p>CSS</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-aos="fade-up" data-aos-delay="190">
+            <div class="title-card">
+              <div class="title-overlay" id="javascript-overlay"></div>
+              <div class="title-circle" id="javascript-circle">
+                <i class="fa-brands fa-js javascript" aria-hidden="true"></i>
+                <p>JavaScript</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-aos="fade-up" data-aos-delay="260">
+            <div class="title-card">
+              <div class="title-overlay" id="jquery-overlay"></div>
+              <div class="title-circle" id="jquery-circle">
+                <i class="devicon-jquery-plain jquery" aria-hidden="true"></i>
+                <p>jQuery</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-aos="fade-up" data-aos-delay="330">
+            <div class="title-card">
+              <div class="title-overlay" id="bootstrap-overlay"></div>
+              <div class="title-circle" id="bootstrap-circle">
+                <i class="fa-brands fa-bootstrap bootstrap" aria-hidden="true"></i>
+                <p>Bootstrap</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-aos="fade-up" data-aos-delay="400">
+            <div class="title-card">
+              <div class="title-overlay" id="git-overlay"></div>
+              <div class="title-circle" id="git-circle">
+                <i class="fa-brands fa-git-alt git" aria-hidden="true"></i>
+                <p>Git</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-aos="fade-up" data-aos-delay="470">
+            <div class="title-card">
+              <div class="title-overlay" id="github-overlay"></div>
+              <div class="title-circle" id="github-circle">
+                <i class="fa-brands fa-github github" aria-hidden="true"></i>
+                <p>GitHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+                          PROJECTS SECTION
+         ============================================================ -->
+      <section class="projects-section" id="projects-section">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+
+        <div class="projects-container">
+          <h2 class="main-heading" data-aos="fade-up">Projects</h2>
+          <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+
+          <div class="projects-grid">
+            <!-- CARD 01: WANDERLUX -->
+            <article class="project-card" data-aos="fade-up" data-aos-delay="0">
+              <div class="project-browser">
+                <div class="browser-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <a
+                  href="https://fareedulhaqyousafzai.github.io/WanderLux/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="browser-url"
+                  title="Open Live Website"
+                >
+                  <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                  <span>fareedulhaqyousafzai.github.io/WanderLux</span>
+                </a>
+              </div>
+
+              <div class="project-media">
+                <img
+                  src="assets/images/WanderLux.webp"
+                  alt="WanderLux Travel Website"
+                  loading="lazy"
+                />
+                <div class="media-fade"></div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-title-row">
+                  <h3>WanderLux</h3>
+                  <span class="project-cat-badge">Travel & Tourism</span>
+                </div>
+
+                <div class="project-tabs" role="tablist">
+                  <button type="button" class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                  <button type="button" class="tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
+                  <button type="button" class="tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
+                </div>
+
+                <div class="tab-content-box">
+                  <p class="tab-pane active" data-pane="overview">
+                    A responsive luxury travel landing page that replaces cluttered agency layouts with a clean, destination-focused UI built to inspire bookings.
+                  </p>
+                  <p class="tab-pane" data-pane="role">
+                    Built the complete frontend, structured the page layout, styled the interface, added JS interactivity, and ensured smooth responsiveness.
+                  </p>
+                  <p class="tab-pane" data-pane="value">
+                    Helps travel businesses present destinations professionally, elevate brand trust, and encourage visitors to explore tour packages.
+                  </p>
+                </div>
+
+                <div class="project-tags">
+                  <span><i class="fa-brands fa-html5" style="color: #e34c26;" aria-hidden="true"></i> HTML5</span>
+                  <span><i class="fa-brands fa-css3-alt" style="color: #264de4;" aria-hidden="true"></i> CSS3</span>
+                  <span><i class="fa-brands fa-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://fareedulhaqyousafzai.github.io/WanderLux/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-live"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/fareedulhaqyousafzai/WanderLux"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-code"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 02: BAZAAR -->
+            <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-browser">
+                <div class="browser-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <a
+                  href="https://fareedulhaqyousafzai.github.io/Bazaar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="browser-url"
+                  title="Open Live Website"
+                >
+                  <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                  <span>fareedulhaqyousafzai.github.io/Bazaar</span>
+                </a>
+              </div>
+
+              <div class="project-media">
+                <img
+                  src="assets/images/Bazaar.webp"
+                  alt="Bazaar E-Commerce Website"
+                  loading="lazy"
+                />
+                <div class="media-fade"></div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-title-row">
+                  <h3>Bazaar</h3>
+                  <span class="project-cat-badge">E-Commerce Store</span>
+                </div>
+
+                <div class="project-tabs" role="tablist">
+                  <button type="button" class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                  <button type="button" class="tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
+                  <button type="button" class="tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
+                </div>
+
+                <div class="tab-content-box">
+                  <p class="tab-pane active" data-pane="overview">
+                    A structured e-commerce storefront across fashion, electronics, and home living, removing catalog clutter so shoppers browse effortlessly.
+                  </p>
+                  <p class="tab-pane" data-pane="role">
+                    Designed and coded the storefront frontend, organized multi-category product grids, and ensured consistent responsive behavior.
+                  </p>
+                  <p class="tab-pane" data-pane="value">
+                    Gives retail brands a clear, modern storefront that highlights products neatly and makes online discovery fast and user-friendly.
+                  </p>
+                </div>
+
+                <div class="project-tags">
+                  <span><i class="fa-brands fa-html5" style="color: #e34c26;" aria-hidden="true"></i> HTML5</span>
+                  <span><i class="fa-brands fa-css3-alt" style="color: #264de4;" aria-hidden="true"></i> CSS3</span>
+                  <span><i class="fa-brands fa-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://fareedulhaqyousafzai.github.io/Bazaar/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-live"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/fareedulhaqyousafzai/Bazaar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-code"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 03: ZAIQA PASAND -->
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-browser">
+                <div class="browser-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <a
+                  href="https://fareedulhaqyousafzai.github.io/ZaiqaPasand/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="browser-url"
+                  title="Open Live Website"
+                >
+                  <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                  <span>fareedulhaqyousafzai.github.io/ZaiqaPasand</span>
+                </a>
+              </div>
+
+              <div class="project-media">
+                <img
+                  src="assets/images/ZaiqaPasand.webp"
+                  alt="Zaiqa Pasand Restaurant Website"
+                  loading="lazy"
+                />
+                <div class="media-fade"></div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-title-row">
+                  <h3>Zaiqa Pasand</h3>
+                  <span class="project-cat-badge">Restaurant & Menu</span>
+                </div>
+
+                <div class="project-tabs" role="tablist">
+                  <button type="button" class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                  <button type="button" class="tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
+                  <button type="button" class="tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
+                </div>
+
+                <div class="tab-content-box">
+                  <p class="tab-pane active" data-pane="overview">
+                    A modern restaurant website with an organized digital menu and brand story, helping diners discover signature dishes and categories fast.
+                  </p>
+                  <p class="tab-pane" data-pane="role">
+                    Built the responsive landing layout, structured menu sections, and styled the full restaurant UI using Bootstrap and custom CSS.
+                  </p>
+                  <p class="tab-pane" data-pane="value">
+                    Helps restaurants showcase food offerings professionally, simplify menu browsing on mobile, and build a strong online identity.
+                  </p>
+                </div>
+
+                <div class="project-tags">
+                  <span><i class="fa-brands fa-html5" style="color: #e34c26;" aria-hidden="true"></i> HTML5</span>
+                  <span><i class="fa-brands fa-css3-alt" style="color: #264de4;" aria-hidden="true"></i> CSS3</span>
+                  <span><i class="fa-brands fa-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript</span>
+                  <span><i class="fa-brands fa-bootstrap" style="color: #7952b3;" aria-hidden="true"></i> Bootstrap</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://fareedulhaqyousafzai.github.io/ZaiqaPasand/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-live"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/fareedulhaqyousafzai/ZaiqaPasand"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-code"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+                          CONTACT SECTION
+         ============================================================ -->
+      <section class="contact-section" id="contact-section">
+        <h2 class="main-heading" data-aos="fade-up">Let's Connect</h2>
+        <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+
+        <div class="contact-container">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <a
+              href="https://wa.me/923306415111"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card direct-whatsapp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="180">
+            <a
+              href="mailto:fareedulhaqyousafzai@gmail.com"
+              class="contact-card direct-email"
+              aria-label="Email Address"
+            >
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span>Email Me</span>
+            </a>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="260">
+            <a
+              href="https://github.com/fareedulhaqyousafzai"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card social-github"
+              aria-label="GitHub Profile"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="340">
+            <a
+              href="https://www.linkedin.com/in/fareedulhaqyousafzai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card social-linkedin"
+              aria-label="LinkedIn Profile"
+            >
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="420">
+            <div class="contact-card location-card">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Karachi, Pakistan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+                        FOOTER
+       ============================================================ -->
+    <footer class="footer-section">
+      <a
+        href="#main-section"
+        class="scroll-top"
+        title="Go to top"
+        data-aos="zoom-in"
+        data-aos-offset="50"
+        aria-label="Scroll to top"
+      >
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+      </a>
+
+      <div class="footer-content" data-aos="fade-up" data-aos-offset="50">
+        <p class="footer-para">
+          &copy; <span id="current-year"></span>
+          <span class="footer-logo">Fareed<span class="logo-dot">.</span></span>
+          All Rights Reserved.
+        </p>
+        <p class="footer-built">
+          Crafted with
+          <i class="fa-solid fa-heart beating-heart" aria-hidden="true"></i> &amp;
+          <i class="fa-solid fa-mug-hot steaming-mug" aria-hidden="true"></i>
+        </p>
+      </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="myscripts.min.js"></script>
+  </body>
+</html>
