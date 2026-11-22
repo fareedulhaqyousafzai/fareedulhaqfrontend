@@ -3328,3 +3328,42 @@ body.light-mode .scroll-top:hover {
     color: #38bdf8;
   }
 }
+/* Compact Smoked-Glass Dropdown */
+  nav {
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    z-index: 120;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 14.5rem;
+    padding: 0.65rem;
+    border-radius: 14px;
+    background: var(--glass-bg-center);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-border-top);
+    box-shadow: var(--glass-shadow);
+  }
+
+  nav ul.nav-active {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav li a {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1.1rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.08rem;
+    border-radius: 9px;
+  }
