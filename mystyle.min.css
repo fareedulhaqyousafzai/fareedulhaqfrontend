@@ -3444,6 +3444,7 @@ body.light-mode .scroll-top:hover {
 .content-section {
     width: 100%;
     max-width: 440px;
+    height: 100px;
     padding: 2.8rem 2.2rem;
     border-radius: 22px;
   }
