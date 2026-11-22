@@ -3576,4 +3576,13 @@ body.light-mode .scroll-top:hover {
     font-size: 1.02rem;
     line-height: 1.38;
   }
+
+  .about-section,
+.education-section,
+.skillset-section,
+.projects-section,
+.contact-section {
+  overflow: visible;
+  overflow-x: clip;
+}
 }
