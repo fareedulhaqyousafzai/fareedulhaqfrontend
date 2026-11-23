@@ -3942,8 +3942,10 @@ body.light-mode .scroll-top:hover {
     margin: 0 auto;
   }
 
-  .contact-container > *:last-child {
+ .contact-container > *:last-child {
     grid-column: 1 / -1;
+    justify-self: center;
+    width: auto;
   }
 
   .contact-card {
@@ -3957,11 +3959,12 @@ body.light-mode .scroll-top:hover {
     -webkit-tap-highlight-color: transparent;
   }
 
-  .contact-container > *:last-child .contact-card,
+ .contact-container > *:last-child .contact-card,
   .contact-card.location-card {
+    width: auto;
     justify-content: center;
+    padding: 1rem 1.8rem 1rem 1.1rem;
   }
-
   .contact-card i {
     width: 3.4rem;
     height: 3.4rem;
