@@ -3496,6 +3496,12 @@ body.light-mode .scroll-top:hover {
     padding: 4rem 4% 4.5rem;
     scroll-margin-top: 64px;
   }
+  .education-section {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
   .education-section .header-divider {
     margin-bottom: 2rem;
