@@ -868,7 +868,8 @@ body.light-mode .theme-switch .slider {
   content: "";
   position: absolute;
   top: -1px;
-  left: 3.6rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 42%;
   height: 2px;
   border-radius: 999px;
@@ -1579,9 +1580,8 @@ body.light-mode .about-availability::before {
 body.light-mode .about-availability::after {
   background: linear-gradient(90deg, rgba(28, 53, 79, 0.22), transparent);
 }
-
 /* =========================================
-   EDUCATION SECTION (CLEAN TIMELINE)
+   EDUCATION SECTION (CLEAN UNIFIED TIMELINE)
 ========================================= */
 .education-section {
   width: 100%;
@@ -1681,12 +1681,13 @@ body.light-mode .about-availability::after {
     0 0 22px rgba(56, 189, 248, 0.45);
 }
 
+/* Dono Cards Same Design & Lighting Mein */
 .timeline-content.glass-card {
   position: relative;
   padding: 2.4rem 2.8rem;
   margin-top: 0;
   border-radius: 18px;
-  background: var(--glass-bg-left);
+  background: var(--glass-bg-right);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -1698,10 +1699,6 @@ body.light-mode .about-availability::after {
     box-shadow 0.3s ease,
     border-color 0.3s ease,
     background 0.3s ease;
-}
-
-.timeline-item:nth-child(even) .timeline-content.glass-card {
-  background: var(--glass-bg-right);
 }
 
 .timeline-content.glass-card::before {
@@ -1727,14 +1724,10 @@ body.light-mode .about-availability::after {
 
 .timeline-item:hover .timeline-content.glass-card {
   transform: translateX(5px);
-  background: var(--glass-hover-left);
+  background: var(--glass-hover-right);
   border-color: var(--glass-border-hover);
   border-left-color: #38bdf8;
   box-shadow: var(--glass-shadow-hover);
-}
-
-.timeline-item:nth-child(even):hover .timeline-content.glass-card {
-  background: var(--glass-hover-right);
 }
 
 .timeline-header {
@@ -1786,6 +1779,7 @@ body.light-mode .about-availability::after {
   text-transform: none;
 }
 
+/* Light Mode */
 body.light-mode .timeline-container::before {
   background: linear-gradient(
     to bottom,
@@ -1841,7 +1835,6 @@ body.light-mode .timeline-subtitle {
 body.light-mode .timeline-text {
   color: #475569;
 }
-
 /* =========================================
    SKILLS ORBS (LARGE & SPACIOUS — 4 + 3)
 ========================================= */
