@@ -1934,24 +1934,6 @@ body.light-mode .timeline-text {
   transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
 }
 
-/* Curved Top Rim Glow For Circular Skill Orbs */
-.title-circle::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-top-color: rgba(125, 211, 252, 0.82);
-  filter: drop-shadow(0 -2px 6px rgba(56, 189, 248, 0.75));
-  pointer-events: none;
-  transition: border-top-color 0.35s ease, transform 0.35s ease;
-}
-
-body.light-mode .title-circle::before {
-  border-top-color: rgba(2, 132, 199, 0.55);
-  filter: none;
-}
-
 .skill:nth-child(even) .title-circle {
   background: radial-gradient(
     circle at 70% 25%,
@@ -2115,7 +2097,6 @@ body.light-mode .title-card:hover .github {
 
 .title-card:hover #github-circle,
 .title-card:hover #github-circle::after { border-color: var(--color-github); }
-
 /* =========================================
    PROJECTS SECTION (LEFT / CENTER / RIGHT LIT)
 ========================================= */
@@ -3738,7 +3719,6 @@ body.light-mode .scroll-top:hover {
     letter-spacing: 0.08rem;
     white-space: nowrap;
   }
-
   /* ---------- PROJECTS SECTION (768px MOBILE SLIDER) ---------- */
   .projects-section {
     height: auto;
