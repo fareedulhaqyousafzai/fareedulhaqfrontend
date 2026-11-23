@@ -3579,11 +3579,12 @@ body.light-mode .scroll-top:hover {
   }
   /* ---------- SKILLS SECTION (768px MOBILE — 3+3+1 GRID) ---------- */
   .skillset-section {
-    padding: 4rem 4% 4.5rem;
-    scroll-margin-top: 64px;
     height: auto;
+    min-height: auto;
+    padding: 4rem 4% 3rem;
+    margin-bottom: 0;
+    scroll-margin-top: 64px;
   }
-
   .skillset-section .header-divider {
     margin-bottom: 2.4rem;
   }
