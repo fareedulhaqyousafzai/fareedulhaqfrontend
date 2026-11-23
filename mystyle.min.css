@@ -3076,15 +3076,17 @@ body.light-mode .social-github:hover i {
 
 .scroll-top {
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   top: -23px;
-  transform: translateX(-50%);
+  margin: 0 auto;
   width: 46px;
   height: 46px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1;
   text-decoration: none;
   font-size: 1.5rem;
   color: #38bdf8;
@@ -3105,8 +3107,16 @@ body.light-mode .social-github:hover i {
     color 0.3s ease;
 }
 
+.scroll-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+}
+
 .scroll-top:hover {
-  transform: translateX(-50%) translateY(-4px);
+  transform: translateY(-4px);
   background: linear-gradient(135deg, #0284c7, #38bdf8);
   border-color: rgba(186, 230, 253, 0.85);
   color: #ffffff;
@@ -3114,7 +3124,6 @@ body.light-mode .social-github:hover i {
     0 0 0 5px var(--site-bg-bottom),
     0 10px 24px rgba(56, 189, 248, 0.5);
 }
-
 body.light-mode .footer-section {
   box-shadow: 0 -8px 24px rgba(16, 149, 213, 0.1);
 }
@@ -3991,20 +4000,23 @@ body.light-mode .scroll-top:hover {
     width: 68%;
   }
 
-  .scroll-top {
+ .scroll-top {
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: 0 auto;
     width: 40px;
     height: 40px;
-    top: -20px;
     font-size: 1.35rem;
     -webkit-tap-highlight-color: transparent;
   }
 
   .scroll-top:hover {
-    transform: translateX(-50%);
+    transform: none;
   }
 
   .scroll-top:active {
-    transform: translateX(-50%) scale(0.92);
+    transform: scale(0.92);
   }
 
   .footer-content {
