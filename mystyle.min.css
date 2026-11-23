@@ -3949,6 +3949,17 @@ body.light-mode .scroll-top:hover {
   body.light-mode .slider-hint {
     color: #4a637d;
   }
+  .project-card .browser-dots .dot.red {
+    background: #ff5f56;
+  }
+
+  .project-card .browser-dots .dot.yellow {
+    background: #ffbd2e;
+  }
+
+  .project-card .browser-dots .dot.green {
+    background: #27c93f;
+  }
   .about-section,
 .education-section,
 .skillset-section,
