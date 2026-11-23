@@ -134,7 +134,12 @@
   --scrollbar-arrow-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 6.6 L8.8 1.4 H1.2 Z' fill='%2338bdf8' stroke='%2338bdf8' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
   --scrollbar-arrow-up-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 1.4 L8.8 6.6 H1.2 Z' fill='%23ffffff' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
   --scrollbar-arrow-down-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 6.6 L8.8 1.4 H1.2 Z' fill='%23ffffff' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
-
+--current-arrow-up: var(--scrollbar-arrow-up);
+  --current-arrow-down: var(--scrollbar-arrow-down);
+  --arrow-up-height: 16px;
+  --arrow-down-height: 16px;
+  --current-arrow-up: var(--scrollbar-arrow-up);
+  --current-arrow-down: var(--scrollbar-arrow-down);
   /* Unified Brand Shadows */
   --brand-shadow:
     0 10px 28px rgba(16, 149, 213, 0.16),
@@ -346,6 +351,9 @@ body:has(.preloader:not(.hide)) {
 /* =========================================================
    CUSTOM SCROLLBAR (14PX + DYNAMIC TOP/BOTTOM ARROWS)
 ========================================================= */
+/* =========================================================
+   CUSTOM SCROLLBAR (14PX + DYNAMIC TOP/BOTTOM ARROWS)
+========================================================= */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
   height: var(--scrollbar-width);
@@ -395,7 +403,7 @@ body:has(.preloader:not(.hide)) {
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
-  background-image: var(--scrollbar-arrow-up);
+  background-image: var(--current-arrow-up);
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
@@ -403,7 +411,7 @@ body:has(.preloader:not(.hide)) {
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:increment {
-  background-image: var(--scrollbar-arrow-down);
+  background-image: var(--current-arrow-down);
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
@@ -415,6 +423,7 @@ html.at-top::-webkit-scrollbar-button:single-button:vertical:decrement,
 html.at-bottom::-webkit-scrollbar-button:single-button:vertical:increment {
   display: none;
   height: 0;
+  background-image: none !important;
 }
 
 @supports not selector(::-webkit-scrollbar) {
@@ -423,7 +432,47 @@ html.at-bottom::-webkit-scrollbar-button:single-button:vertical:increment {
     scrollbar-color: var(--primary) var(--scrollbar-track);
   }
 }
+/* Top & Bottom Scrollbar Arrows */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  display: block;
+  width: var(--scrollbar-width);
+  height: var(--arrow-up-height);
+  background-color: var(--scrollbar-track);
+  background-image: var(--current-arrow-up);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 7px;
+  border-left: 1px solid var(--scrollbar-border);
+}
 
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: var(--scrollbar-arrow-up-hover);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  display: block;
+  width: var(--scrollbar-width);
+  height: var(--arrow-down-height);
+  background-color: var(--scrollbar-track);
+  background-image: var(--current-arrow-down);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 7px;
+  border-left: 1px solid var(--scrollbar-border);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: var(--scrollbar-arrow-down-hover);
+}
+
+html.at-top::-webkit-scrollbar-button:single-button:vertical:decrement,
+html.at-bottom::-webkit-scrollbar-button:single-button:vertical:increment {
+  display: none;
+  width: 0;
+  height: 0;
+  border: none;
+  background-image: none !important;
+}
 /* =========================================================
    TYPOGRAPHY & SHARED SECTION HEADINGS
 ========================================================= */
