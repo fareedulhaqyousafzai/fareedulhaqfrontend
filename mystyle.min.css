@@ -1317,7 +1317,7 @@ body.light-mode .about-description span:hover {
 ========================================================= */
 .education-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   padding: 6rem 5% 6.5rem;
   scroll-margin-top: 45px;
   background: transparent;
