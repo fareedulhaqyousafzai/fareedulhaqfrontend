@@ -871,6 +871,7 @@ body.light-mode .theme-switch .slider {
   left: 3.6rem;
   width: 42%;
   height: 2px;
+  border-radius: 999px;
   background: linear-gradient(
     90deg,
     transparent,
@@ -879,15 +880,15 @@ body.light-mode .theme-switch .slider {
     rgba(56, 189, 248, 0.8),
     transparent
   );
-  border-radius: 999px;
   filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.85));
   pointer-events: none;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body.light-mode .content-section::before {
   height: 1.5px;
   filter: none;
-  opacity: 0.75;
+  opacity: 0.78;
   background: linear-gradient(
     90deg,
     transparent,
@@ -1265,8 +1266,8 @@ body.light-mode .custom-shape-divider-bottom-1716734170::after {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 44%;
-  max-width: 380px;
+  width: 40%;
+  max-width: none;
   height: 1.5px;
   border-radius: 999px;
   background: linear-gradient(
@@ -1286,10 +1287,6 @@ body.light-mode .custom-shape-divider-bottom-1716734170::after {
   background: var(--glass-hover-right);
   border-color: var(--glass-border-hover);
   box-shadow: var(--glass-shadow-hover);
-}
-
-.about-panel:hover::before {
-  width: 60%;
 }
 
 .about-left {
@@ -1740,11 +1737,6 @@ body.light-mode .about-availability::after {
   background: var(--glass-hover-right);
 }
 
-.timeline-item:hover .timeline-content.glass-card::before {
-  top: 8%;
-  height: 84%;
-}
-
 .timeline-header {
   display: flex;
   justify-content: space-between;
@@ -1947,6 +1939,24 @@ body.light-mode .timeline-text {
   border-top-color: var(--glass-border-top);
   box-shadow: var(--glass-shadow);
   transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+/* Curved Top Rim Glow For Circular Skill Orbs */
+.title-circle::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: rgba(125, 211, 252, 0.82);
+  filter: drop-shadow(0 -2px 6px rgba(56, 189, 248, 0.75));
+  pointer-events: none;
+  transition: border-top-color 0.35s ease, transform 0.35s ease;
+}
+
+body.light-mode .title-circle::before {
+  border-top-color: rgba(2, 132, 199, 0.55);
+  filter: none;
 }
 
 .skill:nth-child(even) .title-circle {
@@ -2238,10 +2248,6 @@ body.light-mode .project-card {
 .project-card:nth-child(3n + 1):hover { background: var(--glass-hover-left); }
 .project-card:nth-child(3n + 2):hover { background: var(--glass-hover-center); }
 .project-card:nth-child(3n + 3):hover { background: var(--glass-hover-right); }
-
-.project-card:hover::before {
-  width: 76%;
-}
 
 body.light-mode .project-card::before {
   height: 1.5px;
@@ -2814,6 +2820,42 @@ body.light-mode .btn-code:hover i {
     background 0.35s ease;
 }
 
+/* Top Glowing Blue Patti Matching Hero, About & Projects */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38%;
+  height: 1.5px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(56, 189, 248, 0.9) 30%,
+    #ffffff 50%,
+    rgba(56, 189, 248, 0.9) 70%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 0 7px rgba(56, 189, 248, 0.85));
+  pointer-events: none;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.light-mode .contact-card::before {
+  filter: none;
+  opacity: 0.78;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #0284c7 30%,
+    #38bdf8 50%,
+    #0284c7 70%,
+    transparent 100%
+  );
+}
+
 .contact-container > *:nth-child(even) .contact-card,
 .contact-container > .contact-card:nth-child(even) {
   background: var(--glass-bg-right);
@@ -3172,6 +3214,40 @@ body.light-mode .scroll-top:hover {
   background: linear-gradient(135deg, #0284c7, #1095d5);
   border-color: #0284c7;
   color: #ffffff;
+}
+
+/* =========================================================
+   DESKTOP-ONLY GLOW BAR HOVER EXPAND (NO TOUCH STICKINESS)
+========================================================= */
+@media (hover: hover) {
+  .content-section:hover::before {
+    width: 68%;
+  }
+
+  .about-panel:hover::before {
+    width: 66%;
+  }
+
+  .timeline-item:hover .timeline-content.glass-card::before {
+    top: 8%;
+    height: 84%;
+  }
+
+  .project-card:hover::before {
+    width: 76%;
+  }
+
+  .contact-card:hover::before {
+    width: 72%;
+  }
+
+  .title-card:hover .title-circle::before {
+    border-top-color: #ffffff;
+  }
+
+  body.light-mode .title-card:hover .title-circle::before {
+    border-top-color: #0284c7;
+  }
 }
 
 /* =======================================================
