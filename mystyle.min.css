@@ -2737,9 +2737,8 @@ body.light-mode .btn-code:hover i {
 .slider-hint {
   display: none;
 }
-
 /* =========================================
-   CONTACT SECTION (ODD LEFT-LIT / EVEN RIGHT-LIT)
+   CONTACT SECTION (CLEAN BRAND ACCENTS)
 ========================================= */
 .contact-section {
   position: relative;
@@ -2792,42 +2791,6 @@ body.light-mode .btn-code:hover i {
     border-color 0.35s ease,
     box-shadow 0.35s ease,
     background 0.35s ease;
-}
-
-/* Top Glowing Blue Patti Matching Hero, About & Projects */
-.contact-card::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 38%;
-  height: 1.5px;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(56, 189, 248, 0.9) 30%,
-    #ffffff 50%,
-    rgba(56, 189, 248, 0.9) 70%,
-    transparent 100%
-  );
-  filter: drop-shadow(0 0 7px rgba(56, 189, 248, 0.85));
-  pointer-events: none;
-  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-body.light-mode .contact-card::before {
-  filter: none;
-  opacity: 0.78;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    #0284c7 30%,
-    #38bdf8 50%,
-    #0284c7 70%,
-    transparent 100%
-  );
 }
 
 .contact-container > *:nth-child(even) .contact-card,
@@ -2996,7 +2959,6 @@ body.light-mode .social-github:hover i {
   color: #ffffff;
   background: #181717;
 }
-
 /* =========================================
    FOOTER SECTION (CLEAN EDITORIAL GLASS)
 ========================================= */
@@ -3960,5 +3922,99 @@ body.light-mode .scroll-top:hover {
 
   body.light-mode .slider-hint {
     color: #4a637d;
+  }
+  /* ---------- CONTACT SECTION (768px MOBILE — 2x2 + LOCATION PILL) ---------- */
+  .contact-section {
+    padding: 4rem 4% 5.2rem;
+    scroll-margin-top: 64px;
+  }
+
+  .contact-section .header-divider {
+    margin-bottom: 2rem;
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 345px;
+    margin: 0 auto;
+  }
+
+  .contact-container > *:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .contact-card {
+    display: flex;
+    width: 100%;
+    min-height: 5.4rem;
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .contact-container > *:last-child .contact-card,
+  .contact-card.location-card {
+    justify-content: center;
+  }
+
+  .contact-card i {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+  }
+
+  .contact-card span {
+    font-size: 1.08rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .contact-card:active {
+    transform: scale(0.97);
+  }
+
+  /* ---------- FOOTER SECTION (768px MOBILE) ---------- */
+  .footer-section {
+    padding: 3.6rem 5% 2.2rem;
+    margin-top: 2.4rem;
+  }
+
+  .footer-section::before {
+    width: 68%;
+  }
+
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    font-size: 1.35rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .scroll-top:hover {
+    transform: translateX(-50%);
+  }
+
+  .scroll-top:active {
+    transform: translateX(-50%) scale(0.92);
+  }
+
+  .footer-content {
+    gap: 0.6rem;
+  }
+
+  .footer-para {
+    font-size: 1.16rem;
+    line-height: 1.45;
+  }
+
+  .footer-built {
+    font-size: 1.04rem;
+    line-height: 1.4;
   }
 }
