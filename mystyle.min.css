@@ -2739,6 +2739,11 @@ body.light-mode .btn-code:hover i {
 .slider-dots {
   display: none;
 }
+/* Desktop par slider controls aur hint hidden */
+.slider-controls,
+.slider-hint {
+  display: none;
+}
 /* =========================================
    CONTACT SECTION (ODD LEFT-LIT / EVEN RIGHT-LIT)
 ========================================= */
@@ -3643,11 +3648,11 @@ body.light-mode .scroll-top:hover {
     letter-spacing: 0.08rem;
     white-space: nowrap;
   }
-  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER — FIXED) ---------- */
+  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER — POLISHED) ---------- */
   .projects-section {
     height: auto;
     min-height: auto;
-    padding: 4rem 2% 4.5rem;
+    padding: 4rem 4% 4.5rem;
     scroll-margin-top: 64px;
   }
 
@@ -3656,11 +3661,10 @@ body.light-mode .scroll-top:hover {
   }
 
   .slider-wrapper {
-    position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 345px;
     margin: 0 auto;
-    padding: 0 3.6rem;
+    padding: 0;
   }
 
   .projects-grid {
@@ -3670,9 +3674,9 @@ body.light-mode .scroll-top:hover {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    gap: 1.6rem;
+    gap: 1.4rem;
     width: 100%;
-    padding: 1.2rem 0.2rem 1.8rem;
+    padding: 1rem 0.2rem 1.4rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -3681,7 +3685,7 @@ body.light-mode .scroll-top:hover {
     display: none;
   }
 
-  /* Ek Waqt Mein Sirf 1 Project Card + Clean Unclipped Shadow */
+  /* 1 Card Per View */
   .project-card {
     flex: 0 0 100%;
     min-width: 100%;
@@ -3694,6 +3698,15 @@ body.light-mode .scroll-top:hover {
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
   }
 
+  /* 1. Cut-off URL Bar Mobile Par Hidden (Sirf 3 Dots Rahenge) */
+  .project-browser {
+    padding: 0.75rem 1.2rem;
+  }
+
+  .browser-url {
+    display: none;
+  }
+
   .project-media {
     height: 165px;
   }
@@ -3703,7 +3716,11 @@ body.light-mode .scroll-top:hover {
   }
 
   .project-body {
-    padding: 1.35rem 1.3rem 1.45rem;
+    padding: 1.25rem 1.3rem 1.35rem;
+  }
+
+  .project-title-row {
+    margin-bottom: 0.85rem;
   }
 
   .project-title-row h3 {
@@ -3717,6 +3734,7 @@ body.light-mode .scroll-top:hover {
 
   .project-tabs {
     gap: 0.4rem;
+    margin-bottom: 0.9rem;
   }
 
   .tab-btn {
@@ -3724,9 +3742,21 @@ body.light-mode .scroll-top:hover {
     padding: 0.45rem 0.6rem;
   }
 
+  /* 5. Description Aur Tech Badges Ke Beech Tight Spacing */
+  .tab-content-box {
+    min-height: auto;
+    margin-bottom: 0.95rem;
+  }
+
   .tab-pane {
     font-size: 1.12rem;
     line-height: 1.45;
+  }
+
+  .project-tags {
+    padding-top: 0.95rem;
+    margin-bottom: 1.15rem;
+    gap: 0.55rem;
   }
 
   .project-tags span {
@@ -3740,16 +3770,23 @@ body.light-mode .scroll-top:hover {
     font-size: 1.05rem;
   }
 
-  /* Left / Right Circular Arrow Buttons (Clean Gap From Card) */
+  /* 2. Arrows + Dots Neeche Ek Clean Row Mein */
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 0.4rem;
+  }
+
   .slider-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 46%;
-    transform: translateY(-50%);
-    width: 3rem;
-    height: 3rem;
+    position: static;
+    transform: none;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
     backdrop-filter: blur(8px);
@@ -3758,55 +3795,70 @@ body.light-mode .scroll-top:hover {
     color: #1095d5;
     font-size: 1.15rem;
     cursor: pointer;
-    z-index: 20;
-    transition: transform 0.25s ease, background 0.25s ease;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, background 0.2s ease;
     -webkit-tap-highlight-color: transparent;
   }
 
-  .left-btn {
-    left: 0.2rem;
-  }
-
-  .right-btn {
-    right: 0.2rem;
-  }
-
   .slider-btn:active {
-    transform: translateY(-50%) scale(0.92);
+    transform: scale(0.92);
     background: rgba(16, 149, 213, 0.2);
   }
 
-  /* Bottom 3 Pill Dots (Dark + Light Mode Active Blue Fixed) */
+  /* 3. Generous Tap Area (padding: 8px) + Sleek Visual Pill */
   .slider-dots {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.8rem;
-    margin-top: 0.8rem;
+    gap: 0.2rem;
+    margin-top: 0;
   }
 
   .slider-dot {
-    width: 1.8rem;
-    height: 0.55rem;
-    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
     border: none;
-    background: rgba(255, 255, 255, 0.35);
+    background: transparent;
     cursor: pointer;
-    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .slider-dot::before {
+    content: "";
+    display: block;
+    width: 1.8rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.35);
     transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
   }
 
-  body.light-mode .slider-dot {
-    background: rgba(28, 53, 79, 0.22);
+  body.light-mode .slider-dot::before {
+    background: rgba(28, 53, 79, 0.24);
   }
 
-  .slider-dot.active,
-  body.light-mode .slider-dot.active {
-    width: 4.2rem;
+  .slider-dot.active::before,
+  body.light-mode .slider-dot.active::before {
+    width: 3.8rem;
     background: #1095d5;
     box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
   }
-  
+
+  /* 4. Swipe Hint Line */
+  .slider-hint {
+    display: block;
+    text-align: center;
+    margin-top: 0.85rem;
+    font-size: 1.08rem;
+    letter-spacing: 0.03rem;
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  body.light-mode .slider-hint {
+    color: rgba(28, 53, 79, 0.62);
+  } 
   .about-section,
 .education-section,
 .skillset-section,
