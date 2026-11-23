@@ -46,11 +46,11 @@
     </script>
 
     <!-- Favicon -->
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='2' fill='%23001e36' stroke='%2331a8ff' stroke-opacity='0.55' stroke-width='1'/%3E%3Cg shape-rendering='crispEdges' fill='%23ffffff'%3E%3Crect x='3' y='3' width='3' height='10'/%3E%3Crect x='3' y='3' width='7' height='2'/%3E%3Crect x='3' y='7' width='6' height='2'/%3E%3C/g%3E%3Ccircle cx='11.5' cy='11.5' r='1.5' fill='%2331a8ff'/%3E%3C/svg%3E"
-/>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='2' fill='%23001e36' stroke='%2331a8ff' stroke-opacity='0.55' stroke-width='1'/%3E%3Cg shape-rendering='crispEdges' fill='%23ffffff'%3E%3Crect x='3' y='3' width='3' height='10'/%3E%3Crect x='3' y='3' width='7' height='2'/%3E%3Crect x='3' y='7' width='6' height='2'/%3E%3C/g%3E%3Ccircle cx='11.5' cy='11.5' r='1.5' fill='%2331a8ff'/%3E%3C/svg%3E"
+    />
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,33 +76,31 @@
   </head>
 
   <body>
-    <!-- ============================================================
-                        LOADER / PRELOADER
-       ============================================================ -->
-    <div id="loader" class="loader-overlay">
-      <div class="loader-inner">
-        <div class="logo-wrapper">
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <h2 class="l-logo">Fareed<span>.</span></h2>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <div class="preloader-orbit">
+          <div class="orbit-ring"></div>
+          <div class="orbit-ring"></div>
+          <h2 class="preloader-logo">Fareed<span>.</span></h2>
         </div>
-        <div class="l-bar-wrap">
-          <div class="l-bar"></div>
+        <div class="preloader-progress">
+          <div class="preloader-progress-bar"></div>
         </div>
-        <div class="l-dots"><span></span><span></span><span></span></div>
+        <div class="preloader-wave">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
 
-    <!-- ============================================================
-                        HEADER / NAVBAR
-       ============================================================ -->
-    <header class="container-nav">
-      <div class="portfolio-logo">Fareed<span class="logo-dot">.</span></div>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="brand-logo">Fareed<span class="brand-dot">.</span></div>
 
       <nav aria-label="Main Navigation">
         <ul id="nav-menu">
           <li class="nav-item">
-            <a class="nav-link active-link" href="#main-section" aria-current="page">Home</a>
+            <a class="nav-link active-link" href="#hero-section" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about-section">About</a>
@@ -111,7 +109,7 @@
             <a class="nav-link" href="#education-section">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skillset-section">Skills</a>
+            <a class="nav-link" href="#skills-section">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects-section">Projects</a>
@@ -123,16 +121,17 @@
       </nav>
 
       <div class="nav-controls">
-        <label class="theme-switch" for="theme" aria-label="Toggle Light Mode">
-          <input id="theme" class="theme_toggle" type="checkbox" />
-          <div class="slider">
+        <label class="theme-switch" for="theme-toggle" aria-label="Toggle Light Mode">
+          <input id="theme-toggle" class="theme-toggle-input" type="checkbox" />
+          <div class="theme-toggle-track">
             <i class="fas fa-moon moon-icon" aria-hidden="true"></i>
             <i class="fas fa-sun sun-icon" aria-hidden="true"></i>
           </div>
         </label>
+
         <i
-          class="fas fa-bars toggle_button"
-          id="toggle_button"
+          class="fas fa-bars menu-toggle"
+          id="menu-toggle"
           role="button"
           tabindex="0"
           aria-label="Toggle Menu"
@@ -142,28 +141,26 @@
     </header>
 
     <main>
-      <!-- ============================================================
-                          HERO SECTION
-         ============================================================ -->
-      <section class="container-main" id="main-section">
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero-section">
         <div
-          class="content-section"
+          class="hero-card"
           data-aos="fade-right"
           data-aos-duration="800"
           data-aos-delay="800"
         >
-          <div class="subheading">
-            <span class="textEffect"></span><span class="last">|</span>
+          <div class="hero-subtitle">
+            <span class="typing-text"></span><span class="typing-cursor">|</span>
           </div>
-          <h1 class="heading">Fareed Ul Haq</h1>
+          <h1 class="hero-title">Fareed Ul Haq</h1>
 
-          <div class="hero-btn-group">
-            <a class="main-contact-btn" href="#contact-section">
+          <div class="hero-actions">
+            <a class="btn-primary" href="#contact-section">
               <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Hire Me
             </a>
             <a
               type="application/pdf"
-              class="secondary-btn"
+              class="btn-secondary"
               href="FareedUlHaq_FrontEnd_Developer.pdf"
               download="FareedUlHaq_FrontEnd_Developer.pdf"
             >
@@ -173,91 +170,86 @@
         </div>
 
         <div
-          class="hero-img-container"
+          class="hero-portrait"
           data-aos="zoom-in"
           data-aos-duration="900"
           data-aos-delay="900"
         >
-          <div class="img-glow-bg"></div>
+          <div class="portrait-frame"></div>
           <img
             src="assets/images/fareed-picture.webp"
             alt="Fareed Ul Haq - Front-End Developer"
-            class="hero-img"
+            class="portrait-img"
             width="320"
             height="320"
             fetchpriority="high"
           />
         </div>
 
-        <div class="custom-shape-divider-bottom-1716734170" aria-hidden="true"></div>
+        <div class="hero-horizon-line" aria-hidden="true"></div>
       </section>
 
-      <!-- ============================================================
-                          ABOUT SECTION
-         ============================================================ -->
+      <!-- About Section -->
       <section class="about-section" id="about-section">
-        <div class="about-shell">
-          <h2 class="main-heading" data-aos="fade-up">About</h2>
-          <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+        <div class="about-container">
+          <h2 class="section-title" data-aos="fade-up">About</h2>
 
-          <div class="about-panel" data-aos="fade-up" data-aos-delay="100">
-            <div class="about-left">
-              <div class="about-header-block">
-                <h3 class="about-headline">
-                  <span>Front-End Developer</span>
-                </h3>
-              </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-bio">
+              <h3 class="about-role-title">
+                <span>Front-End Developer</span>
+              </h3>
 
-              <p class="about-copy">
+              <p class="about-description">
                 I build fast, responsive websites with clean layouts and smooth interactions across mobile, tablet, and desktop.
               </p>
 
-              <p class="about-copy">
+              <p class="about-description">
                 My core toolkit includes <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>jQuery</span>, and <span>Bootstrap</span>, backed by <span>Git</span> and <span>GitHub</span> for structured, maintainable code.
               </p>
             </div>
 
-            <div class="about-right">
-              <span class="about-services-label">What I Build</span>
+            <div class="about-services">
+              <span class="services-label">What I Build</span>
 
-              <div class="service-list">
+              <div class="services-list">
                 <div class="service-item">
-                  <div class="focus-icon" aria-hidden="true">
+                  <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                       <line x1="3" y1="9" x2="21" y2="9"></line>
                       <line x1="9" y1="21" x2="9" y2="9"></line>
                     </svg>
                   </div>
-                  <div class="focus-info">
+                  <div class="service-details">
                     <h4>Landing Pages</h4>
                     <p>Fast, focused pages for products, launches, and personal brands.</p>
                   </div>
                 </div>
 
                 <div class="service-item">
-                  <div class="focus-icon" aria-hidden="true">
+                  <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="12" cy="12" r="10"></circle>
                       <line x1="2" y1="12" x2="22" y2="12"></line>
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                     </svg>
                   </div>
-                  <div class="focus-info">
+                  <div class="service-details">
                     <h4>Business Websites</h4>
                     <p>Multi-page sites for local brands, menus, and storefront layouts.</p>
                   </div>
                 </div>
 
                 <div class="service-item">
-                  <div class="focus-icon" aria-hidden="true">
+                  <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                       <polyline points="2 17 12 22 22 17"></polyline>
                       <polyline points="2 12 12 17 22 12"></polyline>
                     </svg>
                   </div>
-                  <div class="focus-info">
+                  <div class="service-details">
                     <h4>Design to Code</h4>
                     <p>Turning UI mockups into accurate, interactive web interfaces.</p>
                   </div>
@@ -265,9 +257,9 @@
               </div>
             </div>
 
-            <div class="about-availability">
-              <div class="availability-content">
-                <span class="status-dot" aria-hidden="true"></span>
+            <div class="availability-banner">
+              <div class="availability-text">
+                <span class="status-indicator" aria-hidden="true"></span>
                 <span>Open to front-end developer roles and freelance projects</span>
               </div>
             </div>
@@ -275,19 +267,16 @@
         </div>
       </section>
 
-      <!-- ============================================================
-                          EDUCATION SECTION
-         ============================================================ -->
+      <!-- Education Section -->
       <section class="education-section" id="education-section">
-        <h2 class="main-heading" data-aos="fade-up">Education</h2>
-        <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
 
-        <div class="timeline-container">
+        <div class="education-timeline">
           <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="timeline-icon">
+            <div class="timeline-badge">
               <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
             </div>
-            <div class="timeline-content glass-card">
+            <div class="timeline-card">
               <div class="timeline-header">
                 <h3 class="timeline-title">
                   Advanced Diploma in Software Engineering (ADSE)
@@ -304,10 +293,10 @@
           </article>
 
           <article class="timeline-item" data-aos="fade-up" data-aos-delay="220">
-            <div class="timeline-icon">
+            <div class="timeline-badge">
               <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
             </div>
-            <div class="timeline-content glass-card">
+            <div class="timeline-card">
               <div class="timeline-header">
                 <h3 class="timeline-title">
                   Diploma of Associate Engineering (DAE)
@@ -321,79 +310,76 @@
         </div>
       </section>
 
-      <!-- ============================================================
-                          SKILLS SECTION
-         ============================================================ -->
-      <section class="skillset-section" id="skillset-section">
-        <h2 class="main-heading" data-aos="fade-up">Skills</h2>
-        <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+      <!-- Skills Section -->
+      <section class="skills-section" id="skills-section">
+        <h2 class="section-title" data-aos="fade-up">Skills</h2>
 
-        <div class="container-skillset">
-          <div class="skill" data-aos="fade-up" data-aos-delay="50">
-            <div class="title-card">
-              <div class="title-overlay" id="html-overlay"></div>
-              <div class="title-circle" id="html-circle">
-                <i class="fa-brands fa-html5 html" aria-hidden="true"></i>
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--html"></div>
+              <div class="skill-circle skill-circle--html">
+                <i class="fa-brands fa-html5 skill-icon skill-icon--html" aria-hidden="true"></i>
                 <p>HTML</p>
               </div>
             </div>
           </div>
 
-          <div class="skill" data-aos="fade-up" data-aos-delay="120">
-            <div class="title-card">
-              <div class="title-overlay" id="css-overlay"></div>
-              <div class="title-circle" id="css-circle">
-                <i class="fa-brands fa-css3-alt css" aria-hidden="true"></i>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="120">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--css"></div>
+              <div class="skill-circle skill-circle--css">
+                <i class="fa-brands fa-css3-alt skill-icon skill-icon--css" aria-hidden="true"></i>
                 <p>CSS</p>
               </div>
             </div>
           </div>
 
-          <div class="skill" data-aos="fade-up" data-aos-delay="190">
-            <div class="title-card">
-              <div class="title-overlay" id="javascript-overlay"></div>
-              <div class="title-circle" id="javascript-circle">
-                <i class="fa-brands fa-js javascript" aria-hidden="true"></i>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="190">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--js"></div>
+              <div class="skill-circle skill-circle--js">
+                <i class="fa-brands fa-js skill-icon skill-icon--js" aria-hidden="true"></i>
                 <p>JavaScript</p>
               </div>
             </div>
           </div>
 
-          <div class="skill" data-aos="fade-up" data-aos-delay="260">
-            <div class="title-card">
-              <div class="title-overlay" id="jquery-overlay"></div>
-              <div class="title-circle" id="jquery-circle">
-                <i class="devicon-jquery-plain jquery" aria-hidden="true"></i>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="260">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--jquery"></div>
+              <div class="skill-circle skill-circle--jquery">
+                <i class="devicon-jquery-plain skill-icon skill-icon--jquery" aria-hidden="true"></i>
                 <p>jQuery</p>
               </div>
             </div>
           </div>
 
-          <div class="skill" data-aos="fade-up" data-aos-delay="330">
-            <div class="title-card">
-              <div class="title-overlay" id="bootstrap-overlay"></div>
-              <div class="title-circle" id="bootstrap-circle">
-                <i class="fa-brands fa-bootstrap bootstrap" aria-hidden="true"></i>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="330">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--bootstrap"></div>
+              <div class="skill-circle skill-circle--bootstrap">
+                <i class="fa-brands fa-bootstrap skill-icon skill-icon--bootstrap" aria-hidden="true"></i>
                 <p>Bootstrap</p>
               </div>
             </div>
           </div>
 
-          <div class="skill" data-aos="fade-up" data-aos-delay="400">
-            <div class="title-card">
-              <div class="title-overlay" id="git-overlay"></div>
-              <div class="title-circle" id="git-circle">
-                <i class="fa-brands fa-git-alt git" aria-hidden="true"></i>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--git"></div>
+              <div class="skill-circle skill-circle--git">
+                <i class="fa-brands fa-git-alt skill-icon skill-icon--git" aria-hidden="true"></i>
                 <p>Git</p>
               </div>
             </div>
           </div>
 
-          <div class="skill" data-aos="fade-up" data-aos-delay="470">
-            <div class="title-card">
-              <div class="title-overlay" id="github-overlay"></div>
-              <div class="title-circle" id="github-circle">
-                <i class="fa-brands fa-github github" aria-hidden="true"></i>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="470">
+            <div class="skill-orb">
+              <div class="skill-glow skill-glow--github"></div>
+              <div class="skill-circle skill-circle--github">
+                <i class="fa-brands fa-github skill-icon skill-icon--github" aria-hidden="true"></i>
                 <p>GitHub</p>
               </div>
             </div>
@@ -401,35 +387,29 @@
         </div>
       </section>
 
-     <!-- ============================================================
-                          PROJECTS SECTION
-         ============================================================ -->
-      <!-- ============================================================
-                          PROJECTS SECTION
-         ============================================================ -->
+      <!-- Projects Section -->
       <section class="projects-section" id="projects-section">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
+        <div class="ambient-orb ambient-orb--left"></div>
+        <div class="ambient-orb ambient-orb--right"></div>
 
         <div class="projects-container">
-          <h2 class="main-heading" data-aos="fade-up">Projects</h2>
-          <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
+          <h2 class="section-title" data-aos="fade-up">Projects</h2>
 
-          <div class="slider-wrapper">
-            <div class="projects-grid" id="projectSlider">
-              <!-- CARD 01: WANDERLUX -->
+          <div class="projects-carousel">
+            <div class="projects-track" id="projects-track">
+              <!-- Project 01: WanderLux -->
               <article class="project-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="project-browser">
+                <div class="browser-bar">
                   <div class="browser-dots">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
+                    <span class="browser-dot browser-dot--red"></span>
+                    <span class="browser-dot browser-dot--yellow"></span>
+                    <span class="browser-dot browser-dot--green"></span>
                   </div>
                   <a
                     href="https://fareedulhaqyousafzai.github.io/WanderLux/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="browser-url"
+                    class="browser-address"
                     title="Open Live Website"
                   >
                     <i class="fa-solid fa-globe" aria-hidden="true"></i>
@@ -437,51 +417,51 @@
                   </a>
                 </div>
 
-                <div class="project-media">
+                <div class="project-preview">
                   <img
                     src="assets/images/WanderLux.webp"
                     alt="WanderLux Travel Website"
                     loading="lazy"
                   />
-                  <div class="media-fade"></div>
+                  <div class="preview-fade"></div>
                 </div>
 
-                <div class="project-body">
-                  <div class="project-title-row">
+                <div class="project-content">
+                  <div class="project-header">
                     <h3>WanderLux</h3>
-                    <span class="project-cat-badge">Travel & Tourism</span>
+                    <span class="project-category">Travel & Tourism</span>
                   </div>
 
                   <div class="project-tabs" role="tablist">
-                    <button type="button" class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
-                    <button type="button" class="tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
-                    <button type="button" class="tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
+                    <button type="button" class="project-tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                    <button type="button" class="project-tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
+                    <button type="button" class="project-tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
                   </div>
 
-                  <div class="tab-content-box">
-                    <p class="tab-pane active" data-pane="overview">
+                  <div class="project-tab-panels">
+                    <p class="project-tab-pane active" data-pane="overview">
                       A responsive luxury travel landing page that replaces cluttered agency layouts with a clean, destination-focused UI built to inspire bookings.
                     </p>
-                    <p class="tab-pane" data-pane="role">
+                    <p class="project-tab-pane" data-pane="role">
                       Built the complete frontend, structured the page layout, styled the interface, added JS interactivity, and ensured smooth responsiveness.
                     </p>
-                    <p class="tab-pane" data-pane="value">
+                    <p class="project-tab-pane" data-pane="value">
                       Helps travel businesses present destinations professionally, elevate brand trust, and encourage visitors to explore tour packages.
                     </p>
                   </div>
 
-                  <div class="project-tags">
-                    <span><i class="fa-brands fa-html5" style="color: #e34c26;" aria-hidden="true"></i> HTML5</span>
-                    <span><i class="fa-brands fa-css3-alt" style="color: #264de4;" aria-hidden="true"></i> CSS3</span>
-                    <span><i class="fa-brands fa-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript</span>
+                  <div class="project-tech-list">
+                    <span class="tech-tag"><i class="fa-brands fa-html5 tech-icon tech-icon--html" aria-hidden="true"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fa-brands fa-css3-alt tech-icon tech-icon--css" aria-hidden="true"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fa-brands fa-js tech-icon tech-icon--js" aria-hidden="true"></i> JavaScript</span>
                   </div>
 
-                  <div class="project-actions">
+                  <div class="project-links">
                     <a
                       href="https://fareedulhaqyousafzai.github.io/WanderLux/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn-live"
+                      class="project-btn-live"
                     >
                       <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
                     </a>
@@ -489,7 +469,7 @@
                       href="https://github.com/fareedulhaqyousafzai/WanderLux"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn-code"
+                      class="project-btn-code"
                     >
                       <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
                     </a>
@@ -497,19 +477,19 @@
                 </div>
               </article>
 
-              <!-- CARD 02: BAZAAR -->
+              <!-- Project 02: Bazaar -->
               <article class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-browser">
+                <div class="browser-bar">
                   <div class="browser-dots">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
+                    <span class="browser-dot browser-dot--red"></span>
+                    <span class="browser-dot browser-dot--yellow"></span>
+                    <span class="browser-dot browser-dot--green"></span>
                   </div>
                   <a
                     href="https://fareedulhaqyousafzai.github.io/Bazaar/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="browser-url"
+                    class="browser-address"
                     title="Open Live Website"
                   >
                     <i class="fa-solid fa-globe" aria-hidden="true"></i>
@@ -517,51 +497,51 @@
                   </a>
                 </div>
 
-                <div class="project-media">
+                <div class="project-preview">
                   <img
                     src="assets/images/Bazaar.webp"
                     alt="Bazaar E-Commerce Website"
                     loading="lazy"
                   />
-                  <div class="media-fade"></div>
+                  <div class="preview-fade"></div>
                 </div>
 
-                <div class="project-body">
-                  <div class="project-title-row">
+                <div class="project-content">
+                  <div class="project-header">
                     <h3>Bazaar</h3>
-                    <span class="project-cat-badge">E-Commerce Store</span>
+                    <span class="project-category">E-Commerce Store</span>
                   </div>
 
                   <div class="project-tabs" role="tablist">
-                    <button type="button" class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
-                    <button type="button" class="tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
-                    <button type="button" class="tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
+                    <button type="button" class="project-tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                    <button type="button" class="project-tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
+                    <button type="button" class="project-tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
                   </div>
 
-                  <div class="tab-content-box">
-                    <p class="tab-pane active" data-pane="overview">
+                  <div class="project-tab-panels">
+                    <p class="project-tab-pane active" data-pane="overview">
                       A structured e-commerce storefront across fashion, electronics, and home living, removing catalog clutter so shoppers browse effortlessly.
                     </p>
-                    <p class="tab-pane" data-pane="role">
+                    <p class="project-tab-pane" data-pane="role">
                       Designed and coded the storefront frontend, organized multi-category product grids, and ensured consistent responsive behavior.
                     </p>
-                    <p class="tab-pane" data-pane="value">
+                    <p class="project-tab-pane" data-pane="value">
                       Gives retail brands a clear, modern storefront that highlights products neatly and makes online discovery fast and user-friendly.
                     </p>
                   </div>
 
-                  <div class="project-tags">
-                    <span><i class="fa-brands fa-html5" style="color: #e34c26;" aria-hidden="true"></i> HTML5</span>
-                    <span><i class="fa-brands fa-css3-alt" style="color: #264de4;" aria-hidden="true"></i> CSS3</span>
-                    <span><i class="fa-brands fa-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript</span>
+                  <div class="project-tech-list">
+                    <span class="tech-tag"><i class="fa-brands fa-html5 tech-icon tech-icon--html" aria-hidden="true"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fa-brands fa-css3-alt tech-icon tech-icon--css" aria-hidden="true"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fa-brands fa-js tech-icon tech-icon--js" aria-hidden="true"></i> JavaScript</span>
                   </div>
 
-                  <div class="project-actions">
+                  <div class="project-links">
                     <a
                       href="https://fareedulhaqyousafzai.github.io/Bazaar/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn-live"
+                      class="project-btn-live"
                     >
                       <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
                     </a>
@@ -569,7 +549,7 @@
                       href="https://github.com/fareedulhaqyousafzai/Bazaar"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn-code"
+                      class="project-btn-code"
                     >
                       <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
                     </a>
@@ -577,19 +557,19 @@
                 </div>
               </article>
 
-              <!-- CARD 03: ZAIQA PASAND -->
+              <!-- Project 03: Zaiqa Pasand -->
               <article class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-browser">
+                <div class="browser-bar">
                   <div class="browser-dots">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
+                    <span class="browser-dot browser-dot--red"></span>
+                    <span class="browser-dot browser-dot--yellow"></span>
+                    <span class="browser-dot browser-dot--green"></span>
                   </div>
                   <a
                     href="https://fareedulhaqyousafzai.github.io/ZaiqaPasand/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="browser-url"
+                    class="browser-address"
                     title="Open Live Website"
                   >
                     <i class="fa-solid fa-globe" aria-hidden="true"></i>
@@ -597,52 +577,52 @@
                   </a>
                 </div>
 
-                <div class="project-media">
+                <div class="project-preview">
                   <img
                     src="assets/images/ZaiqaPasand.webp"
                     alt="Zaiqa Pasand Restaurant Website"
                     loading="lazy"
                   />
-                  <div class="media-fade"></div>
+                  <div class="preview-fade"></div>
                 </div>
 
-                <div class="project-body">
-                  <div class="project-title-row">
+                <div class="project-content">
+                  <div class="project-header">
                     <h3>Zaiqa Pasand</h3>
-                    <span class="project-cat-badge">Restaurant & Menu</span>
+                    <span class="project-category">Restaurant & Menu</span>
                   </div>
 
                   <div class="project-tabs" role="tablist">
-                    <button type="button" class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
-                    <button type="button" class="tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
-                    <button type="button" class="tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
+                    <button type="button" class="project-tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                    <button type="button" class="project-tab-btn" data-tab="role" role="tab" aria-selected="false">My Role</button>
+                    <button type="button" class="project-tab-btn" data-tab="value" role="tab" aria-selected="false">Client Value</button>
                   </div>
 
-                  <div class="tab-content-box">
-                    <p class="tab-pane active" data-pane="overview">
+                  <div class="project-tab-panels">
+                    <p class="project-tab-pane active" data-pane="overview">
                       A modern restaurant website with an organized digital menu and brand story, helping diners discover signature dishes and categories fast.
                     </p>
-                    <p class="tab-pane" data-pane="role">
+                    <p class="project-tab-pane" data-pane="role">
                       Built the responsive landing layout, structured menu sections, and styled the full restaurant UI using Bootstrap and custom CSS.
                     </p>
-                    <p class="tab-pane" data-pane="value">
+                    <p class="project-tab-pane" data-pane="value">
                       Helps restaurants showcase food offerings professionally, simplify menu browsing on mobile, and build a strong online identity.
                     </p>
                   </div>
 
-                  <div class="project-tags">
-                    <span><i class="fa-brands fa-html5" style="color: #e34c26;" aria-hidden="true"></i> HTML5</span>
-                    <span><i class="fa-brands fa-css3-alt" style="color: #264de4;" aria-hidden="true"></i> CSS3</span>
-                    <span><i class="fa-brands fa-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript</span>
-                    <span><i class="fa-brands fa-bootstrap" style="color: #7952b3;" aria-hidden="true"></i> Bootstrap</span>
+                  <div class="project-tech-list">
+                    <span class="tech-tag"><i class="fa-brands fa-html5 tech-icon tech-icon--html" aria-hidden="true"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fa-brands fa-css3-alt tech-icon tech-icon--css" aria-hidden="true"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fa-brands fa-js tech-icon tech-icon--js" aria-hidden="true"></i> JavaScript</span>
+                    <span class="tech-tag"><i class="fa-brands fa-bootstrap tech-icon tech-icon--bootstrap" aria-hidden="true"></i> Bootstrap</span>
                   </div>
 
-                  <div class="project-actions">
+                  <div class="project-links">
                     <a
                       href="https://fareedulhaqyousafzai.github.io/ZaiqaPasand/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn-live"
+                      class="project-btn-live"
                     >
                       <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
                     </a>
@@ -650,7 +630,7 @@
                       href="https://github.com/fareedulhaqyousafzai/ZaiqaPasand"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn-code"
+                      class="project-btn-code"
                     >
                       <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
                     </a>
@@ -660,50 +640,47 @@
             </div>
           </div>
 
-          <div class="slider-controls">
+          <div class="carousel-controls">
             <button
               type="button"
-              class="slider-btn left-btn"
-              id="slideLeft"
+              class="carousel-btn"
+              id="slide-prev"
               aria-label="Previous Project"
             >
               <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
             </button>
 
-            <div class="slider-dots" id="sliderDots" aria-label="Project Slides">
-              <button type="button" class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
-              <button type="button" class="slider-dot" data-index="1" aria-label="Slide 2"></button>
-              <button type="button" class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+            <div class="carousel-dots" aria-label="Project Slides">
+              <button type="button" class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
             </div>
 
             <button
               type="button"
-              class="slider-btn right-btn"
-              id="slideRight"
+              class="carousel-btn"
+              id="slide-next"
               aria-label="Next Project"
             >
               <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </button>
           </div>
 
-          <p class="slider-hint">Swipe to explore my latest creative work</p>
+          <p class="carousel-hint">Swipe to explore my latest creative work</p>
         </div>
       </section>
-      
-         <!-- ============================================================
-                          CONTACT SECTION
-         ============================================================ -->
-      <section class="contact-section" id="contact-section">
-        <h2 class="main-heading" data-aos="fade-up">Let's Connect</h2>
-        <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
 
-        <div class="contact-container">
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact-section">
+        <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
+
+        <div class="contact-grid">
           <div data-aos="fade-up" data-aos-delay="100">
             <a
               href="https://wa.me/923306415111"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card direct-whatsapp"
+              class="contact-card contact-card--whatsapp"
               aria-label="WhatsApp"
             >
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -714,7 +691,7 @@
           <div data-aos="fade-up" data-aos-delay="180">
             <a
               href="mailto:fareedulhaqyousafzai@gmail.com"
-              class="contact-card direct-email"
+              class="contact-card contact-card--email"
               aria-label="Email Address"
             >
               <i class="fa-regular fa-envelope" aria-hidden="true"></i>
@@ -727,7 +704,7 @@
               href="https://github.com/fareedulhaqyousafzai"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card social-github"
+              class="contact-card contact-card--github"
               aria-label="GitHub Profile"
             >
               <i class="fa-brands fa-github" aria-hidden="true"></i>
@@ -740,7 +717,7 @@
               href="https://www.linkedin.com/in/fareedulhaqyousafzai/"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card social-linkedin"
+              class="contact-card contact-card--linkedin"
               aria-label="LinkedIn Profile"
             >
               <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
@@ -749,7 +726,7 @@
           </div>
 
           <div data-aos="fade-up" data-aos-delay="420">
-            <div class="contact-card location-card">
+            <div class="contact-card contact-card--location">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
               <span>Karachi, Pakistan</span>
             </div>
@@ -758,13 +735,11 @@
       </section>
     </main>
 
-    <!-- ============================================================
-                        FOOTER
-       ============================================================ -->
-    <footer class="footer-section">
+    <!-- Footer -->
+    <footer class="footer">
       <a
-        href="#main-section"
-        class="scroll-top"
+        href="#hero-section"
+        class="scroll-top-btn"
         title="Go to top"
         data-aos="zoom-in"
         data-aos-offset="50"
@@ -774,20 +749,20 @@
       </a>
 
       <div class="footer-content" data-aos="fade-up" data-aos-offset="50">
-        <p class="footer-para">
+        <p class="footer-copyright">
           &copy; <span id="current-year"></span>
-          <span class="footer-logo">Fareed<span class="logo-dot">.</span></span>
+          <span class="footer-brand">Fareed<span class="brand-dot">.</span></span>
           All Rights Reserved.
         </p>
-        <p class="footer-built">
+        <p class="footer-tagline">
           Crafted with
-          <i class="fa-solid fa-heart beating-heart" aria-hidden="true"></i> &amp;
-          <i class="fa-solid fa-mug-hot steaming-mug" aria-hidden="true"></i>
+          <i class="fa-solid fa-heart heart-icon" aria-hidden="true"></i> &amp;
+          <i class="fa-solid fa-mug-hot coffee-icon" aria-hidden="true"></i>
         </p>
       </div>
     </footer>
 
-    <!-- External Scripts -->
+    <!-- Scripts -->
     <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script defer src="myscripts.min.js"></script>
   </body>
