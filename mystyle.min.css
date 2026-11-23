@@ -3980,6 +3980,28 @@ body.light-mode .scroll-top:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(16, 149, 213, 0.14);
+  }
+
+  .project-card:hover {
+    transform: none;
+    border-color: rgba(16, 149, 213, 0.45);
+    box-shadow: 0 8px 22px rgba(16, 149, 213, 0.26);
+  }
+
+  body.light-mode .project-card {
+    box-shadow: 0 6px 16px rgba(16, 149, 213, 0.1);
+  }
+
+  body.light-mode .project-card:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(16, 149, 213, 0.2);
+  }
   .about-section,
 .education-section,
 .skillset-section,
