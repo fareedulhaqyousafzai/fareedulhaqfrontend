@@ -4011,3 +4011,49 @@ body.light-mode .scroll-top:hover {
   overflow-x: clip;
 }
 }
+
+/* =========================================================
+   UNIFIED BRAND BLUE SHADOW (DESKTOP + MOBILE — ALL SECTIONS)
+========================================================= */
+.glass-card,
+.about-panel,
+.project-card,
+.contact-card {
+  box-shadow: 0 8px 24px rgba(16, 149, 213, 0.14);
+}
+
+.glass-card:hover,
+.about-panel:hover,
+.project-card:hover,
+.contact-card:hover {
+  box-shadow: 0 12px 30px rgba(16, 149, 213, 0.24);
+}
+
+.title-card {
+  box-shadow: 0 6px 20px rgba(16, 149, 213, 0.16);
+}
+
+/* Light Mode (Desktop + Mobile) */
+body.light-mode .glass-card,
+body.light-mode .about-panel,
+body.light-mode .project-card,
+body.light-mode .contact-card {
+  box-shadow: 0 8px 22px rgba(16, 149, 213, 0.1);
+}
+
+body.light-mode .glass-card:hover,
+body.light-mode .about-panel:hover,
+body.light-mode .project-card:hover,
+body.light-mode .contact-card:hover {
+  box-shadow: 0 12px 28px rgba(16, 149, 213, 0.18);
+}
+
+/* Mobile Tap/Hover Par Card Upar Na Uchle */
+@media (max-width: 768px) {
+  .glass-card:hover,
+  .about-panel:hover,
+  .project-card:hover,
+  .contact-card:hover {
+    transform: none;
+  }
+}
