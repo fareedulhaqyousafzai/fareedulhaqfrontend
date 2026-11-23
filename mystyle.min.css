@@ -122,6 +122,7 @@
     #38bdf8 58%,
     rgba(2, 132, 199, 0.8) 100%
   );
+
   --scrollbar-thumb-hover: linear-gradient(
     180deg,
     #1095d5 0%,
@@ -149,6 +150,7 @@
     0 0 24px rgba(56, 189, 248, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
   --brand-shadow-sm: 0 6px 20px rgba(16, 149, 213, 0.16);
+  
 
   /* Technology, Contact & UI Status Colors */
   --color-html: #e34f26;
@@ -202,6 +204,7 @@ body.light-mode {
   --site-bg-mid: #eff6ff;
   --site-bg-bottom: #e6f2fc;
   --site-grid-line: rgba(16, 149, 213, 0.06);
+
 
   /* Headings & Preloader */
   --heading-color: #0f172a;
@@ -281,6 +284,31 @@ body.light-mode {
     0 14px 34px rgba(16, 149, 213, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 1);
   --brand-shadow-sm: 0 6px 18px rgba(16, 149, 213, 0.13);
+
+
+  /* Custom Scrollbar */
+  --scrollbar-width: 14px;
+  --scrollbar-track: #081526;
+  --scrollbar-border: rgba(56, 189, 248, 0.14);
+  --scrollbar-thumb: linear-gradient(
+    180deg,
+    rgba(2, 132, 199, 0.8) 0%,
+    #38bdf8 42%,
+    #ffffff 50%,
+    #38bdf8 58%,
+    rgba(2, 132, 199, 0.8) 100%
+  );
+  --scrollbar-thumb-hover: linear-gradient(
+    180deg,
+    #1095d5 0%,
+    #7dd3fc 40%,
+    #ffffff 50%,
+    #7dd3fc 60%,
+    #1095d5 100%
+  );
+  /* Scrollbar */
+  --scrollbar-track: #f4f9ff;
+  --scrollbar-border: rgba(16, 149, 213, 0.25);
 }
 
 /* =========================================================
@@ -472,6 +500,152 @@ html.at-bottom::-webkit-scrollbar-button:single-button:vertical:increment {
   height: 0;
   border: none;
   background-image: none !important;
+}
+
+/* =========================================================
+   CUSTOM SCROLLBAR (ZERO DEAD SPACE + FLOATING EDGE ARROWS)
+========================================================= */
+/* =========================================================
+   CUSTOM OVERLAY SCROLLBAR (ARROWS INSIDE + ZERO DEAD SPACE)
+========================================================= */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.custom-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: var(--scrollbar-width);
+  background: var(--scrollbar-track);
+  border-left: 1px solid var(--scrollbar-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 998;
+  user-select: none;
+}
+
+/* Hide Custom Scrollbar While Preloader Is Active */
+html:has(.preloader:not(.hide)) .custom-scrollbar {
+  display: none;
+}
+
+.csb-arrow {
+  width: 100%;
+  height: 18px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: var(--accent-text);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.18s ease, opacity 0.18s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.csb-arrow:hover {
+  color: var(--text-primary);
+  background: rgba(16, 149, 213, 0.18);
+}
+
+/* Collapse Arrow & Space Completely at Top / Bottom */
+.custom-scrollbar.at-top .csb-arrow--up,
+.custom-scrollbar.at-bottom .csb-arrow--down {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.csb-track {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  cursor: pointer;
+}
+
+.csb-thumb {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 0;
+  min-height: 36px;
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+  cursor: grab;
+  transition: left 0.15s ease, right 0.15s ease, background 0.2s ease;
+}
+
+.csb-thumb:hover {
+  left: 2.5px;
+  right: 2.5px;
+  background: var(--scrollbar-thumb-hover);
+}
+
+.csb-thumb:active,
+.custom-scrollbar.is-dragging .csb-thumb {
+  left: 2.5px;
+  right: 2.5px;
+  background: var(--primary);
+  cursor: grabbing;
+}
+
+.csb-arrow {
+  width: 100%;
+  height: 18px;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--accent-text);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.custom-scrollbar.at-top .csb-arrow--up,
+.custom-scrollbar.at-bottom .csb-arrow--down {
+  display: none;
+}body.light-mode .custom-scrollbar,
+html:has(body.light-mode) .custom-scrollbar {
+  background: var(--scrollbar-track);
+  border-left: 1px solid var(--scrollbar-border);
+}
+
+body.light-mode .csb-arrow:hover,
+html:has(body.light-mode) .csb-arrow:hover {
+  color: var(--navy-core);
+  background: rgba(16, 149, 213, 0.14);
+}
+.custom-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--scrollbar-width);
+  height: 100dvh;
+  background: var(--scrollbar-track);
+  border-left: 1px solid var(--scrollbar-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  user-select: none;
+  touch-action: none;
 }
 /* =========================================================
    TYPOGRAPHY & SHARED SECTION HEADINGS
@@ -3703,5 +3877,20 @@ body.light-mode .footer-brand .brand-dot {
   .footer-tagline {
     font-size: 1.04rem;
     line-height: 1.4;
+  }
+  /* Mobile (<= 768px) Visible Custom Scrollbar */
+  .custom-scrollbar {
+    display: flex !important;
+    width: 10px !important;
+  }
+
+  .csb-arrow {
+    height: 14px;
+    font-size: 0.95rem;
+  }
+
+  .csb-thumb {
+    left: 2px;
+    right: 2px;
   }
 }
