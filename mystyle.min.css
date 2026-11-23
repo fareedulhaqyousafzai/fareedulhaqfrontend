@@ -2734,6 +2734,11 @@ body.light-mode .btn-code:hover i {
   color: #ffffff;
 }
 
+/* Desktop par slider controls hidden */
+.slider-btn,
+.slider-dots {
+  display: none;
+}
 /* =========================================
    CONTACT SECTION (ODD LEFT-LIT / EVEN RIGHT-LIT)
 ========================================= */
@@ -3637,6 +3642,163 @@ body.light-mode .scroll-top:hover {
     font-size: 1.05rem;
     letter-spacing: 0.08rem;
     white-space: nowrap;
+  }
+  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER) ---------- */
+  .projects-section {
+    height: auto;
+    min-height: auto;
+    padding: 4rem 3% 4.5rem;
+    scroll-margin-top: 64px;
+  }
+
+  .projects-section .header-divider {
+    margin-bottom: 2rem;
+  }
+
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 0 3.4rem;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1.6rem;
+    width: 100%;
+    padding: 0.4rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .projects-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ek Waqt Mein Sirf 1 Project Card */
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+    border-radius: 16px;
+  }
+
+  .project-media {
+    height: 165px;
+  }
+
+  .project-media::before {
+    display: none;
+  }
+
+  .project-body {
+    padding: 1.35rem 1.3rem 1.45rem;
+  }
+
+  .project-title-row h3 {
+    font-size: 1.6rem;
+  }
+
+  .project-cat-badge {
+    font-size: 0.92rem;
+    padding: 0.2rem 0.65rem;
+  }
+
+  .project-tabs {
+    gap: 0.4rem;
+  }
+
+  .tab-btn {
+    font-size: 1rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .tab-pane {
+    font-size: 1.12rem;
+    line-height: 1.45;
+  }
+
+  .project-tags span {
+    font-size: 0.96rem;
+    padding: 0.28rem 0.65rem;
+  }
+
+  .btn-live,
+  .btn-code {
+    padding: 0.85rem 0.6rem;
+    font-size: 1.05rem;
+  }
+
+  /* Left / Right Circular Arrow Buttons */
+  .slider-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--glass-bg-center) 85%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid #1095d5;
+    color: #38bdf8;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .left-btn {
+    left: 0;
+  }
+
+  .right-btn {
+    right: 0;
+  }
+
+  .slider-btn:active {
+    transform: translateY(-50%) scale(0.92);
+    background: rgba(16, 149, 213, 0.2);
+  }
+
+  /* Bottom 3 Pill Dots */
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.8rem;
+  }
+
+  .slider-dot {
+    width: 1.8rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  body.light-mode .slider-dot {
+    background: rgba(28, 53, 79, 0.25);
+  }
+
+  .slider-dot.active {
+    width: 4.2rem;
+    background: #1095d5;
+    box-shadow: 0 0 12px rgba(16, 149, 213, 0.55);
   }
 
 
