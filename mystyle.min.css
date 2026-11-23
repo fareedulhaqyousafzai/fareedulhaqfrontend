@@ -3643,24 +3643,24 @@ body.light-mode .scroll-top:hover {
     letter-spacing: 0.08rem;
     white-space: nowrap;
   }
-  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER) ---------- */
+  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER — FIXED) ---------- */
   .projects-section {
     height: auto;
     min-height: auto;
-    padding: 4rem 3% 4.5rem;
+    padding: 4rem 2% 4.5rem;
     scroll-margin-top: 64px;
   }
 
   .projects-section .header-divider {
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
   }
 
   .slider-wrapper {
     position: relative;
     width: 100%;
-    max-width: 390px;
+    max-width: 400px;
     margin: 0 auto;
-    padding: 0 3.4rem;
+    padding: 0 3.6rem;
   }
 
   .projects-grid {
@@ -3672,7 +3672,7 @@ body.light-mode .scroll-top:hover {
     scroll-behavior: smooth;
     gap: 1.6rem;
     width: 100%;
-    padding: 0.4rem 0;
+    padding: 1.2rem 0.2rem 1.8rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -3681,12 +3681,17 @@ body.light-mode .scroll-top:hover {
     display: none;
   }
 
-  /* Ek Waqt Mein Sirf 1 Project Card */
+  /* Ek Waqt Mein Sirf 1 Project Card + Clean Unclipped Shadow */
   .project-card {
     flex: 0 0 100%;
     min-width: 100%;
     scroll-snap-align: center;
     border-radius: 16px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+  }
+
+  body.light-mode .project-card {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
   }
 
   .project-media {
@@ -3735,7 +3740,7 @@ body.light-mode .scroll-top:hover {
     font-size: 1.05rem;
   }
 
-  /* Left / Right Circular Arrow Buttons */
+  /* Left / Right Circular Arrow Buttons (Clean Gap From Card) */
   .slider-btn {
     display: flex;
     justify-content: center;
@@ -3743,27 +3748,27 @@ body.light-mode .scroll-top:hover {
     position: absolute;
     top: 46%;
     transform: translateY(-50%);
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    background: color-mix(in srgb, var(--glass-bg-center) 85%, transparent);
+    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1.5px solid #1095d5;
-    color: #38bdf8;
-    font-size: 1.25rem;
+    color: #1095d5;
+    font-size: 1.15rem;
     cursor: pointer;
     z-index: 20;
-    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
     -webkit-tap-highlight-color: transparent;
   }
 
   .left-btn {
-    left: 0;
+    left: 0.2rem;
   }
 
   .right-btn {
-    right: 0;
+    right: 0.2rem;
   }
 
   .slider-btn:active {
@@ -3771,13 +3776,13 @@ body.light-mode .scroll-top:hover {
     background: rgba(16, 149, 213, 0.2);
   }
 
-  /* Bottom 3 Pill Dots */
+  /* Bottom 3 Pill Dots (Dark + Light Mode Active Blue Fixed) */
   .slider-dots {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    margin-top: 1.8rem;
+    margin-top: 0.8rem;
   }
 
   .slider-dot {
@@ -3792,16 +3797,16 @@ body.light-mode .scroll-top:hover {
   }
 
   body.light-mode .slider-dot {
-    background: rgba(28, 53, 79, 0.25);
+    background: rgba(28, 53, 79, 0.22);
   }
 
-  .slider-dot.active {
+  .slider-dot.active,
+  body.light-mode .slider-dot.active {
     width: 4.2rem;
     background: #1095d5;
-    box-shadow: 0 0 12px rgba(16, 149, 213, 0.55);
+    box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
   }
-
-
+  
   .about-section,
 .education-section,
 .skillset-section,
