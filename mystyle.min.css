@@ -3018,12 +3018,20 @@ body.light-mode .social-github:hover i {
   text-transform: none;
 }
 
+
 .footer-logo {
+  display: inline-block;
   color: #f8fafc;
   font-weight: 800;
   font-size: 1.18em;
   letter-spacing: 0.04rem;
   margin: 0 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.04);
 }
 
 .footer-logo .logo-dot {
@@ -3031,6 +3039,7 @@ body.light-mode .social-github:hover i {
   font-size: 1.2em;
   text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
 }
+
 
 .footer-built {
   margin: 0;
@@ -4032,18 +4041,5 @@ body.light-mode .scroll-top:hover {
     font-size: 1.04rem;
     line-height: 1.4;
   }
-  .footer-logo {
-  display: inline-block;
-  color: #f8fafc;
-  font-weight: 800;
-  font-size: 1.18em;
-  letter-spacing: 0.04rem;
-  margin: 0 3px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.footer-logo:hover {
-  transform: scale(1.04);
-}
+  
 }
