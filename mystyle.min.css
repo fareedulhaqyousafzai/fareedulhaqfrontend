@@ -110,7 +110,8 @@
   );
   --glow-bar-filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.85));
 
-  /* Custom Scrollbar */
+  /* Custom Scrollbar (14px Desktop + Dynamic Arrows) */
+  --scrollbar-width: 14px;
   --scrollbar-track: #081526;
   --scrollbar-border: rgba(56, 189, 248, 0.14);
   --scrollbar-thumb: linear-gradient(
@@ -129,6 +130,10 @@
     #7dd3fc 60%,
     #1095d5 100%
   );
+  --scrollbar-arrow-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 1.4 L8.8 6.6 H1.2 Z' fill='%2338bdf8' stroke='%2338bdf8' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --scrollbar-arrow-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 6.6 L8.8 1.4 H1.2 Z' fill='%2338bdf8' stroke='%2338bdf8' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --scrollbar-arrow-up-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 1.4 L8.8 6.6 H1.2 Z' fill='%23ffffff' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --scrollbar-arrow-down-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 6.6 L8.8 1.4 H1.2 Z' fill='%23ffffff' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
 
   /* Unified Brand Shadows */
   --brand-shadow:
@@ -258,6 +263,10 @@ body.light-mode {
     #0369a1 62%,
     #0284c7 100%
   );
+  --scrollbar-arrow-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 1.4 L8.8 6.6 H1.2 Z' fill='%230284c7' stroke='%230284c7' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --scrollbar-arrow-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 6.6 L8.8 1.4 H1.2 Z' fill='%230284c7' stroke='%230284c7' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --scrollbar-arrow-up-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 1.4 L8.8 6.6 H1.2 Z' fill='%230c2440' stroke='%230c2440' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --scrollbar-arrow-down-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M5 6.6 L8.8 1.4 H1.2 Z' fill='%230c2440' stroke='%230c2440' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E");
 
   /* Shadows */
   --brand-shadow:
@@ -335,11 +344,11 @@ body:has(.preloader:not(.hide)) {
 }
 
 /* =========================================================
-   CUSTOM SCROLLBAR
+   CUSTOM SCROLLBAR (14PX + DYNAMIC TOP/BOTTOM ARROWS)
 ========================================================= */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-button {
@@ -356,25 +365,61 @@ body:has(.preloader:not(.hide)) {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 999px;
-  border: 2px solid var(--scrollbar-track);
+  border: 3px solid var(--scrollbar-track);
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
-  border: 1.5px solid var(--scrollbar-track);
+  border: 2.5px solid var(--scrollbar-track);
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:active {
   background: var(--primary);
-  border: 1.5px solid var(--scrollbar-track);
+  border: 2.5px solid var(--scrollbar-track);
   background-clip: padding-box;
+}
+
+/* Top & Bottom Scrollbar Arrows */
+::-webkit-scrollbar-button:single-button:vertical:decrement,
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  display: block;
+  width: var(--scrollbar-width);
+  height: 16px;
+  background-color: var(--scrollbar-track);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 7px;
+  border-left: 1px solid var(--scrollbar-border);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: var(--scrollbar-arrow-up);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: var(--scrollbar-arrow-up-hover);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: var(--scrollbar-arrow-down);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: var(--scrollbar-arrow-down-hover);
+}
+
+/* Auto-Hide Top Arrow at Top & Bottom Arrow at Bottom */
+html.at-top::-webkit-scrollbar-button:single-button:vertical:decrement,
+html.at-bottom::-webkit-scrollbar-button:single-button:vertical:increment {
+  display: none;
+  height: 0;
 }
 
 @supports not selector(::-webkit-scrollbar) {
   html {
-    scrollbar-width: thin;
+    scrollbar-width: auto;
     scrollbar-color: var(--primary) var(--scrollbar-track);
   }
 }
@@ -2757,6 +2802,26 @@ body.light-mode .footer-brand .brand-dot {
    RESPONSIVE MOBILE LAYOUT (max-width: 768px)
 ========================================================= */
 @media (max-width: 768px) {
+  /* Mobile (<= 768px) Sleek Visible Scrollbar */
+  :root {
+    --scrollbar-width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-width: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:active {
+    border-width: 1.5px;
+  }
+
+  ::-webkit-scrollbar-button:single-button:vertical:decrement,
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 13px;
+    background-size: 7px 6px;
+  }
+
   /* Disable Hover Card Lifts On Touch Screens */
   .navbar:hover,
   .hero-card:hover,
