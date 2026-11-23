@@ -82,22 +82,27 @@
     rgba(11, 28, 52, 0.58) 100%
   );
 
-  /* Glass Borders, Blur & Shadows */
+  /* Glass Borders, Blur & Unified Brand Blue Shadows */
   --glass-blur: blur(18px) saturate(175%);
   --glass-border: rgba(125, 211, 252, 0.14);
   --glass-border-top: rgba(255, 255, 255, 0.24);
   --glass-border-hover: rgba(56, 189, 248, 0.45);
-  --glass-shadow:
-    0 20px 46px rgba(0, 0, 0, 0.42),
+
+  --brand-shadow:
+    0 10px 28px rgba(16, 149, 213, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  --glass-shadow-hover:
-    0 26px 56px rgba(0, 0, 0, 0.5),
-    0 0 28px rgba(56, 189, 248, 0.16),
+  --brand-shadow-hover:
+    0 14px 36px rgba(16, 149, 213, 0.28),
+    0 0 24px rgba(56, 189, 248, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  --brand-shadow-sm: 0 6px 20px rgba(16, 149, 213, 0.16);
+
+  --glass-shadow: var(--brand-shadow);
+  --glass-shadow-hover: var(--brand-shadow-hover);
 
   --b-shadow-main-color: 0px 5px 15px rgba(16, 149, 213, 0.4);
   --b-shadow-main-color-hover: 0px 8px 22px rgba(16, 149, 213, 0.65);
-  --b-shadow-black-color: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --b-shadow-black-color: 0 4px 15px rgba(16, 149, 213, 0.22);
 
   /* Brand Skill Colors */
   --color-html: #e34f26;
@@ -144,12 +149,17 @@ body.light-mode {
   --glass-border: rgba(16, 149, 213, 0.2);
   --glass-border-top: rgba(255, 255, 255, 1);
   --glass-border-hover: rgba(2, 132, 199, 0.45);
-  --glass-shadow:
-    0 16px 38px rgba(28, 53, 79, 0.09),
+
+  --brand-shadow:
+    0 10px 26px rgba(16, 149, 213, 0.11),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
-  --glass-shadow-hover:
-    0 22px 46px rgba(16, 149, 213, 0.18),
+  --brand-shadow-hover:
+    0 14px 34px rgba(16, 149, 213, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 1);
+  --brand-shadow-sm: 0 6px 18px rgba(16, 149, 213, 0.11);
+
+  --glass-shadow: var(--brand-shadow);
+  --glass-shadow-hover: var(--brand-shadow-hover);
 }
 
 /* =========================================
@@ -992,7 +1002,7 @@ body.light-mode .heading {
   background: var(--glass-inner-left);
   border: 1px solid rgba(56, 189, 248, 0.38);
   box-shadow:
-    0 8px 22px rgba(0, 0, 0, 0.28),
+    var(--brand-shadow-sm),
     inset 0 1px 0 rgba(255, 255, 255, 0.14);
   color: #f1f5f9;
 }
@@ -1040,7 +1050,7 @@ body.light-mode .content-section .secondary-btn {
   color: #1c354f;
   border-color: rgba(2, 132, 199, 0.35);
   box-shadow:
-    0 8px 20px rgba(28, 53, 79, 0.08),
+    var(--brand-shadow-sm),
     inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
@@ -1053,7 +1063,7 @@ body.light-mode .content-section .main-contact-btn:hover,
 body.light-mode .content-section .secondary-btn:hover {
   color: #ffffff;
   border-color: #1c354f;
-  box-shadow: 0 10px 24px rgba(28, 53, 79, 0.24);
+  box-shadow: 0 10px 24px rgba(16, 149, 213, 0.24);
 }
 
 /* Frosted Glass Portrait Container */
@@ -1122,7 +1132,7 @@ body.light-mode .img-glow-bg {
   object-position: top center;
   border-radius: 60% 40% 35% 65% / 58% 36% 64% 42%;
   border: 2px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+  box-shadow: var(--brand-shadow);
   transition: transform 0.35s ease, border-color 0.35s ease;
   animation: floatingBlob 8s ease-in-out infinite;
   transform: translateZ(0);
@@ -1130,7 +1140,7 @@ body.light-mode .img-glow-bg {
 
 body.light-mode .hero-img {
   border-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 14px 32px rgba(28, 53, 79, 0.16);
+  box-shadow: var(--brand-shadow);
 }
 
 .hero-img-container:hover .hero-img {
@@ -1196,6 +1206,18 @@ body.light-mode .custom-shape-divider-bottom-1716734170::after {
 }
 
 /* =========================================
+   UNCLIPPED SHADOW OVERFLOW ACROSS SECTIONS
+========================================= */
+.about-section,
+.education-section,
+.skillset-section,
+.projects-section,
+.contact-section {
+  overflow: visible;
+  overflow-x: clip;
+}
+
+/* =========================================
    ABOUT SECTION (2-COLUMN EDITORIAL GLASS)
 ========================================= */
 .about-section {
@@ -1207,7 +1229,6 @@ body.light-mode .custom-shape-divider-bottom-1716734170::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -1567,13 +1588,12 @@ body.light-mode .about-availability::after {
 ========================================= */
 .education-section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 6rem 5% 6.5rem;
   scroll-margin-top: 45px;
   background: transparent;
   position: relative;
   z-index: 1;
-  overflow: hidden;
 }
 
 .timeline-container {
@@ -1644,7 +1664,7 @@ body.light-mode .about-availability::after {
   z-index: 3;
   box-shadow:
     0 0 0 5px var(--site-bg-mid),
-    0 0 18px rgba(16, 149, 213, 0.2),
+    var(--brand-shadow-sm),
     inset 0 1px 1px rgba(255, 255, 255, 0.18);
   transition:
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -1795,7 +1815,7 @@ body.light-mode .timeline-icon {
   color: #0284c7;
   box-shadow:
     0 0 0 5px var(--site-bg-mid),
-    0 8px 18px rgba(16, 149, 213, 0.14);
+    var(--brand-shadow-sm);
 }
 
 body.light-mode .timeline-item:hover .timeline-icon {
@@ -1839,7 +1859,6 @@ body.light-mode .timeline-text {
   padding: 6rem 5% 6.5rem;
   scroll-margin-top: 45px;
   background: transparent;
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -2104,7 +2123,6 @@ body.light-mode .title-card:hover .github {
   scroll-margin-top: 45px;
   background: transparent;
   color: var(--font-color);
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -2699,7 +2717,7 @@ body.light-mode .project-tags span .fa-js {
   border-color: #ffffff;
   color: #1c354f;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 22px rgba(16, 149, 213, 0.25);
 }
 
 .btn-live:hover i,
@@ -2726,7 +2744,7 @@ body.light-mode .btn-code:hover {
   border-color: #1c354f;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(28, 53, 79, 0.22);
+  box-shadow: 0 8px 20px rgba(16, 149, 213, 0.22);
 }
 
 body.light-mode .btn-live:hover i,
@@ -2734,16 +2752,12 @@ body.light-mode .btn-code:hover i {
   color: #ffffff;
 }
 
-/* Desktop par slider controls hidden */
-.slider-btn,
-.slider-dots {
-  display: none;
-}
 /* Desktop par slider controls aur hint hidden */
 .slider-controls,
 .slider-hint {
   display: none;
 }
+
 /* =========================================
    CONTACT SECTION (ODD LEFT-LIT / EVEN RIGHT-LIT)
 ========================================= */
@@ -2753,7 +2767,6 @@ body.light-mode .btn-code:hover i {
   padding: 6.5rem 5% 8rem;
   scroll-margin-top: 45px;
   background: transparent;
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -2859,7 +2872,7 @@ body.light-mode .btn-code:hover i {
 /* Brand Hover Accents */
 .direct-whatsapp:hover {
   border-color: rgba(37, 211, 102, 0.55);
-  box-shadow: 0 20px 42px rgba(37, 211, 102, 0.16);
+  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.18);
 }
 
 .direct-whatsapp:hover i {
@@ -2871,7 +2884,7 @@ body.light-mode .btn-code:hover i {
 
 .direct-email:hover {
   border-color: rgba(234, 67, 53, 0.55);
-  box-shadow: 0 20px 42px rgba(234, 67, 53, 0.16);
+  box-shadow: 0 14px 34px rgba(234, 67, 53, 0.18);
 }
 
 .direct-email:hover i {
@@ -2883,7 +2896,7 @@ body.light-mode .btn-code:hover i {
 
 .social-github:hover {
   border-color: rgba(255, 255, 255, 0.38);
-  box-shadow: 0 20px 42px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 34px rgba(56, 189, 248, 0.18);
 }
 
 .social-github:hover i {
@@ -2895,7 +2908,7 @@ body.light-mode .btn-code:hover i {
 
 .social-linkedin:hover {
   border-color: rgba(10, 102, 194, 0.6);
-  box-shadow: 0 20px 42px rgba(10, 102, 194, 0.18);
+  box-shadow: 0 14px 34px rgba(10, 102, 194, 0.22);
 }
 
 .social-linkedin:hover i {
@@ -2929,7 +2942,7 @@ body.light-mode .btn-code:hover i {
 .location-card:hover {
   transform: translateY(-3px);
   border-color: rgba(239, 68, 68, 0.45);
-  box-shadow: 0 18px 36px rgba(239, 68, 68, 0.12);
+  box-shadow: 0 14px 32px rgba(239, 68, 68, 0.16);
 }
 
 .location-card:hover i {
@@ -2960,7 +2973,7 @@ body.light-mode .contact-card:hover span {
 
 body.light-mode .social-github:hover {
   border-color: rgba(24, 23, 23, 0.55);
-  box-shadow: 0 20px 42px rgba(24, 23, 23, 0.16);
+  box-shadow: 0 14px 32px rgba(16, 149, 213, 0.18);
 }
 
 body.light-mode .social-github:hover i {
@@ -2981,7 +2994,7 @@ body.light-mode .social-github:hover i {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-top: 1px solid var(--glass-border-top);
-  box-shadow: 0 -14px 36px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 -10px 30px rgba(16, 149, 213, 0.14);
   z-index: 2;
 }
 
@@ -3103,7 +3116,7 @@ body.light-mode .social-github:hover i {
   border: 1px solid rgba(56, 189, 248, 0.48);
   box-shadow:
     0 0 0 5px var(--site-bg-bottom),
-    0 8px 20px rgba(16, 149, 213, 0.25),
+    var(--brand-shadow-sm),
     inset 0 1px 1px rgba(255, 255, 255, 0.2);
   z-index: 10;
   transition:
@@ -3125,7 +3138,7 @@ body.light-mode .social-github:hover i {
 }
 
 body.light-mode .footer-section {
-  box-shadow: 0 -10px 28px rgba(28, 53, 79, 0.06);
+  box-shadow: 0 -8px 24px rgba(16, 149, 213, 0.1);
 }
 
 body.light-mode .footer-section::before {
@@ -3152,7 +3165,7 @@ body.light-mode .scroll-top {
   color: #0284c7;
   box-shadow:
     0 0 0 5px var(--site-bg-bottom),
-    0 8px 18px rgba(16, 149, 213, 0.16);
+    var(--brand-shadow-sm);
 }
 
 body.light-mode .scroll-top:hover {
@@ -3160,10 +3173,21 @@ body.light-mode .scroll-top:hover {
   border-color: #0284c7;
   color: #ffffff;
 }
+
 /* =======================================================
-   MOBILE (max-width: 768px) — LOADER, NAVBAR & HERO
+   MOBILE (max-width: 768px) — ALL SECTIONS OPTIMIZED
 ======================================================= */
 @media (max-width: 768px) {
+  /* Disable Hover Card Lift On Touch Devices */
+  .container-nav:hover,
+  .content-section:hover,
+  .about-panel:hover,
+  .timeline-item:hover .timeline-content.glass-card,
+  .project-card:hover,
+  .contact-card:hover {
+    transform: none;
+  }
+
   /* ---------- LOADER / PRELOADER ---------- */
   .loader-inner {
     gap: 2.4rem;
@@ -3267,7 +3291,7 @@ body.light-mode .scroll-top:hover {
     box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.65);
   }
 
-  /* Tight Smoked-Glass Dropdown (No Extra Side Space) */
+  /* Tight Smoked-Glass Dropdown */
   nav {
     position: absolute;
     right: 0;
@@ -3321,7 +3345,6 @@ body.light-mode .scroll-top:hover {
     gap: 2.2rem;
   }
 
-  /* Prominent Portrait */
   .hero-img-container {
     width: clamp(255px, 70vw, 290px);
     height: clamp(255px, 70vw, 290px);
@@ -3332,7 +3355,6 @@ body.light-mode .scroll-top:hover {
     height: 90%;
   }
 
-  /* Compact Balanced Content Card */
   .content-section {
     flex: none;
     width: 90%;
@@ -3388,7 +3410,8 @@ body.light-mode .scroll-top:hover {
   .custom-shape-divider-bottom-1716734170::after {
     width: 72%;
   }
-/* ---------- ABOUT SECTION (HERO-MATCHED WIDTH) ---------- */
+
+  /* ---------- ABOUT SECTION (HERO-MATCHED WIDTH) ---------- */
   .about-section {
     padding: 3.6rem 4% 4rem;
     scroll-margin-top: 64px;
@@ -3501,13 +3524,15 @@ body.light-mode .scroll-top:hover {
     width: 6px;
     height: 6px;
   }
+
   /* ---------- EDUCATION SECTION (EQUAL-HEIGHT 768px MOBILE) ---------- */
   .education-section {
+    height: auto;
+    min-height: auto;
     padding: 4rem 4% 4.5rem;
     scroll-margin-top: 64px;
-    height: auto;
   }
- 
+
   .education-section .header-divider {
     margin-bottom: 2rem;
   }
@@ -3540,10 +3565,9 @@ body.light-mode .scroll-top:hover {
     font-size: 1.2rem;
     box-shadow:
       0 0 0 4px var(--site-bg-mid),
-      0 0 14px rgba(16, 149, 213, 0.2);
+      var(--brand-shadow-sm);
   }
 
-  /* Equal Height + Clean Vertical Centering */
   .timeline-content.glass-card {
     min-height: 11.4rem;
     padding: 1.35rem 1.3rem;
@@ -3551,10 +3575,6 @@ body.light-mode .scroll-top:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .timeline-item:hover .timeline-content.glass-card {
-    transform: none;
   }
 
   .timeline-header {
@@ -3587,6 +3607,7 @@ body.light-mode .scroll-top:hover {
     font-size: 1.02rem;
     line-height: 1.38;
   }
+
   /* ---------- SKILLS SECTION (768px MOBILE — 3+3+1 GRID) ---------- */
   .skillset-section {
     height: auto;
@@ -3595,6 +3616,7 @@ body.light-mode .scroll-top:hover {
     margin-bottom: 0;
     scroll-margin-top: 64px;
   }
+
   .skillset-section .header-divider {
     margin-bottom: 2.4rem;
   }
@@ -3625,7 +3647,6 @@ body.light-mode .scroll-top:hover {
     height: 5rem;
   }
 
-  /* Uniform Icon Sizing */
   .html,
   .css {
     font-size: 3.3rem;
@@ -3648,7 +3669,8 @@ body.light-mode .scroll-top:hover {
     letter-spacing: 0.08rem;
     white-space: nowrap;
   }
-  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER — POLISHED) ---------- */
+
+  /* ---------- PROJECTS SECTION (768px MOBILE SLIDER) ---------- */
   .projects-section {
     height: auto;
     min-height: auto;
@@ -3665,6 +3687,10 @@ body.light-mode .scroll-top:hover {
     max-width: 345px;
     margin: 0 auto;
     padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
   }
 
   .projects-grid {
@@ -3676,7 +3702,10 @@ body.light-mode .scroll-top:hover {
     scroll-behavior: smooth;
     gap: 1.4rem;
     width: 100%;
-    padding: 1rem 0.2rem 1.4rem;
+    padding: 1.2rem 0.6rem 2.4rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -3685,26 +3714,51 @@ body.light-mode .scroll-top:hover {
     display: none;
   }
 
-  /* 1 Card Per View */
   .project-card {
     flex: 0 0 100%;
     min-width: 100%;
     scroll-snap-align: center;
     border-radius: 16px;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+    box-shadow: var(--brand-shadow-sm);
   }
 
-  body.light-mode .project-card {
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  .project-card:hover {
+    border-color: rgba(16, 149, 213, 0.45);
+    box-shadow: var(--brand-shadow);
   }
 
-  /* 1. Cut-off URL Bar Mobile Par Hidden (Sirf 3 Dots Rahenge) */
+  /* Always Colored Browser Dots + Compact URL Bar */
   .project-browser {
-    padding: 0.75rem 1.2rem;
+    padding: 0.7rem 1.1rem;
+    gap: 0.9rem;
+  }
+
+  .project-card .browser-dots .dot.red {
+    background: #ff5f56;
+  }
+
+  .project-card .browser-dots .dot.yellow {
+    background: #ffbd2e;
+  }
+
+  .project-card .browser-dots .dot.green {
+    background: #27c93f;
   }
 
   .browser-url {
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.98rem;
+  }
+
+  .browser-url span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .project-media {
@@ -3742,7 +3796,6 @@ body.light-mode .scroll-top:hover {
     padding: 0.45rem 0.6rem;
   }
 
-  /* 5. Description Aur Tech Badges Ke Beech Tight Spacing */
   .tab-content-box {
     min-height: auto;
     margin-bottom: 0.95rem;
@@ -3770,13 +3823,13 @@ body.light-mode .scroll-top:hover {
     font-size: 1.05rem;
   }
 
-  /* 2. Arrows + Dots Neeche Ek Clean Row Mein */
+  /* Bottom Slider Controls (Arrows + Tap-Friendly Dots) */
   .slider-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.4rem;
-    margin-top: 0.4rem;
+    gap: 1.2rem;
+    margin-top: 0;
   }
 
   .slider-btn {
@@ -3785,15 +3838,15 @@ body.light-mode .scroll-top:hover {
     align-items: center;
     position: static;
     transform: none;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3.8rem;
+    height: 3.8rem;
     border-radius: 50%;
     background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid #1095d5;
-    color: #1095d5;
-    font-size: 1.15rem;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.25rem;
     cursor: pointer;
     flex-shrink: 0;
     transition: transform 0.2s ease, background 0.2s ease;
@@ -3805,7 +3858,6 @@ body.light-mode .scroll-top:hover {
     background: rgba(16, 149, 213, 0.2);
   }
 
-  /* 3. Generous Tap Area (padding: 8px) + Sleek Visual Pill */
   .slider-dots {
     display: flex;
     justify-content: center;
@@ -3818,7 +3870,7 @@ body.light-mode .scroll-top:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 4px;
+    padding: 8px 6px;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -3842,100 +3894,11 @@ body.light-mode .scroll-top:hover {
   .slider-dot.active::before,
   body.light-mode .slider-dot.active::before {
     width: 3.8rem;
-    background: #1095d5;
+    background: var(--primary);
     box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
   }
 
-  /* 4. Swipe Hint Line */
-  .slider-hint {
-    display: block;
-    text-align: center;
-    margin-top: 0.85rem;
-    font-size: 1.08rem;
-    letter-spacing: 0.03rem;
-    color: rgba(255, 255, 255, 0.58);
-  }
-
-  body.light-mode .slider-hint {
-    color: rgba(28, 53, 79, 0.62);
-  } 
-
-  .slider-wrapper {
-    width: 100%;
-    max-width: 345px;
-    margin: 0 auto;
-    padding: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    overflow: visible;
-  }
-
-  .projects-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 1.4rem;
-    width: 100%;
-    padding: 1.2rem 0.6rem 2.4rem;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .slider-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2rem;
-    margin-top: 0;
-  }
-
-  .slider-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: static;
-    transform: none;
-    width: 3.8rem;
-    height: 3.8rem;
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid #1095d5;
-    color: #1095d5;
-    font-size: 1.25rem;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.2s ease, background 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .slider-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-    margin-top: 0;
-  }
-
-  .slider-dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 6px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-  }
-
+  /* Swipe Hint */
   .slider-hint {
     display: block;
     text-align: center;
@@ -3948,112 +3911,5 @@ body.light-mode .scroll-top:hover {
 
   body.light-mode .slider-hint {
     color: #4a637d;
-  }
-  .project-card .browser-dots .dot.red {
-    background: #ff5f56;
-  }
-
-  .project-card .browser-dots .dot.yellow {
-    background: #ffbd2e;
-  }
-
-  .project-card .browser-dots .dot.green {
-    background: #27c93f;
-  }
-  .project-browser {
-    padding: 0.7rem 1.1rem;
-    gap: 0.9rem;
-  }
-
-  .browser-url {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex: 1;
-    min-width: 0;
-    padding: 0.35rem 0.85rem;
-    font-size: 0.98rem;
-  }
-
-  .browser-url span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(16, 149, 213, 0.14);
-  }
-
-  .project-card:hover {
-    transform: none;
-    border-color: rgba(16, 149, 213, 0.45);
-    box-shadow: 0 8px 22px rgba(16, 149, 213, 0.26);
-  }
-
-  body.light-mode .project-card {
-    box-shadow: 0 6px 16px rgba(16, 149, 213, 0.1);
-  }
-
-  body.light-mode .project-card:hover {
-    transform: none;
-    box-shadow: 0 8px 20px rgba(16, 149, 213, 0.2);
-  }
-  .about-section,
-.education-section,
-.skillset-section,
-.projects-section,
-.contact-section {
-  overflow: visible;
-  overflow-x: clip;
-}
-}
-
-/* =========================================================
-   UNIFIED BRAND BLUE SHADOW (DESKTOP + MOBILE — ALL SECTIONS)
-========================================================= */
-.glass-card,
-.about-panel,
-.project-card,
-.contact-card {
-  box-shadow: 0 8px 24px rgba(16, 149, 213, 0.14);
-}
-
-.glass-card:hover,
-.about-panel:hover,
-.project-card:hover,
-.contact-card:hover {
-  box-shadow: 0 12px 30px rgba(16, 149, 213, 0.24);
-}
-
-.title-card {
-  box-shadow: 0 6px 20px rgba(16, 149, 213, 0.16);
-}
-
-/* Light Mode (Desktop + Mobile) */
-body.light-mode .glass-card,
-body.light-mode .about-panel,
-body.light-mode .project-card,
-body.light-mode .contact-card {
-  box-shadow: 0 8px 22px rgba(16, 149, 213, 0.1);
-}
-
-body.light-mode .glass-card:hover,
-body.light-mode .about-panel:hover,
-body.light-mode .project-card:hover,
-body.light-mode .contact-card:hover {
-  box-shadow: 0 12px 28px rgba(16, 149, 213, 0.18);
-}
-
-/* Mobile Tap/Hover Par Card Upar Na Uchle */
-@media (max-width: 768px) {
-  .glass-card:hover,
-  .about-panel:hover,
-  .project-card:hover,
-  .contact-card:hover {
-    transform: none;
   }
 }
