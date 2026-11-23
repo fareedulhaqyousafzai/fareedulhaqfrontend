@@ -219,13 +219,17 @@ body {
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-
+html:has(.loader-overlay:not(.hide)),
+body:has(.loader-overlay:not(.hide)) {
+  overflow: hidden !important;
+  height: 100dvh;
+}
 /* =========================================
    MODERN SLIM GRADIENT SCROLLBAR
 ========================================= */
 ::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-button {
@@ -235,49 +239,79 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--site-bg-bottom);
-  border-left: 1px solid rgba(125, 211, 252, 0.08);
+  background: #081526;
+  border-left: 1px solid rgba(56, 189, 248, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     180deg,
-    rgba(2, 132, 199, 0.85) 0%,
-    rgba(56, 189, 248, 0.95) 50%,
-    rgba(16, 149, 213, 0.85) 100%
+    rgba(2, 132, 199, 0.75) 0%,
+    #38bdf8 42%,
+    #e0f2fe 50%,
+    #38bdf8 58%,
+    rgba(2, 132, 199, 0.75) 100%
   );
   border-radius: 999px;
-  border: 2px solid var(--site-bg-bottom);
+  border: 2px solid #081526;
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #38bdf8 0%, #bae6fd 50%, #38bdf8 100%);
-  border: 2px solid var(--site-bg-bottom);
+  background: linear-gradient(
+    180deg,
+    #1095d5 0%,
+    #7dd3fc 40%,
+    #ffffff 50%,
+    #7dd3fc 60%,
+    #1095d5 100%
+  );
+  border: 1.5px solid #081526;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #7dd3fc;
+  background: #bae6fd;
+  border: 1.5px solid #081526;
+  background-clip: padding-box;
 }
 
+/* Light Mode Scrollbar */
 body.light-mode::-webkit-scrollbar-track {
   background: #e6f2fc;
-  border-left: 1px solid rgba(16, 149, 213, 0.14);
+  border-left: 1px solid rgba(16, 149, 213, 0.16);
 }
 
 body.light-mode::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0284c7 0%, #38bdf8 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 132, 199, 0.8) 0%,
+    #1095d5 45%,
+    #7dd3fc 50%,
+    #1095d5 55%,
+    rgba(2, 132, 199, 0.8) 100%
+  );
   border: 2px solid #e6f2fc;
+  background-clip: padding-box;
 }
 
 body.light-mode::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #0369a1 0%, #0284c7 100%);
+  background: linear-gradient(
+    180deg,
+    #0369a1 0%,
+    #0284c7 45%,
+    #38bdf8 50%,
+    #0284c7 55%,
+    #0369a1 100%
+  );
+  border: 1.5px solid #e6f2fc;
+  background-clip: padding-box;
 }
 
 @supports not selector(::-webkit-scrollbar) {
   html {
     scrollbar-width: thin;
-    scrollbar-color: #38bdf8 var(--site-bg-bottom);
+    scrollbar-color: #38bdf8 #081526;
   }
 }
 
