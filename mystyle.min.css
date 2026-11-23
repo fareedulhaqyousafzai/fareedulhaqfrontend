@@ -3960,6 +3960,26 @@ body.light-mode .scroll-top:hover {
   .project-card .browser-dots .dot.green {
     background: #27c93f;
   }
+  .project-browser {
+    padding: 0.7rem 1.1rem;
+    gap: 0.9rem;
+  }
+
+  .browser-url {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.98rem;
+  }
+
+  .browser-url span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .about-section,
 .education-section,
 .skillset-section,
