@@ -403,6 +403,9 @@
      <!-- ============================================================
                           PROJECTS SECTION
          ============================================================ -->
+      <!-- ============================================================
+                          PROJECTS SECTION
+         ============================================================ -->
       <section class="projects-section" id="projects-section">
         <div class="glow-orb orb-1"></div>
         <div class="glow-orb orb-2"></div>
@@ -412,15 +415,6 @@
           <div class="header-divider" data-aos="fade-right" data-aos-delay="150"></div>
 
           <div class="slider-wrapper">
-            <button
-              type="button"
-              class="slider-btn left-btn"
-              id="slideLeft"
-              aria-label="Previous Project"
-            >
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-            </button>
-
             <div class="projects-grid" id="projectSlider">
               <!-- CARD 01: WANDERLUX -->
               <article class="project-card" data-aos="fade-up" data-aos-delay="0">
@@ -663,6 +657,23 @@
                 </div>
               </article>
             </div>
+          </div>
+
+          <div class="slider-controls">
+            <button
+              type="button"
+              class="slider-btn left-btn"
+              id="slideLeft"
+              aria-label="Previous Project"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="slider-dots" id="sliderDots" aria-label="Project Slides">
+              <button type="button" class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button type="button" class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+              <button type="button" class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+            </div>
 
             <button
               type="button"
@@ -674,14 +685,11 @@
             </button>
           </div>
 
-          <div class="slider-dots" id="sliderDots" aria-label="Project Slides">
-            <button type="button" class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
-            <button type="button" class="slider-dot" data-index="1" aria-label="Slide 2"></button>
-            <button type="button" class="slider-dot" data-index="2" aria-label="Slide 3"></button>
-          </div>
+          <p class="slider-hint">Swipe to explore my latest creative work</p>
         </div>
       </section>
-      <!-- ============================================================
+      
+         <!-- ============================================================
                           CONTACT SECTION
          ============================================================ -->
       <section class="contact-section" id="contact-section">
