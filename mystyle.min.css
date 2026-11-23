@@ -3576,6 +3576,66 @@ body.light-mode .scroll-top:hover {
     font-size: 1.02rem;
     line-height: 1.38;
   }
+  /* ---------- SKILLS SECTION (768px MOBILE — 3+3+1 GRID) ---------- */
+  .skillset-section {
+    padding: 4rem 4% 4.5rem;
+    scroll-margin-top: 64px;
+  }
+
+  .skillset-section .header-divider {
+    margin-bottom: 2.4rem;
+  }
+
+  .container-skillset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 340px;
+    margin: 0 auto;
+    gap: 2.8rem 1.8rem;
+  }
+
+  .skill {
+    flex: 0 0 calc(33.333% - 1.4rem);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2.2rem;
+  }
+
+  .title-card {
+    width: 7.6rem;
+    height: 7.6rem;
+  }
+
+  .title-overlay {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* Uniform Icon Sizing */
+  .html,
+  .css {
+    font-size: 3.3rem;
+  }
+
+  .javascript,
+  .jquery {
+    font-size: 3.1rem;
+  }
+
+  .bootstrap,
+  .git,
+  .github {
+    font-size: 3.4rem;
+  }
+
+  .title-circle p {
+    top: calc(100% + 1rem);
+    font-size: 1.05rem;
+    letter-spacing: 0.08rem;
+    white-space: nowrap;
+  }
+
 
   .about-section,
 .education-section,
