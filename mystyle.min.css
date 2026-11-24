@@ -3529,12 +3529,11 @@ body.light-mode .footer-brand .brand-dot {
     border-radius: 16px;
   }
 
-  .about-role-title {
+.about-role-title {
     font-size: 2rem;
     line-height: 1.12;
-    margin: -0.6rem 0 0.8rem 0;
+    margin: -1.4rem 0 1.2rem 0;
   }
-
   .about-description {
     font-size: 1.08rem;
     line-height: 1.42;
