@@ -4058,4 +4058,224 @@ body.light-mode .footer-brand .brand-dot {
   .carousel-hint {
     display: none;
   }
+  /* Projects Section — Compact Card with Side Prev/Next Buttons */
+  .projects-section {
+    padding: 1.4rem 4% 1.6rem;
+    scroll-margin-top: 46px;
+  }
+
+  .projects-section .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .projects-container {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 610px;
+    margin: 0 auto;
+  }
+
+  .projects-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.6rem;
+    padding: 0;
+  }
+
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "bar bar"
+      "preview body";
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  /* Browser Bar */
+  .browser-bar {
+    grid-area: bar;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    padding: 0.34rem 0.8rem;
+    box-sizing: border-box;
+  }
+
+  .browser-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .browser-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .browser-address {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    padding: 0.12rem 0.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Left Column: Compact Preview + Hover Scroll */
+  .project-preview {
+    grid-area: preview;
+    position: relative;
+    height: 100%;
+    min-height: 175px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right: 1px solid var(--divider-line);
+    display: block;
+  }
+
+  .project-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 3.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .project-preview:hover img,
+  .project-card:hover .project-preview img {
+    transform: translateY(calc(-100% + 175px));
+  }
+
+  .preview-fade {
+    display: none;
+  }
+
+  /* Right Column: Compact Height */
+  .project-content {
+    grid-area: body;
+    padding: 0.72rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.42rem;
+    min-width: 0;
+  }
+
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .project-header h3 {
+    font-size: 1.22rem;
+    margin: 0;
+  }
+
+  .project-category {
+    font-size: 0.78rem;
+    padding: 0.12rem 0.52rem;
+  }
+
+  .project-tabs {
+    margin-bottom: 0;
+    padding: 0.16rem;
+  }
+
+  .project-tab-button {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.38rem;
+  }
+
+  .project-tab-panels {
+    margin-bottom: 0;
+  }
+
+  .project-tab-panel {
+    font-size: 0.88rem;
+    line-height: 1.28;
+  }
+
+  .project-technologies {
+    gap: 0.3rem;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--divider-line);
+    margin-bottom: 0;
+  }
+
+  .technology-tag {
+    font-size: 0.76rem;
+    padding: 0.12rem 0.46rem;
+  }
+
+  .project-links {
+    gap: 0.55rem;
+    margin-top: 0.05rem;
+  }
+
+  .project-button-live,
+  .project-button-code {
+    padding: 0.36rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Prev/Next Buttons Positioned on Left & Right Sides of Card */
+  .carousel-controls {
+    position: static;
+    margin: 0;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.05rem;
+    z-index: 5;
+  }
+
+  #carousel-previous {
+    left: 0.4rem;
+  }
+
+  #carousel-next {
+    right: 0.4rem;
+  }
+
+  .carousel-dots,
+  .carousel-hint {
+    display: none;
+  }
 }
