@@ -3061,6 +3061,79 @@ body.light-mode .footer-brand .brand-dot {
     min-height: 6.2rem;
     padding: 1.1rem 1.8rem 1.1rem 1.2rem;
   }
+  /* About Section — Balanced 2-Column Tablet Layout */
+  .about-section {
+    padding: 6rem 5% 8rem;
+    scroll-margin-top: 62px;
+  }
+
+  .about-section .section-title {
+    margin-bottom: 2.6rem;
+  }
+
+  .about-container {
+    max-width: 820px;
+  }
+
+  .about-card {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.4rem 3rem;
+    padding: 3rem 3.2rem;
+    border-radius: 22px;
+  }
+
+  .about-role-title {
+    font-size: clamp(2.8rem, 3.6vw, 3.4rem);
+    line-height: 1.15;
+    text-align: left;
+    margin: 0 0 1.4rem 0;
+  }
+
+  .about-description {
+    max-width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.65;
+    margin-bottom: 1.1rem;
+  }
+
+  .about-services {
+    padding-left: 2.6rem;
+    padding-top: 0;
+    border-left: 1px solid var(--divider-line);
+    border-top: none;
+  }
+
+  .services-label {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .service-item {
+    gap: 1.2rem;
+    padding: 1.15rem 0.8rem;
+    margin: 0 -0.8rem;
+  }
+
+  .service-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-details h4 {
+    font-size: 1.44rem;
+  }
+
+  .service-details p {
+    font-size: 1.26rem;
+    line-height: 1.45;
+  }
+
+  .availability-banner {
+    margin-top: 0.4rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--divider-line);
+    font-size: 1.3rem;
+  }
 }
 
 /* =========================================================
