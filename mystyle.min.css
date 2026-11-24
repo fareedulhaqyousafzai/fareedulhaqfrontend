@@ -3750,145 +3750,7 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 0.92rem;
     letter-spacing: 0.06rem;
   }
-  /* Projects Section — Clean 2-Column Card (Left Mockup + Right Details) */
-  .projects-section {
-    padding: 1.8rem 4% 2rem;
-    scroll-margin-top: 50px;
-  }
-
-  .projects-section .section-title {
-    font-size: 1.85rem;
-    margin-bottom: 1.1rem;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .projects-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1.6rem;
-    padding: 0;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    align-items: stretch;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-
-  /* Left Column Wrapper (Browser Bar + Image) */
-  .project-card > div:first-child {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid var(--divider-line);
-    min-width: 0;
-  }
-
-  .project-browser-bar {
-    padding: 0.42rem 0.85rem;
-  }
-
-  .browser-dot {
-    width: 7px;
-    height: 7px;
-  }
-
-  .browser-url {
-    font-size: 0.84rem;
-    padding: 0.14rem 0.6rem;
-  }
-
-  .project-preview {
-    flex: 1;
-    height: 175px;
-    max-height: 175px;
-    overflow: hidden;
-  }
-
-  .project-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-  }
-
-  /* Right Column: Title, Tabs, Text, Tags & Buttons */
-  .project-body {
-    padding: 0.9rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 0;
-  }
-
-  .project-title {
-    font-size: 1.32rem;
-    margin-bottom: 0.35rem;
-  }
-
-  .project-tabs {
-    margin-bottom: 0.45rem;
-    padding: 0.2rem;
-  }
-
-  .project-tab {
-    font-size: 0.86rem;
-    padding: 0.26rem 0.45rem;
-  }
-
-  .project-description {
-    font-size: 0.96rem;
-    line-height: 1.34;
-    margin-bottom: 0.5rem;
-  }
-
-  .project-tags {
-    gap: 0.35rem;
-    margin-bottom: 0.55rem;
-  }
-
-  .project-tag {
-    font-size: 0.82rem;
-    padding: 0.15rem 0.55rem;
-  }
-
-  .project-links {
-    gap: 0.65rem;
-  }
-
-  .project-link-live,
-  .project-link-code {
-    padding: 0.42rem 0.85rem;
-    font-size: 0.92rem;
-  }
-
-  .carousel-controls {
-    display: flex;
-    margin-top: 0.75rem;
-    gap: 0.8rem;
-  }
-
-  .carousel-arrow {
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.1rem;
-  }
-
-  .carousel-hint {
-    display: none;
-  }
-  /* Projects Section — Exact 2-Column Layout with Grid Areas */
+  /* Projects Section — Exact Class-Matched Split Layout in Landscape */
   .projects-section {
     padding: 1.6rem 4% 1.8rem;
     scroll-margin-top: 48px;
@@ -3927,11 +3789,25 @@ body.light-mode .footer-brand .brand-dot {
     overflow: hidden;
   }
 
-  .project-browser-bar {
+  /* Browser Bar: Full Card Width, 3 Dots Left + URL Bar Right */
+  .browser-bar {
     grid-area: bar;
+    width: 100%;
+    display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: flex-start;
-    padding: 0.38rem 0.85rem;
+    gap: 0.75rem;
+    padding: 0.42rem 0.9rem;
+    box-sizing: border-box;
+  }
+
+  .browser-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
   }
 
   .browser-dot {
@@ -3939,28 +3815,49 @@ body.light-mode .footer-brand .brand-dot {
     height: 7px;
   }
 
-  .browser-url {
+  .browser-address {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    justify-content: flex-start;
     font-size: 0.84rem;
-    padding: 0.14rem 0.65rem;
+    padding: 0.16rem 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
+  /* Left Column: Clean Image Preview (Zero Top Empty Space) */
   .project-preview {
     grid-area: preview;
-    height: 185px;
-    max-height: 185px;
+    position: relative;
+    height: 192px;
+    max-height: 192px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     border-right: 1px solid var(--divider-line);
+    display: block;
   }
 
   .project-preview img {
+    position: static;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top center;
     display: block;
+    margin: 0;
+    transform: none;
   }
 
-  .project-body {
+  .preview-fade {
+    display: none;
+  }
+
+  /* Right Column: Content, Tabs, Tech Tags & Buttons */
+  .project-content {
     grid-area: body;
     padding: 0.85rem 1.15rem;
     display: flex;
@@ -3969,9 +3866,17 @@ body.light-mode .footer-brand .brand-dot {
     min-width: 0;
   }
 
-  .project-title {
-    font-size: 1.28rem;
-    margin-bottom: 0.3rem;
+  .project-header {
+    margin-bottom: 0.35rem;
+  }
+
+  .project-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-category {
+    font-size: 0.82rem;
+    padding: 0.15rem 0.55rem;
   }
 
   .project-tabs {
@@ -3979,23 +3884,26 @@ body.light-mode .footer-brand .brand-dot {
     padding: 0.18rem;
   }
 
-  .project-tab {
+  .project-tab-button {
     font-size: 0.84rem;
     padding: 0.24rem 0.42rem;
   }
 
-  .project-description {
-    font-size: 0.94rem;
-    line-height: 1.32;
+  .project-tab-panels {
     margin-bottom: 0.45rem;
   }
 
-  .project-tags {
+  .project-tab-panel {
+    font-size: 0.94rem;
+    line-height: 1.32;
+  }
+
+  .project-technologies {
     gap: 0.32rem;
     margin-bottom: 0.5rem;
   }
 
-  .project-tag {
+  .technology-tag {
     font-size: 0.8rem;
     padding: 0.14rem 0.5rem;
   }
@@ -4004,19 +3912,20 @@ body.light-mode .footer-brand .brand-dot {
     gap: 0.6rem;
   }
 
-  .project-link-live,
-  .project-link-code {
-    padding: 0.4rem 0.8rem;
+  .project-button-live,
+  .project-button-code {
+    padding: 0.42rem 0.85rem;
     font-size: 0.9rem;
   }
 
+  /* Carousel Controls */
   .carousel-controls {
     display: flex;
     margin-top: 0.65rem;
     gap: 0.8rem;
   }
 
-  .carousel-arrow {
+  .carousel-button {
     width: 2.8rem;
     height: 2.8rem;
     font-size: 1.05rem;
@@ -4024,123 +3933,5 @@ body.light-mode .footer-brand .brand-dot {
 
   .carousel-hint {
     display: none;
-  }
-  /* Browser Bar: Full Card Width, 3 Dots Left + URL Bar Right in One Line */
-  .project-browser-bar {
-    grid-area: bar;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    padding: 0.45rem 0.9rem;
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 7px;
-    height: 7px;
-  }
-
-  .browser-url {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    text-align: left;
-    font-size: 0.84rem;
-    padding: 0.16rem 0.7rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Clean Image Preview (No Extra Top Gap) */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 190px;
-    max-height: 190px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-  }
-
-  .project-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    margin: 0;
-  }
-  /* Browser Bar: Full Card Width, 3 Dots Left + URL Bar Right in One Line */
-  .project-browser-bar {
-    grid-area: bar;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    padding: 0.45rem 0.9rem;
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 7px;
-    height: 7px;
-  }
-
-  .browser-url {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    text-align: left;
-    font-size: 0.84rem;
-    padding: 0.16rem 0.7rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Clean Image Preview (No Extra Top Gap) */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 190px;
-    max-height: 190px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-  }
-
-  .project-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    margin: 0;
   }
 }
