@@ -3834,6 +3834,57 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.16rem;
     letter-spacing: 0.05rem;
   }
+  /* Contact Section — Balanced 3 + 2 Tablet Layout */
+  .contact-section {
+    padding: 5.5rem 5% 6.5rem;
+    scroll-margin-top: 62px;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .contact-grid > * {
+    flex: 0 1 auto;
+    width: auto;
+  }
+
+  .contact-grid > *:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .contact-card {
+    display: inline-flex;
+    width: auto;
+    min-height: 5.6rem;
+    padding: 1rem 1.8rem 1rem 1.1rem;
+    border-radius: 14px;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contact-card-location {
+    padding: 1rem 1.8rem 1rem 1.1rem;
+  }
+
+  .contact-card i {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    font-size: 1.55rem;
+  }
+
+  .contact-card span {
+    font-size: 1.15rem;
+    letter-spacing: 0.05rem;
+  }
 }
 
 /* =========================================================
