@@ -3599,46 +3599,59 @@ body.light-mode .footer-brand .brand-dot {
     display: none;
   }
 /* Education Section — Landscape Side-by-Side Equal Cards */
+  /* Education Section — Compact Vertical Timeline in Landscape */
   .education-section {
-    padding: 2.4rem 5% 2.8rem;
+    padding: 2rem 5% 2.4rem;
     scroll-margin-top: 52px;
   }
 
   .education-section .section-title {
     font-size: 1.9rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.1rem;
   }
 
   .education-timeline {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.6rem;
+    display: block;
     width: 100%;
-    max-width: 740px;
+    max-width: 560px;
     margin: 0 auto;
-    align-items: stretch;
   }
 
-  .education-timeline::before,
-  .timeline-item::after {
-    display: none;
+  .education-timeline::before {
+    display: block;
+    left: 1.4rem;
+    top: 1.6rem;
+    bottom: 1.6rem;
   }
 
   .timeline-item {
-    display: flex;
-    padding-left: 0;
+    display: block;
+    padding-left: 3.6rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .timeline-item:last-child {
     margin-bottom: 0;
   }
 
+  .timeline-item::after {
+    display: block;
+    left: 2.8rem;
+    width: 0.8rem;
+  }
+
   .timeline-badge {
-    display: none;
+    display: flex;
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
   }
 
   .timeline-card {
     width: 100%;
-    min-height: 11.5rem;
-    padding: 1.4rem 1.6rem;
-    border-radius: 16px;
+    min-height: 7.4rem;
+    padding: 0.95rem 1.4rem;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3646,28 +3659,28 @@ body.light-mode .footer-brand .brand-dot {
 
   .timeline-header {
     gap: 0.8rem;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.25rem;
   }
 
   .timeline-title {
-    font-size: 1.24rem;
-    line-height: 1.3;
+    font-size: 1.2rem;
+    line-height: 1.25;
   }
 
   .timeline-year {
-    font-size: 0.96rem;
-    padding: 0.2rem 0.65rem;
+    font-size: 0.92rem;
+    padding: 0.15rem 0.6rem;
   }
 
   .timeline-subtitle {
-    font-size: 1.1rem;
-    line-height: 1.35;
-    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
   }
 
   .timeline-text {
-    font-size: 1.02rem;
-    line-height: 1.38;
+    font-size: 0.96rem;
+    line-height: 1.3;
   }
 
 }
