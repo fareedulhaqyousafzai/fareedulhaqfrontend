@@ -5218,7 +5218,7 @@ body.light-mode .footer-brand .brand-dot {
   }
   /* About Section */
   .about-section {
-    padding: 4rem 5% 1.4rem;
+    padding: 3.5rem 5% 1.4rem;
     scroll-margin-top: 36px;
   }
 
@@ -5229,7 +5229,7 @@ body.light-mode .footer-brand .brand-dot {
 
   /* Education Section */
   .education-section {
-    padding: 4rem 5% 1.4rem;
+    padding: 3.5rem 5% 1.4rem;
     scroll-margin-top: 36px;
   }
 
@@ -5240,7 +5240,7 @@ body.light-mode .footer-brand .brand-dot {
 
   /* Skills Section */
   .skills-section {
-    padding: 4rem 5% 1.4rem;
+    padding: 3.5rem 5% 1.4rem;
     scroll-margin-top: 36px;
   }
 
@@ -5251,7 +5251,7 @@ body.light-mode .footer-brand .brand-dot {
 
   /* Projects Section */
   .projects-section {
-    padding: 4rem 4% 1.2rem;
+    padding: 3.5rem 4% 1.2rem;
     scroll-margin-top: 36px;
   }
 
@@ -5262,7 +5262,7 @@ body.light-mode .footer-brand .brand-dot {
 
   /* Contact Section */
   .contact-section {
-    padding: 4rem 5% 2rem;
+    padding: 3.5rem 5% 2rem;
     scroll-margin-top: 36px;
   }
 }
