@@ -4468,7 +4468,9 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   /* Side Prev/Next Buttons */
+ /* Side Prev/Next Buttons */
   .carousel-controls {
+    display: block;
     position: static;
     margin: 0;
   }
