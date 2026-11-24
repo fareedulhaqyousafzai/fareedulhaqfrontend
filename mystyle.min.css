@@ -3787,6 +3787,53 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.24rem;
     letter-spacing: 0.06rem;
   }
+  /* Contact Section — Compact 2x2 Grid + Centered Location */
+  .contact-section {
+    padding: 5.5rem 5% 6.5rem;
+    scroll-margin-top: 62px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .contact-grid > *:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: auto;
+  }
+
+  .contact-card {
+    display: flex;
+    width: 100%;
+    min-height: 5.8rem;
+    padding: 1rem 1.6rem 1rem 1.1rem;
+    border-radius: 14px;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .contact-card-location {
+    width: auto;
+    justify-content: center;
+    padding: 1rem 2rem 1rem 1.1rem;
+  }
+
+  .contact-card i {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+  }
+
+  .contact-card span {
+    font-size: 1.16rem;
+    letter-spacing: 0.05rem;
+  }
 }
 
 /* =========================================================
