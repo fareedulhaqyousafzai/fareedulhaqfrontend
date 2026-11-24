@@ -3609,13 +3609,12 @@ body.light-mode .footer-brand .brand-dot {
     margin-bottom: 1.2rem;
   }
 
-  .education-timeline {
+ .education-timeline {
     display: block;
     width: 100%;
-    max-width: 620px;
+    max-width: 490px;
     margin: 0 auto;
   }
-
   .education-timeline::before {
     display: block;
     left: 1.6rem;
@@ -3646,16 +3645,15 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.25rem;
   }
 
-  .timeline-card {
+ .timeline-card {
     width: 100%;
-    min-height: 8.2rem;
-    padding: 1.15rem 1.6rem;
-    border-radius: 15px;
+    min-height: auto;
+    padding: 1rem 1.4rem;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
   .timeline-header {
     gap: 1rem;
     margin-bottom: 0.35rem;
