@@ -3508,7 +3508,7 @@ body.light-mode .footer-brand .brand-dot {
     width: 85%;
     height: 85%;
   }
-  /* About Section — Landscape 2-Column Layout */
+  /* About Section — Landscape Balanced Spacing */
   .about-section {
     padding: 3.6rem 5% 4rem;
     scroll-margin-top: 58px;
@@ -3524,15 +3524,15 @@ body.light-mode .footer-brand .brand-dot {
     width: 100%;
     max-width: 780px;
     margin: 0 auto;
-    gap: 2.2rem;
-    padding: 2rem 2.4rem;
+    gap: 1.4rem 2.2rem;
+    padding: 2rem 2.4rem 2.2rem;
     border-radius: 18px;
   }
 
   .about-role-title {
     font-size: 2.4rem;
     line-height: 1.15;
-    margin: 0 0 1rem 0;
+    margin: -1.4rem 0 1.4rem 0;
   }
 
   .about-description {
@@ -3574,13 +3574,14 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .availability-banner {
-    padding-top: 0.6rem;
-    border-top: none;
+    margin-top: 0.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--divider-line);
     font-size: 1.12rem;
   }
 
   .availability-banner::before,
   .availability-banner::after {
-    display: block;
+    display: none;
   }
 }
