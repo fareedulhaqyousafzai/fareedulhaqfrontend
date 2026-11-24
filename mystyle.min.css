@@ -1,5 +1,5 @@
 /* =========================================================
-   THEME COLORS & SHADOWS (DARK MODE DEFAULT)
+   1. THEME COLORS & SHADOWS (DARK MODE DEFAULT)
 ========================================================= */
 :root {
   /* Brand Colors */
@@ -75,7 +75,7 @@
 }
 
 /* =========================================================
-   LIGHT MODE OVERRIDES
+   2. LIGHT MODE OVERRIDES
 ========================================================= */
 body.light-mode {
   --text-primary: #1c354f;
@@ -132,7 +132,7 @@ body.light-mode {
 }
 
 /* =========================================================
-   BASE & RESETS
+   3. BASE & RESETS
 ========================================================= */
 * {
   margin: 0;
@@ -198,6 +198,7 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Lock page scroll while preloader is visible */
 html:has(.preloader:not(.hide)),
 body:has(.preloader:not(.hide)) {
   overflow: hidden !important;
@@ -205,7 +206,7 @@ body:has(.preloader:not(.hide)) {
 }
 
 /* =========================================================
-   CUSTOM OVERLAY SCROLLBAR
+   4. CUSTOM OVERLAY SCROLLBAR (DESKTOP)
 ========================================================= */
 .custom-scrollbar {
   position: fixed;
@@ -293,7 +294,7 @@ body.light-mode .custom-scrollbar-arrow:hover {
 }
 
 /* =========================================================
-   TYPOGRAPHY & SHARED SECTION HEADINGS
+   5. TYPOGRAPHY & SHARED SECTION HEADINGS
 ========================================================= */
 p,
 li,
@@ -352,7 +353,7 @@ a {
 }
 
 /* =========================================================
-   PRELOADER
+   6. PRELOADER
 ========================================================= */
 .preloader {
   position: fixed;
@@ -536,7 +537,7 @@ body.light-mode .preloader-progress-bar {
 }
 
 /* =========================================================
-   NAVIGATION BAR
+   7. NAVIGATION BAR
 ========================================================= */
 .navbar {
   width: 96%;
@@ -744,7 +745,7 @@ body.light-mode .theme-toggle-track {
 }
 
 /* =========================================================
-   HERO SECTION
+   8. HERO SECTION
 ========================================================= */
 .hero-section {
   position: relative;
@@ -1037,7 +1038,7 @@ body.light-mode .portrait-backdrop {
 }
 
 /* =========================================================
-   ABOUT SECTION
+   9. ABOUT SECTION
 ========================================================= */
 .about-section {
   position: relative;
@@ -1313,7 +1314,7 @@ body.light-mode .about-description span:hover {
 }
 
 /* =========================================================
-   EDUCATION SECTION
+   10. EDUCATION SECTION
 ========================================================= */
 .education-section {
   width: 100%;
@@ -1503,7 +1504,7 @@ body.light-mode .about-description span:hover {
 }
 
 /* =========================================================
-   SKILLS SECTION
+   11. SKILLS SECTION
 ========================================================= */
 .skills-section {
   position: relative;
@@ -1734,7 +1735,7 @@ body.light-mode .skill-card:hover .skill-icon {
 .skill-card:hover .skill-circle-github::after { border-color: var(--color-github); }
 
 /* =========================================================
-   PROJECTS SECTION
+   12. PROJECTS SECTION (DESKTOP 3-COLUMN GRID)
 ========================================================= */
 .projects-section {
   position: relative;
@@ -1929,7 +1930,7 @@ body.light-mode .ambient-glow-right { background: rgba(28, 53, 79, 0.06); }
   background: rgba(56, 189, 248, 0.14);
 }
 
-/* Preview Image */
+/* Preview Image & Hover Scroll */
 .project-preview {
   position: relative;
   height: 176px;
@@ -2183,7 +2184,7 @@ body.light-mode .project-tab-button.active {
   background: rgba(56, 189, 248, 0.12);
 }
 
-/* Project Buttons */
+/* Project Action Buttons */
 .project-links {
   margin-top: auto;
   display: grid;
@@ -2267,7 +2268,7 @@ body.light-mode .project-button-code:hover i {
 }
 
 /* =========================================================
-   CONTACT SECTION
+   13. CONTACT SECTION
 ========================================================= */
 .contact-section {
   position: relative;
@@ -2477,7 +2478,7 @@ body.light-mode .contact-card-github:hover {
 }
 
 /* =========================================================
-   FOOTER
+   14. FOOTER
 ========================================================= */
 .footer {
   position: relative;
@@ -2644,7 +2645,7 @@ body.light-mode .footer-brand .brand-dot {
 }
 
 /* =========================================================
-   DESKTOP-ONLY HOVER EXPANSION
+   15. DESKTOP-ONLY HOVER EXPANSION
 ========================================================= */
 @media (hover: hover) {
   .hero-card:hover::before {
@@ -2664,8 +2665,9 @@ body.light-mode .footer-brand .brand-dot {
     width: 76%;
   }
 }
+
 /* =========================================================
-   17. LAPTOP (1024px - 1279px)
+   16. LAPTOP & TABLET LANDSCAPE (1024px - 1279px)
 ========================================================= */
 @media (max-width: 1279px) {
   /* Navbar */
@@ -2802,7 +2804,7 @@ body.light-mode .footer-brand .brand-dot {
 }
 
 /* =========================================================
-   18. TABLET (768px - 1023px)
+   17. TABLET PORTRAIT (768px - 1023px)
 ========================================================= */
 @media (max-width: 1023px) {
   /* Navbar & Glass Dropdown Menu */
@@ -3060,7 +3062,7 @@ body.light-mode .footer-brand .brand-dot {
     gap: 4.5rem 4.8rem;
   }
 
-  /* Projects Section — Wider Centered Carousel & Tablet Typography */
+  /* Projects Section — Single Centered Carousel */
   .projects-section {
     padding: 6.5rem 5% 6.5rem;
     scroll-margin-top: 62px;
@@ -3354,10 +3356,10 @@ body.light-mode .footer-brand .brand-dot {
 }
 
 /* =========================================================
-   19. RESPONSIVE MOBILE LAYOUT (max-width: 768px)
+   18. MOBILE PORTRAIT (max-width: 768px)
 ========================================================= */
 @media (max-width: 768px) {
-  /* Custom Overlay Scrollbar */
+  /* Hide Custom Overlay Scrollbar */
   .custom-scrollbar {
     display: none;
   }
@@ -4122,7 +4124,8 @@ body.light-mode .footer-brand .brand-dot {
 }
 
 /* =========================================================
-   20. MOBILE & COMPACT TABLET LANDSCAPE OPTIMIZATION
+   19. MOBILE & COMPACT TABLET LANDSCAPE OPTIMIZATION
+       (Pixel 7 / Samsung S24 Ultra / Compact Landscape)
 ========================================================= */
 @media (max-width: 1000px) and (max-height: 600px) and (orientation: landscape) {
   /* Hide Custom Scrollbar in Landscape */
@@ -4130,7 +4133,7 @@ body.light-mode .footer-brand .brand-dot {
     display: none !important;
   }
 
-  /* Compact Preloader in Landscape */
+  /* Compact Preloader */
   .preloader-content {
     gap: 1.5rem;
   }
@@ -4173,7 +4176,7 @@ body.light-mode .footer-brand .brand-dot {
     height: 14px;
   }
 
-  /* Ultra-Sleek Compact Navbar in Landscape */
+  /* Ultra-Sleek Compact Navbar */
   .navbar {
     width: 92%;
     max-width: none;
@@ -4226,7 +4229,7 @@ body.light-mode .footer-brand .brand-dot {
     border-radius: 8px;
   }
 
-  /* Hero Section — Compact & Aligned Inside Navbar Edges */
+  /* Hero Section — Aligned Inside Navbar Edges */
   .hero-section {
     flex-direction: row;
     justify-content: center;
@@ -4287,614 +4290,13 @@ body.light-mode .footer-brand .brand-dot {
 
   /* About Section — Compact & Aligned Inside Navbar Edges */
   .about-section {
-    padding: 2.2rem 5% 2.6rem;
-    scroll-margin-top: 46px;
+    padding: 3.3rem 5% 1.4rem;
+    scroll-margin-top: 36px;
   }
 
   .about-section .section-title {
-    font-size: 1.9rem;
-    margin-bottom: 1.1rem;
-  }
-
-  .about-container {
-    max-width: 615px;
-  }
-
-  .about-card {
-    grid-template-columns: 1.08fr 0.92fr;
-    width: 100%;
-    max-width: 615px;
-    margin: 0 auto;
-    gap: 0.75rem 1.4rem;
-    padding: 1.2rem 1.55rem 1.3rem;
-    border-radius: 16px;
-  }
-
-  .about-role-title {
-    font-size: 2rem;
-    line-height: 1.12;
-    text-align: center;
-    margin: -1.4rem 0 1.2rem 0;
-  }
-
-  .about-description {
-    font-size: 1.08rem;
-    line-height: 1.42;
+    font-size: 1.65rem;
     margin-bottom: 0.55rem;
-  }
-
-  .about-services {
-    padding-left: 1.5rem;
-    padding-top: 0;
-    border-left: 1px solid var(--divider-line);
-    border-top: none;
-  }
-
-  .services-label {
-    margin-bottom: 0.35rem;
-    font-size: 0.88rem;
-  }
-
-  .service-item {
-    padding: 0.45rem 0.3rem;
-    margin: 0 -0.3rem;
-    gap: 0.75rem;
-  }
-
-  .service-item:first-child {
-    padding-top: 0.2rem;
-  }
-
-  .service-item:last-child {
-    padding-bottom: 0.2rem;
-  }
-
-  .service-icon {
-    width: 26px;
-    height: 26px;
-    border-radius: 7px;
-  }
-
-  .service-icon svg {
-    width: 13px;
-    height: 13px;
-  }
-
-  .service-details h4 {
-    font-size: 1.12rem;
-    margin-bottom: 0.08rem;
-  }
-
-  .service-details p {
-    font-size: 0.98rem;
-    line-height: 1.3;
-  }
-
-  .availability-banner {
-    margin-top: 0.1rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--divider-line);
-    font-size: 1rem;
-  }
-
-  .availability-banner::before,
-  .availability-banner::after {
-    display: none;
-  }
-
-  /* Education Section — Balanced Font Size in Landscape */
-  .education-section {
-    padding: 2rem 5% 2.4rem;
-    scroll-margin-top: 46px;
-  }
-
-  .education-section .section-title {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .education-timeline {
-    display: block;
-    width: 100%;
-    max-width: 490px;
-    margin: 0 auto;
-  }
-
-  .education-timeline::before {
-    display: block;
-    left: 1.6rem;
-    top: 1.8rem;
-    bottom: 1.8rem;
-  }
-
-  .timeline-item {
-    display: block;
-    padding-left: 4.2rem;
-    margin-bottom: 1.1rem;
-  }
-
-  .timeline-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .timeline-item::after {
-    display: block;
-    left: 3.2rem;
-    width: 1rem;
-  }
-
-  .timeline-badge {
-    display: flex;
-    width: 3.2rem;
-    height: 3.2rem;
-    font-size: 1.25rem;
-  }
-
-  .timeline-card {
-    width: 100%;
-    min-height: auto;
-    padding: 1rem 1.4rem;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .timeline-header {
-    gap: 1rem;
-    margin-bottom: 0.35rem;
-  }
-
-  .timeline-title {
-    font-size: 1.42rem;
-    line-height: 1.28;
-  }
-
-  .timeline-year {
-    font-size: 1.04rem;
-    padding: 0.2rem 0.75rem;
-  }
-
-  .timeline-subtitle {
-    font-size: 1.22rem;
-    line-height: 1.32;
-    margin-bottom: 0.25rem;
-  }
-
-  .timeline-text {
-    font-size: 1.1rem;
-    line-height: 1.34;
-  }
-
-  /* Skills Section — Exact 4 Top + 3 Bottom Centered Grid */
-  .skills-section {
-    padding: 1.8rem 5% 2rem;
-    scroll-margin-top: 46px;
-  }
-
-  .skills-section .section-title {
-    font-size: 1.85rem;
-    margin-bottom: 1.3rem;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    justify-items: center;
-    max-width: 440px;
-    margin: 0 auto;
-    gap: 1.4rem 1rem;
-  }
-
-  .skill-item {
-    grid-column: span 2;
-    flex: none;
-    width: auto;
-    padding-bottom: 1.4rem;
-  }
-
-  .skill-item:nth-child(5) {
-    grid-column: 2 / span 2;
-  }
-
-  .skill-item:nth-child(6) {
-    grid-column: 4 / span 2;
-  }
-
-  .skill-item:nth-child(7) {
-    grid-column: 6 / span 2;
-  }
-
-  .skill-card {
-    width: 5.8rem;
-    height: 5.8rem;
-  }
-
-  .skill-glow {
-    width: 3.8rem;
-    height: 3.8rem;
-  }
-
-  .skill-icon-html,
-  .skill-icon-css {
-    font-size: 2.5rem;
-  }
-
-  .skill-icon-javascript,
-  .skill-icon-jquery {
-    font-size: 2.35rem;
-  }
-
-  .skill-icon-bootstrap,
-  .skill-icon-git,
-  .skill-icon-github {
-    font-size: 2.6rem;
-  }
-
-  .skill-circle p {
-    top: calc(100% + 0.7rem);
-    font-size: 0.92rem;
-    letter-spacing: 0.06rem;
-  }
-
-  /* Projects Section — Clean 50/50 Split Card + Side Buttons */
-  .projects-section {
-    padding: 1.4rem 4% 1.6rem;
-    scroll-margin-top: 44px;
-  }
-
-  .projects-section .section-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .projects-container {
-    position: relative;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-
-  .projects-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1.6rem;
-    padding: 0;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "bar bar"
-      "preview body";
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  .project-card:last-child:nth-child(odd) {
-    max-width: 100%;
-  }
-
-  /* Ultra-Slim Browser Bar */
-  .browser-bar {
-    grid-area: bar;
-    width: 100%;
-    height: 24px;
-    min-height: 24px;
-    max-height: 24px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.65rem;
-    padding: 0 0.75rem;
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.28rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .browser-address {
-    flex: 0 1 83%;
-    min-width: 0;
-    width: auto;
-    max-width: 88%;
-    height: 16px;
-    min-height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 0.74rem;
-    line-height: 1;
-    padding: 0 0.65rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Image Preview + Smooth Hover Scroll */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 205px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview::before {
-    content: "↕ Hover to scroll";
-    display: block;
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    z-index: 3;
-    padding: 3px 9px;
-    border-radius: 999px;
-    background: rgba(6, 15, 29, 0.82);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    color: #e2e8f0;
-    font-size: 0.82rem;
-    font-weight: 600;
-    opacity: 0.95;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-
-  .project-card:hover .project-preview::before,
-  .project-preview:hover::before {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-
-  .project-preview img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    margin: 0;
-    transform: translateY(0);
-    transition: transform 3.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 205px));
-  }
-
-  .preview-fade {
-    display: none;
-  }
-
-  /* Right Column: Details Area */
-  .project-content {
-    grid-area: body;
-    padding: 1rem 1.15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.55rem;
-    min-width: 0;
-  }
-
-  .project-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .project-header h3 {
-    font-size: 1.28rem;
-    margin: 0;
-  }
-
-  .project-category {
-    font-size: 0.78rem;
-    padding: 0.12rem 0.52rem;
-  }
-
-  .project-tabs {
-    margin-bottom: 0;
-    padding: 0.16rem;
-  }
-
-  .project-tab-button {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.38rem;
-  }
-
-  .project-tab-panels {
-    min-height: auto;
-    margin-bottom: 0;
-  }
-
-  .project-tab-panel {
-    font-size: 0.92rem;
-    line-height: 1.32;
-  }
-
-  .project-technologies {
-    gap: 0.3rem;
-    padding-top: 0.38rem;
-    border-top: 1px solid var(--divider-line);
-    margin-bottom: 0;
-  }
-
-  .technology-tag {
-    font-size: 0.76rem;
-    padding: 0.12rem 0.46rem;
-  }
-
-  .project-links {
-    gap: 0.55rem;
-    margin-top: 0.05rem;
-  }
-
-  .project-button-live,
-  .project-button-code {
-    padding: 0.38rem 0.75rem;
-    font-size: 0.85rem;
-  }
-
-  /* Side Prev/Next Buttons */
-  .carousel-controls {
-    display: block;
-    position: static;
-    margin: 0;
-  }
-
-  .carousel-button {
-    position: absolute;
-    top: 56%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.1rem;
-    height: 3.1rem;
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid var(--primary);
-    color: var(--primary);
-    font-size: 1.1rem;
-    cursor: pointer;
-    z-index: 5;
-    transition: transform 0.2s ease, background 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .carousel-button:active {
-    transform: translateY(-50%) scale(0.92);
-    background: rgba(16, 149, 213, 0.2);
-  }
-
-  #carousel-previous {
-    left: 0.4rem;
-  }
-
-  #carousel-next {
-    right: 0.4rem;
-  }
-
-  .carousel-dots,
-  .carousel-hint {
-    display: none;
-  }
-
-  /* Contact Section — Compact Landscape Grid */
-  .contact-section {
-    padding: 2rem 5% 2.8rem;
-    scroll-margin-top: 44px;
-  }
-
-  .contact-section .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.85rem;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .contact-grid > *:last-child {
-    grid-column: auto;
-    width: auto;
-  }
-
-  .contact-card {
-    width: auto;
-    min-height: 4.4rem;
-    padding: 0.7rem 1.3rem 0.7rem 0.85rem;
-    border-radius: 12px;
-    gap: 0.75rem;
-  }
-
-  .contact-card i {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 8px;
-    font-size: 1.3rem;
-  }
-
-  .contact-card span {
-    font-size: 0.98rem;
-    letter-spacing: 0.04rem;
-  }
-
-  /* Footer — Compact Landscape Fit */
-  .footer {
-    padding: 2.6rem 5% 1.6rem;
-    margin-top: 1.6rem;
-  }
-
-  .scroll-top-button {
-    top: -18px;
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
-  }
-
-  .footer-content {
-    gap: 0.45rem;
-  }
-
-  .footer-copyright {
-    font-size: 1.05rem;
-  }
-
-  .footer-tagline {
-    font-size: 0.95rem;
-  }
-  /* About Section — Fits Ultra-Short Landscape Screens (S24 Ultra / Pixel 7) */
-  .about-section {
-    padding: 5.2rem 5% 2rem;
-    scroll-margin-top: 54px;
-  }
-
-  .about-section .section-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
   }
 
   .about-container {
@@ -4983,15 +4385,15 @@ body.light-mode .footer-brand .brand-dot {
     display: none;
   }
 
-  /* Education Section — Both Cards Visible in S24 Ultra Landscape */
+  /* Education Section — Balanced Font Size & Dual-Card Fit */
   .education-section {
-    padding: 5.2rem 5% 2rem;
-    scroll-margin-top: 54px;
+    padding: 3.3rem 5% 1.4rem;
+    scroll-margin-top: 36px;
   }
 
   .education-section .section-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.65rem;
+    margin-bottom: 0.6rem;
   }
 
   .education-timeline {
@@ -5067,15 +4469,15 @@ body.light-mode .footer-brand .brand-dot {
     line-height: 1.26;
   }
 
-  /* Skills Section — All 7 Skills Visible in S24 Ultra Landscape */
+  /* Skills Section — Exact 4 Top + 3 Bottom Centered Grid */
   .skills-section {
-    padding: 5.2rem 5% 1.8rem;
-    scroll-margin-top: 54px;
+    padding: 3.3rem 5% 1.4rem;
+    scroll-margin-top: 36px;
   }
 
   .skills-section .section-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.95rem;
+    font-size: 1.65rem;
+    margin-bottom: 0.75rem;
   }
 
   .skills-grid {
@@ -5138,15 +4540,15 @@ body.light-mode .footer-brand .brand-dot {
     letter-spacing: 0.05rem;
   }
 
-  /* Projects Section — Full Card + Buttons Visible in S24 Ultra Landscape */
+  /* Projects Section — 50/50 Split Card + Side Glass Buttons */
   .projects-section {
-    padding: 5.2rem 4% 1.6rem;
-    scroll-margin-top: 54px;
+    padding: 3.3rem 4% 1.2rem;
+    scroll-margin-top: 36px;
   }
 
   .projects-section .section-title {
-    font-size: 1.7rem;
-    margin-bottom: 0.65rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .projects-container {
@@ -5162,6 +4564,80 @@ body.light-mode .footer-brand .brand-dot {
     margin: 0 auto;
   }
 
+  .projects-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.6rem;
+    padding: 0;
+  }
+
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "bar bar"
+      "preview body";
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .project-card:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  /* Ultra-Slim Browser Bar */
+  .browser-bar {
+    grid-area: bar;
+    width: 100%;
+    height: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+  }
+
+  .browser-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.28rem;
+    flex-shrink: 0;
+  }
+
+  .browser-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .browser-address {
+    flex: 0 1 83%;
+    min-width: 0;
+    width: auto;
+    max-width: 88%;
+    height: 16px;
+    min-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.74rem;
+    line-height: 1;
+    padding: 0 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Left Column: Image Preview + Smooth Scroll */
   .project-preview {
     grid-area: preview;
     position: relative;
@@ -5174,11 +4650,58 @@ body.light-mode .footer-brand .brand-dot {
     display: block;
   }
 
+  .project-preview::before {
+    content: "↕ Hover to scroll";
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 3;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(6, 15, 29, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #e2e8f0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    opacity: 0.95;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .project-card:hover .project-preview::before,
+  .project-preview:hover::before {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  .project-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 3.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
   .project-preview:hover img,
   .project-card:hover .project-preview img {
     transform: translateY(calc(-100% + 175px));
   }
 
+  .preview-fade {
+    display: none;
+  }
+
+  /* Right Column: Details Area */
   .project-content {
     grid-area: body;
     padding: 0.75rem 1rem;
@@ -5189,9 +4712,37 @@ body.light-mode .footer-brand .brand-dot {
     min-width: 0;
   }
 
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
   .project-header h3 {
     font-size: 1.22rem;
     margin: 0;
+  }
+
+  .project-category {
+    font-size: 0.78rem;
+    padding: 0.12rem 0.52rem;
+  }
+
+  .project-tabs {
+    margin-bottom: 0;
+    padding: 0.16rem;
+  }
+
+  .project-tab-button {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.38rem;
+  }
+
+  .project-tab-panels {
+    min-height: auto;
+    margin-bottom: 0;
   }
 
   .project-tab-panel {
@@ -5206,6 +4757,11 @@ body.light-mode .footer-brand .brand-dot {
     margin-bottom: 0;
   }
 
+  .technology-tag {
+    font-size: 0.76rem;
+    padding: 0.12rem 0.46rem;
+  }
+
   .project-links {
     gap: 0.5rem;
     margin-top: 0;
@@ -5216,48 +4772,52 @@ body.light-mode .footer-brand .brand-dot {
     padding: 0.32rem 0.65rem;
     font-size: 0.82rem;
   }
-  /* About Section */
-  .about-section {
-    padding: 3.3rem 5% 1.4rem;
-    scroll-margin-top: 36px;
+
+  /* Side Prev/Next Glass Buttons */
+  .carousel-controls {
+    display: block;
+    position: static;
+    margin: 0;
   }
 
-  .about-section .section-title {
-    font-size: 1.65rem;
-    margin-bottom: 0.55rem;
+  .carousel-button {
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.2s ease, background 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  /* Education Section */
-  .education-section {
-    padding: 3.3rem 5% 1.4rem;
-    scroll-margin-top: 36px;
+  .carousel-button:active {
+    transform: translateY(-50%) scale(0.92);
+    background: rgba(16, 149, 213, 0.2);
   }
 
-  .education-section .section-title {
-    font-size: 1.65rem;
-    margin-bottom: 0.6rem;
+  #carousel-previous {
+    left: 0.4rem;
   }
 
-  /* Skills Section */
-  .skills-section {
-    padding: 3.3rem 5% 1.4rem;
-    scroll-margin-top: 36px;
+  #carousel-next {
+    right: 0.4rem;
   }
 
-  .skills-section .section-title {
-    font-size: 1.65rem;
-    margin-bottom: 0.75rem;
-  }
-
-  /* Projects Section */
-  .projects-section {
-    padding: 3.3rem 4% 1.2rem;
-    scroll-margin-top: 36px;
-  }
-
-  .projects-section .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+  .carousel-dots,
+  .carousel-hint {
+    display: none;
   }
 
   /* Contact Section */
@@ -5265,10 +4825,74 @@ body.light-mode .footer-brand .brand-dot {
     padding: 3.3rem 5% 2rem;
     scroll-margin-top: 36px;
   }
+
+  .contact-section .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .contact-grid > *:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .contact-card {
+    width: auto;
+    min-height: 4.4rem;
+    padding: 0.7rem 1.3rem 0.7rem 0.85rem;
+    border-radius: 12px;
+    gap: 0.75rem;
+  }
+
+  .contact-card i {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+  }
+
+  .contact-card span {
+    font-size: 0.98rem;
+    letter-spacing: 0.04rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2.6rem 5% 1.6rem;
+    margin-top: 1.6rem;
+  }
+
+  .scroll-top-button {
+    top: -18px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    gap: 0.45rem;
+  }
+
+  .footer-copyright {
+    font-size: 1.05rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+  }
 }
 
 /* =========================================================
-   21. SMALL MOBILE OPTIMIZATION (max-width: 479px)
+   20. SMALL MOBILE OPTIMIZATION (max-width: 479px)
 ========================================================= */
 @media (max-width: 479px) {
   /* Section Headings */
