@@ -3134,6 +3134,144 @@ body.light-mode .footer-brand .brand-dot {
     border-top: 1px solid var(--divider-line);
     font-size: 1.3rem;
   }
+  /* Projects Section — Single Centered Carousel + Bottom Controls */
+  .projects-section {
+    padding: 5.5rem 5% 6rem;
+    scroll-margin-top: 62px;
+  }
+
+  .projects-section .section-title {
+    margin-bottom: 2.2rem;
+  }
+
+  .projects-container {
+    max-width: 560px;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .projects-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 0.8rem 0.6rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .projects-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+    border-radius: 20px;
+  }
+
+  .project-card:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  .project-preview {
+    height: 215px;
+  }
+
+  .project-card:hover .project-preview img,
+  .project-preview:hover img {
+    transform: translateY(calc(-100% + 215px));
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0.4rem;
+  }
+
+  .carousel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.4rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-button:hover {
+    background: rgba(16, 149, 213, 0.18);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  }
+
+  .carousel-button:active {
+    transform: scale(0.92);
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .carousel-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-dot::before {
+    content: "";
+    display: block;
+    width: 2.2rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.35);
+    transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .carousel-dot.active::before {
+    width: 4.4rem;
+    background: var(--primary);
+    box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
+  }
+
+  .carousel-hint {
+    display: block;
+    text-align: center;
+    margin-top: 0.9rem;
+    font-size: 1.24rem;
+    text-transform: none;
+    letter-spacing: 0.02rem;
+    color: var(--text-muted);
+  }
 }
 
 /* =========================================================
