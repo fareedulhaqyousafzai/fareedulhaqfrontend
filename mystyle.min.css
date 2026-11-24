@@ -4296,4 +4296,46 @@ body.light-mode .footer-brand .brand-dot {
     padding: 1.2rem 1.55rem 1.3rem;
     border-radius: 16px;
   }
+  /* Compact Preloader in Landscape */
+  .preloader-content {
+    gap: 1.5rem;
+  }
+
+  .preloader-orbit {
+    width: 130px;
+    height: 130px;
+  }
+
+  .preloader-orbit::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .preloader-logo {
+    font-size: 2.2rem;
+  }
+
+  .orbit-ring:nth-child(1) {
+    width: 112px;
+    height: 112px;
+    margin-top: -56px;
+    margin-left: -56px;
+  }
+
+  .orbit-ring:nth-child(2) {
+    width: 138px;
+    height: 138px;
+    margin-top: -69px;
+    margin-left: -69px;
+  }
+
+  .preloader-progress {
+    width: 115px;
+  }
+
+  .preloader-wave {
+    margin-top: -0.75rem;
+    gap: 4px;
+    height: 14px;
+  }
 }
