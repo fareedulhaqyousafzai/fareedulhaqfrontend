@@ -4631,4 +4631,33 @@ body.light-mode .footer-brand .brand-dot {
     max-width: 575px;
     margin: 0 auto;
   }
+  .projects-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .browser-address {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: 280px;
+    height: 16px;
+    min-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.74rem;
+    line-height: 1;
+    padding: 0 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
