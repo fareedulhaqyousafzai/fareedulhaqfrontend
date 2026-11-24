@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Fareed Ul Haq" />
 
+    <!-- Primary Meta Tags -->
     <title>Fareed Ul Haq | Front-End Developer</title>
     <meta
       name="description"
@@ -15,7 +16,7 @@
       content="Frontend Developer, HTML, CSS, JavaScript, jQuery, Bootstrap, Portfolio, Karachi"
     />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social Preview -->
     <meta property="og:title" content="Fareed Ul Haq | Front-End Developer" />
     <meta
       property="og:description"
@@ -25,7 +26,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fareedulhaqyousafzai.github.io/" />
 
-    <!-- Structured Data (SEO) -->
+    <!-- Structured Data (JSON-LD SEO) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -45,14 +46,14 @@
       }
     </script>
 
-    <!-- Favicon -->
+    <!-- Custom SVG Favicon -->
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='2' fill='%23001e36' stroke='%2331a8ff' stroke-opacity='0.55' stroke-width='1'/%3E%3Cg shape-rendering='crispEdges' fill='%23ffffff'%3E%3Crect x='3' y='3' width='3' height='10'/%3E%3Crect x='3' y='3' width='7' height='2'/%3E%3Crect x='3' y='7' width='6' height='2'/%3E%3C/g%3E%3Ccircle cx='11.5' cy='11.5' r='1.5' fill='%2331a8ff'/%3E%3C/svg%3E"
     />
 
-    <!-- Fonts & Icons -->
+    <!-- Google Fonts & Icon Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -71,12 +72,14 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Main Stylesheet -->
+    <!-- Main Minified Stylesheet -->
     <link rel="stylesheet" href="mystyle.min.css" />
   </head>
 
   <body>
-    <!-- Preloader -->
+    <!-- =======================================================
+         PRELOADER OVERLAY
+    ======================================================= -->
     <div id="preloader" class="preloader">
       <div class="preloader-content">
         <div class="preloader-orbit">
@@ -93,7 +96,9 @@
       </div>
     </div>
 
-    <!-- Navigation Bar -->
+    <!-- =======================================================
+         FLOATING NAVIGATION BAR
+    ======================================================= -->
     <header class="navbar">
       <div class="brand-logo">Fareed<span class="brand-dot">.</span></div>
 
@@ -120,6 +125,7 @@
         </ul>
       </nav>
 
+      <!-- Theme Switch & Mobile/Tablet Menu Toggle -->
       <div class="navigation-controls">
         <label class="theme-switch" for="theme-toggle" aria-label="Toggle Light Mode">
           <input id="theme-toggle" class="theme-toggle-input" type="checkbox" />
@@ -141,7 +147,9 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- =======================================================
+           HERO SECTION
+      ======================================================= -->
       <section class="hero-section" id="hero-section">
         <div
           class="hero-card"
@@ -189,12 +197,15 @@
         <div class="hero-horizon-line" aria-hidden="true"></div>
       </section>
 
-      <!-- About Section -->
+      <!-- =======================================================
+           ABOUT SECTION
+      ======================================================= -->
       <section class="about-section" id="about-section">
         <div class="about-container">
           <h2 class="section-title" data-aos="fade-up">About</h2>
 
           <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+            <!-- Left Column: Biography -->
             <div class="about-biography">
               <h3 class="about-role-title">
                 <span>Front-End Developer</span>
@@ -209,6 +220,7 @@
               </p>
             </div>
 
+            <!-- Right Column: Services -->
             <div class="about-services">
               <span class="services-label">What I Build</span>
 
@@ -257,6 +269,7 @@
               </div>
             </div>
 
+            <!-- Bottom Availability Status -->
             <div class="availability-banner">
               <div class="availability-content">
                 <span class="availability-indicator" aria-hidden="true"></span>
@@ -267,7 +280,9 @@
         </div>
       </section>
 
-      <!-- Education Section -->
+      <!-- =======================================================
+           EDUCATION SECTION
+      ======================================================= -->
       <section class="education-section" id="education-section">
         <h2 class="section-title" data-aos="fade-up">Education</h2>
 
@@ -310,7 +325,9 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
+      <!-- =======================================================
+           SKILLS SECTION
+      ======================================================= -->
       <section class="skills-section" id="skills-section">
         <h2 class="section-title" data-aos="fade-up">Skills</h2>
 
@@ -387,7 +404,9 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
+      <!-- =======================================================
+           PROJECTS SECTION
+      ======================================================= -->
       <section class="projects-section" id="projects-section">
         <div class="ambient-glow ambient-glow-left"></div>
         <div class="ambient-glow ambient-glow-right"></div>
@@ -640,6 +659,7 @@
             </div>
           </div>
 
+          <!-- Carousel Controls (Tablet / Mobile / Landscape) -->
           <div class="carousel-controls">
             <button
               type="button"
@@ -670,7 +690,9 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <!-- =======================================================
+           CONTACT SECTION
+      ======================================================= -->
       <section class="contact-section" id="contact-section">
         <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
 
@@ -735,7 +757,9 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- =======================================================
+         FOOTER
+    ======================================================= -->
     <footer class="footer">
       <a
         href="#hero-section"
@@ -762,7 +786,9 @@
       </div>
     </footer>
 
-    <!-- Custom Overlay Scrollbar -->
+    <!-- =======================================================
+         CUSTOM OVERLAY SCROLLBAR (DESKTOP)
+    ======================================================= -->
     <div class="custom-scrollbar" id="custom-scrollbar" aria-hidden="true">
       <button type="button" class="custom-scrollbar-arrow custom-scrollbar-arrow-up" id="custom-scrollbar-up" tabindex="-1">
         <i class="fa-solid fa-caret-up"></i>
