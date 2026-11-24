@@ -3973,8 +3973,8 @@ body.light-mode .footer-brand .brand-dot {
     height: 6px;
   }
 
-  .browser-address {
-    flex: 0 1 78%;
+ .browser-address {
+    flex: 0 1 88%;
     min-width: 0;
     width: auto;
     max-width: 88%;
