@@ -3049,6 +3049,20 @@ body.light-mode .footer-brand .brand-dot {
     max-width: 360px;
     margin: 0 auto;
   }
+  .browser-dot-red {
+    background: #ff5f56;
+    box-shadow: 0 0 6px rgba(255, 95, 86, 0.55);
+  }
+
+  .browser-dot-yellow {
+    background: #ffbd2e;
+    box-shadow: 0 0 6px rgba(255, 189, 46, 0.55);
+  }
+
+  .browser-dot-green {
+    background: #27c93f;
+    box-shadow: 0 0 6px rgba(39, 201, 63, 0.55);
+  }
 
   /* Contact Section */
   .contact-section {
