@@ -4338,4 +4338,21 @@ body.light-mode .footer-brand .brand-dot {
     gap: 4px;
     height: 14px;
   }
+  .browser-address {
+    flex: 0 1 78%;
+    min-width: 0;
+    width: auto;
+    max-width: 78%;
+    height: 16px;
+    min-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.74rem;
+    line-height: 1;
+    padding: 0 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
