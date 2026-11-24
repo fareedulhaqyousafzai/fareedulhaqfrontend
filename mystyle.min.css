@@ -2663,7 +2663,8 @@ body.light-mode .footer-brand .brand-dot {
   .project-card:hover::before {
     width: 76%;
   }
-}/* =========================================================
+}
+/* =========================================================
    17. LAPTOP (1024px - 1279px)
 ========================================================= */
 @media (max-width: 1279px) {
@@ -2964,122 +2965,6 @@ body.light-mode .footer-brand .brand-dot {
     margin-top: 2.2rem;
   }
 
-  /* About Section */
-  .about-section {
-    padding: 5rem 5% 5.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .about-container {
-    max-width: 680px;
-  }
-
-  .about-card {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-    padding: 2.8rem 3rem;
-  }
-
-  .about-role-title {
-    font-size: 3.4rem;
-    margin: 0 0 1.4rem 0;
-  }
-
-  .about-description {
-    max-width: 100%;
-    font-size: 1.44rem;
-  }
-
-  .about-services {
-    padding-left: 0;
-    padding-top: 2rem;
-    border-left: none;
-    border-top: 1px solid var(--divider-line);
-  }
-
-  .availability-banner {
-    margin-top: 0;
-    padding-top: 1.6rem;
-    border-top: 1px solid var(--divider-line);
-  }
-
-  /* Education Section */
-  .education-section {
-    padding: 5rem 5% 5.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .education-timeline {
-    max-width: 660px;
-  }
-
-  /* Skills Section */
-  .skills-section {
-    padding: 5rem 5% 5.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .skills-grid {
-    max-width: 660px;
-    gap: 4.5rem 4.8rem;
-  }
-  /* Skills Section */
-  .skills-section {
-    padding: 5.5rem 5% 8.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  /* Projects Section — Clean 2-Column Tablet Grid */
-  .projects-section {
-    padding: 5rem 5% 5.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .projects-container {
-    max-width: 740px;
-  }
-
-  .projects-track {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-  }
-
-  .project-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-  .browser-dot-red {
-    background: #ff5f56;
-    box-shadow: 0 0 6px rgba(255, 95, 86, 0.55);
-  }
-
-  .browser-dot-yellow {
-    background: #ffbd2e;
-    box-shadow: 0 0 6px rgba(255, 189, 46, 0.55);
-  }
-
-  .browser-dot-green {
-    background: #27c93f;
-    box-shadow: 0 0 6px rgba(39, 201, 63, 0.55);
-  }
-
-  /* Contact Section */
-  .contact-section {
-    padding: 5rem 5% 6.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .contact-grid {
-    flex-wrap: wrap;
-    max-width: 680px;
-    gap: 1.2rem;
-  }
-
-  .contact-card {
-    min-height: 6.2rem;
-    padding: 1.1rem 1.8rem 1.1rem 1.2rem;
-  }
   /* About Section — Balanced 2-Column Tablet Layout */
   .about-section {
     padding: 6rem 5% 8rem;
@@ -3153,144 +3038,28 @@ body.light-mode .footer-brand .brand-dot {
     border-top: 1px solid var(--divider-line);
     font-size: 1.3rem;
   }
-  /* Projects Section — Single Centered Carousel + Bottom Controls */
-  .projects-section {
-    padding: 5.5rem 5% 6rem;
+
+  /* Education Section */
+  .education-section {
+    padding: 5rem 5% 5.5rem;
     scroll-margin-top: 62px;
   }
 
-  .projects-section .section-title {
-    margin-bottom: 2.2rem;
+  .education-timeline {
+    max-width: 660px;
   }
 
-  .projects-container {
-    max-width: 560px;
+  /* Skills Section */
+  .skills-section {
+    padding: 5.5rem 5% 8.5rem;
+    scroll-margin-top: 62px;
   }
 
-  .projects-carousel {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    overflow: visible;
+  .skills-grid {
+    max-width: 660px;
+    gap: 4.5rem 4.8rem;
   }
 
-  .projects-track {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 2rem;
-    padding: 0.8rem 0.6rem 2rem;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .projects-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    max-width: 100%;
-    scroll-snap-align: center;
-    border-radius: 20px;
-  }
-
-  .project-card:last-child:nth-child(odd) {
-    max-width: 100%;
-  }
-
-  .project-preview {
-    height: 215px;
-  }
-
-  .project-card:hover .project-preview img,
-  .project-preview:hover img {
-    transform: translateY(calc(-100% + 215px));
-  }
-
-  .carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 0.4rem;
-  }
-
-  .carousel-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.2rem;
-    height: 4.2rem;
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid var(--primary);
-    color: var(--primary);
-    font-size: 1.4rem;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .carousel-button:hover {
-    background: rgba(16, 149, 213, 0.18);
-    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
-  }
-
-  .carousel-button:active {
-    transform: scale(0.92);
-  }
-
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .carousel-dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 6px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .carousel-dot::before {
-    content: "";
-    display: block;
-    width: 2.2rem;
-    height: 0.55rem;
-    border-radius: 999px;
-    background: rgba(148, 163, 184, 0.35);
-    transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
-  }
-
-  .carousel-dot.active::before {
-    width: 4.4rem;
-    background: var(--primary);
-    box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
-  }
-
-  .carousel-hint {
-    display: block;
-    text-align: center;
-    margin-top: 0.9rem;
-    font-size: 1.24rem;
-    text-transform: none;
-    letter-spacing: 0.02rem;
-    color: var(--text-muted);
-  }
   /* Projects Section — Wider Centered Carousel & Tablet Typography */
   .projects-section {
     padding: 6.5rem 5% 6.5rem;
@@ -3346,6 +3115,21 @@ body.light-mode .footer-brand .brand-dot {
     padding: 0 18px;
   }
 
+  .browser-dot-red {
+    background: #ff5f56;
+    box-shadow: 0 0 6px rgba(255, 95, 86, 0.55);
+  }
+
+  .browser-dot-yellow {
+    background: #ffbd2e;
+    box-shadow: 0 0 6px rgba(255, 189, 46, 0.55);
+  }
+
+  .browser-dot-green {
+    background: #27c93f;
+    box-shadow: 0 0 6px rgba(39, 201, 63, 0.55);
+  }
+
   .browser-address {
     height: 25px;
     font-size: 1.15rem;
@@ -3360,7 +3144,6 @@ body.light-mode .footer-brand .brand-dot {
     transform: translateY(calc(-100% + 245px));
   }
 
-  /* Details Section Alignment & Larger Tablet Font Sizes */
   .project-content {
     padding: 2rem 2.4rem 2.2rem;
     display: flex;
@@ -3516,375 +3299,7 @@ body.light-mode .footer-brand .brand-dot {
     letter-spacing: 0.02rem;
     color: var(--text-muted);
   }
-  /* Projects Section — Wider Centered Carousel & Tablet Typography */
-  .projects-section {
-    padding: 6.5rem 5% 6.5rem;
-    scroll-margin-top: 62px;
-  }
 
-  .projects-section .section-title {
-    margin-bottom: 2.6rem;
-  }
-
-  .projects-container {
-    max-width: 680px;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: visible;
-  }
-
-  .projects-track {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 2.2rem;
-    padding: 0.8rem 0.6rem 2rem;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .projects-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    max-width: 100%;
-    scroll-snap-align: center;
-    border-radius: 22px;
-  }
-
-  .project-card:last-child:nth-child(odd) {
-    max-width: 100%;
-  }
-
-  .browser-bar {
-    height: 42px;
-    padding: 0 18px;
-  }
-
-  .browser-address {
-    height: 25px;
-    font-size: 1.15rem;
-  }
-
-  .project-preview {
-    height: 245px;
-  }
-
-  .project-card:hover .project-preview img,
-  .project-preview:hover img {
-    transform: translateY(calc(-100% + 245px));
-  }
-
-  /* Details Section Alignment & Larger Tablet Font Sizes */
-  .project-content {
-    padding: 2rem 2.4rem 2.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.4rem;
-  }
-
-  .project-header {
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
-
-  .project-header h3 {
-    font-size: 2.35rem;
-  }
-
-  .project-category {
-    font-size: 1.12rem;
-    padding: 5px 14px;
-  }
-
-  .project-tabs {
-    padding: 5px;
-    margin-bottom: 0;
-  }
-
-  .project-tab-button {
-    font-size: 1.24rem;
-    padding: 0.8rem 0.6rem;
-  }
-
-  .project-tab-panels {
-    min-height: 68px;
-    padding: 0.2rem 0;
-    margin-bottom: 0;
-    align-items: center;
-  }
-
-  .project-tab-panel {
-    font-size: 1.38rem;
-    line-height: 1.62;
-  }
-
-  .project-technologies {
-    gap: 8px;
-    padding-top: 1.3rem;
-    margin-bottom: 0;
-  }
-
-  .technology-tag {
-    font-size: 1.16rem;
-    padding: 5px 13px;
-  }
-
-  .technology-icon {
-    font-size: 1.32rem;
-  }
-
-  .project-links {
-    gap: 14px;
-    margin-top: 0.2rem;
-  }
-
-  .project-button-live,
-  .project-button-code {
-    padding: 1.15rem;
-    font-size: 1.26rem;
-  }
-
-  .project-button-live i,
-  .project-button-code i {
-    font-size: 1.55rem;
-  }
-
-  .carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.6rem;
-    margin-top: 0.6rem;
-  }
-
-  .carousel-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.4rem;
-    height: 4.4rem;
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid var(--primary);
-    color: var(--primary);
-    font-size: 1.45rem;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .carousel-button:hover {
-    background: rgba(16, 149, 213, 0.18);
-    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
-  }
-
-  .carousel-button:active {
-    transform: scale(0.92);
-  }
-
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .carousel-dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 6px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .carousel-dot::before {
-    content: "";
-    display: block;
-    width: 2.4rem;
-    height: 0.55rem;
-    border-radius: 999px;
-    background: rgba(148, 163, 184, 0.35);
-    transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
-  }
-
-  .carousel-dot.active::before {
-    width: 4.8rem;
-    background: var(--primary);
-    box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
-  }
-
-  .carousel-hint {
-    display: block;
-    text-align: center;
-    margin-top: 0.9rem;
-    font-size: 1.28rem;
-    text-transform: none;
-    letter-spacing: 0.02rem;
-    color: var(--text-muted);
-  }
-  /* Contact Section — Clean 2x2 Grid + Centered Location */
-  .contact-section {
-    padding: 6rem 5% 7rem;
-    scroll-margin-top: 62px;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.6rem;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  .contact-grid > *:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: auto;
-  }
-
-  .contact-card {
-    display: flex;
-    width: 100%;
-    min-height: 6.6rem;
-    padding: 1.2rem 2rem 1.2rem 1.4rem;
-    border-radius: 16px;
-    justify-content: flex-start;
-    gap: 1.2rem;
-  }
-
-  .contact-card-location {
-    width: auto;
-    justify-content: center;
-    padding: 1.2rem 2.4rem 1.2rem 1.4rem;
-  }
-
-  .contact-card i {
-    width: 4rem;
-    height: 4rem;
-    font-size: 1.8rem;
-  }
-
-  .contact-card span {
-    font-size: 1.24rem;
-    letter-spacing: 0.06rem;
-  }
-  /* Contact Section — Compact 2x2 Grid + Centered Location */
-  .contact-section {
-    padding: 5.5rem 5% 6.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
-    max-width: 430px;
-    margin: 0 auto;
-  }
-
-  .contact-grid > *:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: auto;
-  }
-
-  .contact-card {
-    display: flex;
-    width: 100%;
-    min-height: 5.8rem;
-    padding: 1rem 1.6rem 1rem 1.1rem;
-    border-radius: 14px;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .contact-card-location {
-    width: auto;
-    justify-content: center;
-    padding: 1rem 2rem 1rem 1.1rem;
-  }
-
-  .contact-card i {
-    width: 3.6rem;
-    height: 3.6rem;
-    border-radius: 10px;
-    font-size: 1.6rem;
-  }
-
-  .contact-card span {
-    font-size: 1.16rem;
-    letter-spacing: 0.05rem;
-  }
-  /* Contact Section — Balanced 3 + 2 Tablet Layout */
-  .contact-section {
-    padding: 5.5rem 5% 6.5rem;
-    scroll-margin-top: 62px;
-  }
-
-  .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.3rem;
-    max-width: 580px;
-    margin: 0 auto;
-  }
-
-  .contact-grid > * {
-    flex: 0 1 auto;
-    width: auto;
-  }
-
-  .contact-grid > *:last-child {
-    grid-column: auto;
-    width: auto;
-  }
-
-  .contact-card {
-    display: inline-flex;
-    width: auto;
-    min-height: 5.6rem;
-    padding: 1rem 1.8rem 1rem 1.1rem;
-    border-radius: 14px;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .contact-card-location {
-    padding: 1rem 1.8rem 1rem 1.1rem;
-  }
-
-  .contact-card i {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 10px;
-    font-size: 1.55rem;
-  }
-
-  .contact-card span {
-    font-size: 1.15rem;
-    letter-spacing: 0.05rem;
-  }
   /* Contact Section — Exact 3 + 2 Tablet Layout */
   .contact-section {
     padding: 5.5rem 5% 6.5rem;
@@ -4148,6 +3563,7 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .about-card {
+    grid-template-columns: 1fr;
     width: 90%;
     max-width: 325px;
     margin: 0 auto;
@@ -4159,6 +3575,7 @@ body.light-mode .footer-brand .brand-dot {
   .about-role-title {
     font-size: clamp(2.25rem, 6.4vw, 2.65rem);
     line-height: 1.15;
+    text-align: center;
     margin: 0 0 0.85rem 0;
   }
 
@@ -4169,7 +3586,10 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .about-services {
+    padding-left: 0;
     padding-top: 1.1rem;
+    border-left: none;
+    border-top: 1px solid var(--divider-line);
   }
 
   .services-label {
@@ -4214,6 +3634,7 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .availability-banner {
+    margin-top: 0;
     padding-top: 1rem;
     font-size: 1.04rem;
     gap: 0;
@@ -4418,6 +3839,7 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .browser-bar {
+    height: auto;
     padding: 0.7rem 1.1rem;
     gap: 0.9rem;
   }
@@ -4432,6 +3854,7 @@ body.light-mode .footer-brand .brand-dot {
     gap: 0.5rem;
     flex: 1;
     min-width: 0;
+    height: auto;
     padding: 0.35rem 0.85rem;
     font-size: 0.98rem;
   }
@@ -4474,6 +3897,7 @@ body.light-mode .footer-brand .brand-dot {
 
   .project-content {
     padding: 1.25rem 1.3rem 1.35rem;
+    gap: 0;
   }
 
   .project-header {
@@ -4491,6 +3915,7 @@ body.light-mode .footer-brand .brand-dot {
 
   .project-tabs {
     gap: 0.4rem;
+    padding: 4px;
     margin-bottom: 0.9rem;
   }
 
@@ -4531,6 +3956,7 @@ body.light-mode .footer-brand .brand-dot {
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
+    margin-top: 0;
   }
 
   .carousel-button {
@@ -4887,6 +4313,7 @@ body.light-mode .footer-brand .brand-dot {
   .about-role-title {
     font-size: 2rem;
     line-height: 1.12;
+    text-align: center;
     margin: -1.4rem 0 1.2rem 0;
   }
 
@@ -5311,6 +4738,7 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .project-tab-panels {
+    min-height: auto;
     margin-bottom: 0;
   }
 
@@ -5343,36 +4771,6 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   /* Side Prev/Next Buttons */
- /* Side Prev/Next Buttons */
-  .carousel-controls {
-    display: block;
-    position: static;
-    margin: 0;
-  }
-
-  .carousel-button {
-    position: absolute;
-    top: 56%;
-    transform: translateY(-50%);
-    width: 2.9rem;
-    height: 2.9rem;
-    font-size: 1.05rem;
-    z-index: 5;
-  }
-
-  #carousel-previous {
-    left: 0.4rem;
-  }
-
-  #carousel-next {
-    right: 0.4rem;
-  }
-
-  .carousel-dots,
-  .carousel-hint {
-    display: none;
-  }
-  /* Side Prev/Next Buttons */
   .carousel-controls {
     display: block;
     position: static;
@@ -5404,6 +4802,19 @@ body.light-mode .footer-brand .brand-dot {
   .carousel-button:active {
     transform: translateY(-50%) scale(0.92);
     background: rgba(16, 149, 213, 0.2);
+  }
+
+  #carousel-previous {
+    left: 0.4rem;
+  }
+
+  #carousel-next {
+    right: 0.4rem;
+  }
+
+  .carousel-dots,
+  .carousel-hint {
+    display: none;
   }
 
   /* Contact Section — Compact Landscape Grid */
