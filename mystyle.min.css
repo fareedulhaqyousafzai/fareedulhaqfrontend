@@ -3750,7 +3750,7 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 0.92rem;
     letter-spacing: 0.06rem;
   }
-  /* Projects Section — 1 Project Split Card (Left Preview + Right Details) */
+  /* Projects Section — Clean 2-Column Card (Left Mockup + Right Details) */
   .projects-section {
     padding: 1.8rem 4% 2rem;
     scroll-margin-top: 50px;
@@ -3781,15 +3781,21 @@ body.light-mode .footer-brand .brand-dot {
     scroll-snap-align: center;
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
-    grid-template-rows: auto 1fr;
+    align-items: stretch;
     border-radius: 15px;
     overflow: hidden;
   }
 
-  /* Browser Bar spans full top width */
+  /* Left Column Wrapper (Browser Bar + Image) */
+  .project-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--divider-line);
+    min-width: 0;
+  }
+
   .project-browser-bar {
-    grid-column: 1 / -1;
-    padding: 0.4rem 0.9rem;
+    padding: 0.42rem 0.85rem;
   }
 
   .browser-dot {
@@ -3798,23 +3804,32 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .browser-url {
-    font-size: 0.88rem;
-    padding: 0.14rem 0.7rem;
+    font-size: 0.84rem;
+    padding: 0.14rem 0.6rem;
   }
 
-  /* Left Column: Website Preview */
   .project-preview {
+    flex: 1;
+    height: 175px;
+    max-height: 175px;
+    overflow: hidden;
+  }
+
+  .project-preview img {
+    width: 100%;
     height: 100%;
-    min-height: 175px;
-    border-right: 1px solid var(--divider-line);
+    object-fit: cover;
+    object-position: top center;
+    display: block;
   }
 
   /* Right Column: Title, Tabs, Text, Tags & Buttons */
   .project-body {
-    padding: 0.85rem 1.2rem;
+    padding: 0.9rem 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0;
   }
 
   .project-title {
@@ -3829,7 +3844,7 @@ body.light-mode .footer-brand .brand-dot {
 
   .project-tab {
     font-size: 0.86rem;
-    padding: 0.26rem 0.5rem;
+    padding: 0.26rem 0.45rem;
   }
 
   .project-description {
@@ -3858,7 +3873,6 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 0.92rem;
   }
 
-  /* Keep Carousel Navigation Compact */
   .carousel-controls {
     display: flex;
     margin-top: 0.75rem;
@@ -3873,20 +3887,5 @@ body.light-mode .footer-brand .brand-dot {
 
   .carousel-hint {
     display: none;
-  }
-  /* Left Column: Website Preview (Cropped cleanly to card height) */
-  .project-preview {
-    height: 195px;
-    max-height: 195px;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-  }
-
-  .project-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
   }
 }
