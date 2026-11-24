@@ -4478,4 +4478,100 @@ body.light-mode .footer-brand .brand-dot {
     gap: 0.65rem;
     min-width: 0;
   }
+  /* Projects Section — Slim Top Browser Bar + Taller Bottom Content */
+  .projects-container {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "bar bar"
+      "preview body";
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  /* Slimmer Browser Bar Height */
+  .browser-bar {
+    grid-area: bar;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    padding: 0.24rem 0.85rem;
+    box-sizing: border-box;
+  }
+
+  .browser-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .browser-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .browser-address {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    justify-content: flex-start;
+    font-size: 0.78rem;
+    line-height: 1.1;
+    padding: 0.1rem 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Left Column: Taller Image Preview */
+  .project-preview {
+    grid-area: preview;
+    position: relative;
+    height: 100%;
+    min-height: 210px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right: 1px solid var(--divider-line);
+    display: block;
+  }
+
+  .project-preview:hover img,
+  .project-card:hover .project-preview img {
+    transform: translateY(calc(-100% + 210px));
+  }
+
+  /* Right Column: Taller Details Area */
+  .project-content {
+    grid-area: body;
+    padding: 1.05rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.65rem;
+    min-width: 0;
+  }
 }
