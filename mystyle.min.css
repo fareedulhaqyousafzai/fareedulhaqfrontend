@@ -2786,39 +2786,7 @@ body.light-mode .footer-brand .brand-dot {
     z-index: 120;
   }
 
-  .navigation-list {
-    display: none;
-    flex-direction: column;
-    gap: 0.2rem;
-    width: max-content;
-    padding: 0.4rem;
-    border-radius: 13px;
-    background: var(--glass-bg-center);
-    backdrop-filter: blur(18px) saturate(175%);
-    -webkit-backdrop-filter: blur(18px) saturate(175%);
-    border: 1px solid var(--glass-border);
-    border-top: 1px solid var(--glass-border-top);
-    box-shadow: var(--brand-shadow);
-  }
-
-  .navigation-list.navigation-active {
-    display: flex;
-  }
-
-  .navigation-item {
-    width: 100%;
-  }
-
-  .navigation-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 0.55rem 1.1rem;
-    font-size: 1.12rem;
-    line-height: 1.2;
-    letter-spacing: 0.06rem;
-    border-radius: 8px;
-  }
+  /* Navbar-Matched Glass Dropdown Menu */
   .navigation-list {
     position: relative;
     display: none;
@@ -2860,6 +2828,25 @@ body.light-mode .footer-brand .brand-dot {
       rgba(255, 255, 255, 0.97) 0%,
       rgba(235, 246, 255, 0.96) 100%
     );
+  }
+
+  .navigation-list.navigation-active {
+    display: flex;
+  }
+
+  .navigation-item {
+    width: 100%;
+  }
+
+  .navigation-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.55rem 1.1rem;
+    font-size: 1.12rem;
+    line-height: 1.2;
+    letter-spacing: 0.06rem;
+    border-radius: 8px;
   }
 
   /* Hero Section */
@@ -3973,7 +3960,7 @@ body.light-mode .footer-brand .brand-dot {
     height: 6px;
   }
 
- .browser-address {
+  .browser-address {
     flex: 0 1 83%;
     min-width: 0;
     width: auto;
