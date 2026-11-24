@@ -4620,4 +4620,15 @@ body.light-mode .footer-brand .brand-dot {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .projects-container {
+    position: relative;
+    max-width: 710px;
+    margin: 0 auto;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 575px;
+    margin: 0 auto;
+  }
 }
