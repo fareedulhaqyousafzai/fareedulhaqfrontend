@@ -2819,6 +2819,48 @@ body.light-mode .footer-brand .brand-dot {
     letter-spacing: 0.06rem;
     border-radius: 8px;
   }
+  .navigation-list {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 14px;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 48, 80, 0.92) 0%,
+      rgba(10, 25, 47, 0.95) 55%,
+      rgba(6, 16, 32, 0.98) 100%
+    );
+    backdrop-filter: blur(22px) saturate(185%);
+    -webkit-backdrop-filter: blur(22px) saturate(185%);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-border-top);
+    box-shadow: var(--brand-shadow-hover);
+  }
+
+  .navigation-list::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 1.5px;
+    background: var(--glow-bar-horizontal);
+    border-radius: 999px;
+    filter: var(--glow-bar-filter);
+    pointer-events: none;
+  }
+
+  body.light-mode .navigation-list {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(235, 246, 255, 0.96) 100%
+    );
+  }
 
   /* Hero Section */
   .hero-section {
