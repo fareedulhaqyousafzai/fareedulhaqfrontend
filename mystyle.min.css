@@ -3874,4 +3874,19 @@ body.light-mode .footer-brand .brand-dot {
   .carousel-hint {
     display: none;
   }
+  /* Left Column: Website Preview (Cropped cleanly to card height) */
+  .project-preview {
+    height: 195px;
+    max-height: 195px;
+    overflow: hidden;
+    border-right: 1px solid var(--divider-line);
+  }
+
+  .project-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
 }
