@@ -4497,6 +4497,39 @@ body.light-mode .footer-brand .brand-dot {
   .carousel-hint {
     display: none;
   }
+  /* Side Prev/Next Buttons */
+  .carousel-controls {
+    display: block;
+    position: static;
+    margin: 0;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.2s ease, background 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-button:active {
+    transform: translateY(-50%) scale(0.92);
+    background: rgba(16, 149, 213, 0.2);
+  }
 
   /* Contact Section — Compact Landscape Grid */
   .contact-section {
