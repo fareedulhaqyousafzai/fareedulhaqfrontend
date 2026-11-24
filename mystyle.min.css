@@ -3750,4 +3750,91 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 0.92rem;
     letter-spacing: 0.06rem;
   }
+  /* Projects Section — Compact 2-Column Side-by-Side in Landscape */
+  .projects-section {
+    padding: 2rem 4% 2.4rem;
+    scroll-margin-top: 50px;
+  }
+
+  .projects-section .section-title {
+    font-size: 1.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .projects-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+    gap: 1.4rem;
+    padding: 0;
+  }
+
+  .project-card {
+    min-width: 0;
+    border-radius: 15px;
+  }
+
+  .project-browser-bar {
+    padding: 0.45rem 0.85rem;
+  }
+
+  .browser-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .browser-url {
+    font-size: 0.88rem;
+    padding: 0.16rem 0.65rem;
+  }
+
+  .project-preview {
+    height: 112px;
+  }
+
+  .project-body {
+    padding: 0.9rem 1.2rem 1.05rem;
+  }
+
+  .project-title {
+    font-size: 1.32rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 0.65rem;
+  }
+
+  .project-tags {
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-tag {
+    font-size: 0.86rem;
+    padding: 0.18rem 0.6rem;
+  }
+
+  .project-links {
+    gap: 0.7rem;
+  }
+
+  .project-link-live,
+  .project-link-code {
+    padding: 0.48rem 0.9rem;
+    font-size: 0.96rem;
+  }
+
+  .carousel-controls,
+  .carousel-hint {
+    display: none;
+  }
 }
