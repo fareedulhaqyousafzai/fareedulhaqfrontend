@@ -3427,6 +3427,34 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.04rem;
     line-height: 1.4;
   }
+  /* Sleek Compact Navbar on Mobile Portrait */
+  .header,
+  .navbar {
+    top: 0.7rem;
+    padding: 0.45rem 1.25rem;
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .logo {
+    font-size: 1.55rem;
+  }
+
+  .theme-toggle {
+    width: 46px;
+    height: 24px;
+  }
+
+  .theme-toggle .toggle-thumb,
+  .theme-toggle::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .menu-toggle,
+  #menu-icon {
+    font-size: 1.55rem;
+  }
 }
 /* =========================================================
    MOBILE & COMPACT TABLET LANDSCAPE OPTIMIZATION
@@ -4659,5 +4687,27 @@ body.light-mode .footer-brand .brand-dot {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  /* Ultra-Sleek Navbar in Mobile Landscape */
+  .header,
+  .navbar {
+    top: 0.5rem;
+    padding: 0.35rem 1.2rem;
+    min-height: 38px;
+    height: 38px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .theme-toggle {
+    width: 42px;
+    height: 21px;
+  }
+
+  .menu-toggle,
+  #menu-icon {
+    font-size: 1.4rem;
   }
 }
