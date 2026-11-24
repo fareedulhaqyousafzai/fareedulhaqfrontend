@@ -3023,6 +3023,11 @@ body.light-mode .footer-brand .brand-dot {
     max-width: 660px;
     gap: 4.5rem 4.8rem;
   }
+  /* Skills Section */
+  .skills-section {
+    padding: 5.5rem 5% 8.5rem;
+    scroll-margin-top: 62px;
+  }
 
   /* Projects Section — Clean 2-Column Tablet Grid */
   .projects-section {
@@ -3268,6 +3273,456 @@ body.light-mode .footer-brand .brand-dot {
     text-align: center;
     margin-top: 0.9rem;
     font-size: 1.24rem;
+    text-transform: none;
+    letter-spacing: 0.02rem;
+    color: var(--text-muted);
+  }
+  /* Projects Section — Wider Centered Carousel & Tablet Typography */
+  .projects-section {
+    padding: 6.5rem 5% 6.5rem;
+    scroll-margin-top: 62px;
+  }
+
+  .projects-section .section-title {
+    margin-bottom: 2.6rem;
+  }
+
+  .projects-container {
+    max-width: 680px;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .projects-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 2.2rem;
+    padding: 0.8rem 0.6rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .projects-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+    border-radius: 22px;
+  }
+
+  .project-card:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  .browser-bar {
+    height: 42px;
+    padding: 0 18px;
+  }
+
+  .browser-address {
+    height: 25px;
+    font-size: 1.15rem;
+  }
+
+  .project-preview {
+    height: 245px;
+  }
+
+  .project-card:hover .project-preview img,
+  .project-preview:hover img {
+    transform: translateY(calc(-100% + 245px));
+  }
+
+  /* Details Section Alignment & Larger Tablet Font Sizes */
+  .project-content {
+    padding: 2rem 2.4rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.4rem;
+  }
+
+  .project-header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .project-header h3 {
+    font-size: 2.35rem;
+  }
+
+  .project-category {
+    font-size: 1.12rem;
+    padding: 5px 14px;
+  }
+
+  .project-tabs {
+    padding: 5px;
+    margin-bottom: 0;
+  }
+
+  .project-tab-button {
+    font-size: 1.24rem;
+    padding: 0.8rem 0.6rem;
+  }
+
+  .project-tab-panels {
+    min-height: 68px;
+    padding: 0.2rem 0;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .project-tab-panel {
+    font-size: 1.38rem;
+    line-height: 1.62;
+  }
+
+  .project-technologies {
+    gap: 8px;
+    padding-top: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .technology-tag {
+    font-size: 1.16rem;
+    padding: 5px 13px;
+  }
+
+  .technology-icon {
+    font-size: 1.32rem;
+  }
+
+  .project-links {
+    gap: 14px;
+    margin-top: 0.2rem;
+  }
+
+  .project-button-live,
+  .project-button-code {
+    padding: 1.15rem;
+    font-size: 1.26rem;
+  }
+
+  .project-button-live i,
+  .project-button-code i {
+    font-size: 1.55rem;
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 0.6rem;
+  }
+
+  .carousel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.45rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-button:hover {
+    background: rgba(16, 149, 213, 0.18);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  }
+
+  .carousel-button:active {
+    transform: scale(0.92);
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .carousel-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-dot::before {
+    content: "";
+    display: block;
+    width: 2.4rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.35);
+    transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .carousel-dot.active::before {
+    width: 4.8rem;
+    background: var(--primary);
+    box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
+  }
+
+  .carousel-hint {
+    display: block;
+    text-align: center;
+    margin-top: 0.9rem;
+    font-size: 1.28rem;
+    text-transform: none;
+    letter-spacing: 0.02rem;
+    color: var(--text-muted);
+  }
+  /* Projects Section — Wider Centered Carousel & Tablet Typography */
+  .projects-section {
+    padding: 6.5rem 5% 6.5rem;
+    scroll-margin-top: 62px;
+  }
+
+  .projects-section .section-title {
+    margin-bottom: 2.6rem;
+  }
+
+  .projects-container {
+    max-width: 680px;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .projects-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 2.2rem;
+    padding: 0.8rem 0.6rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .projects-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+    border-radius: 22px;
+  }
+
+  .project-card:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  .browser-bar {
+    height: 42px;
+    padding: 0 18px;
+  }
+
+  .browser-address {
+    height: 25px;
+    font-size: 1.15rem;
+  }
+
+  .project-preview {
+    height: 245px;
+  }
+
+  .project-card:hover .project-preview img,
+  .project-preview:hover img {
+    transform: translateY(calc(-100% + 245px));
+  }
+
+  /* Details Section Alignment & Larger Tablet Font Sizes */
+  .project-content {
+    padding: 2rem 2.4rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.4rem;
+  }
+
+  .project-header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .project-header h3 {
+    font-size: 2.35rem;
+  }
+
+  .project-category {
+    font-size: 1.12rem;
+    padding: 5px 14px;
+  }
+
+  .project-tabs {
+    padding: 5px;
+    margin-bottom: 0;
+  }
+
+  .project-tab-button {
+    font-size: 1.24rem;
+    padding: 0.8rem 0.6rem;
+  }
+
+  .project-tab-panels {
+    min-height: 68px;
+    padding: 0.2rem 0;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .project-tab-panel {
+    font-size: 1.38rem;
+    line-height: 1.62;
+  }
+
+  .project-technologies {
+    gap: 8px;
+    padding-top: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .technology-tag {
+    font-size: 1.16rem;
+    padding: 5px 13px;
+  }
+
+  .technology-icon {
+    font-size: 1.32rem;
+  }
+
+  .project-links {
+    gap: 14px;
+    margin-top: 0.2rem;
+  }
+
+  .project-button-live,
+  .project-button-code {
+    padding: 1.15rem;
+    font-size: 1.26rem;
+  }
+
+  .project-button-live i,
+  .project-button-code i {
+    font-size: 1.55rem;
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 0.6rem;
+  }
+
+  .carousel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--glass-bg-center) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.45rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-button:hover {
+    background: rgba(16, 149, 213, 0.18);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  }
+
+  .carousel-button:active {
+    transform: scale(0.92);
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .carousel-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-dot::before {
+    content: "";
+    display: block;
+    width: 2.4rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.35);
+    transition: width 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .carousel-dot.active::before {
+    width: 4.8rem;
+    background: var(--primary);
+    box-shadow: 0 0 12px rgba(16, 149, 213, 0.5);
+  }
+
+  .carousel-hint {
+    display: block;
+    text-align: center;
+    margin-top: 0.9rem;
+    font-size: 1.28rem;
     text-transform: none;
     letter-spacing: 0.02rem;
     color: var(--text-muted);
