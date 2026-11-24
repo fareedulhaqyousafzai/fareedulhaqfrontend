@@ -2664,7 +2664,6 @@ body.light-mode .footer-brand .brand-dot {
     width: 76%;
   }
 }
-
 /* =========================================================
    RESPONSIVE MOBILE LAYOUT (max-width: 768px)
 ========================================================= */
@@ -2673,8 +2672,6 @@ body.light-mode .footer-brand .brand-dot {
   .custom-scrollbar {
     display: none;
   }
-
- 
 
   .section-title {
     margin-bottom: 2rem;
@@ -2722,50 +2719,50 @@ body.light-mode .footer-brand .brand-dot {
     gap: 5px;
   }
 
-  /* Navigation Bar */
+  /* Sleek Navigation Bar */
   .navbar {
     width: 92%;
-    top: 14px;
-    height: 5.2rem;
-    padding: 0 1.6rem;
+    top: 10px;
+    height: 4.3rem;
+    padding: 0 1.4rem;
   }
 
   .brand-logo {
-    font-size: 2.3rem;
+    font-size: 2rem;
     flex-shrink: 0;
   }
 
   .navigation-controls {
-    gap: 1.1rem;
+    gap: 0.95rem;
     flex-shrink: 0;
   }
 
   .theme-toggle-track {
-    width: 5.4rem;
-    height: 2.8rem;
+    width: 4.6rem;
+    height: 2.4rem;
   }
 
   .theme-toggle-track::before,
   .theme-toggle-track i {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.2rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.05rem;
   }
 
   .theme-toggle-input:checked + .theme-toggle-track::before {
-    transform: translateX(2.5rem);
+    transform: translateX(2.1rem);
   }
 
   .mobile-menu-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.6rem;
-    height: 3.6rem;
-    font-size: 2.2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.95rem;
     color: var(--text-primary);
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 9px;
     outline: none;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
@@ -2784,7 +2781,7 @@ body.light-mode .footer-brand .brand-dot {
   nav {
     position: absolute;
     right: 0;
-    top: 5.8rem;
+    top: 4.9rem;
     z-index: 120;
   }
 
@@ -2829,7 +2826,7 @@ body.light-mode .footer-brand .brand-dot {
     align-items: center;
     text-align: center;
     min-height: 100svh;
-    padding: 8.2rem 4% 3.5rem;
+    padding: 7.4rem 4% 3.5rem;
     gap: 2.2rem;
   }
 
@@ -2900,7 +2897,7 @@ body.light-mode .footer-brand .brand-dot {
   /* About Section */
   .about-section {
     padding: 3.6rem 4% 4rem;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 58px;
   }
 
   .about-section .section-title {
@@ -3005,7 +3002,7 @@ body.light-mode .footer-brand .brand-dot {
     height: auto;
     min-height: auto;
     padding: 4rem 4% 4.5rem;
-    scroll-margin-top: 78px;
+    scroll-margin-top: 64px;
   }
 
   .education-timeline {
@@ -3039,7 +3036,7 @@ body.light-mode .footer-brand .brand-dot {
       var(--brand-shadow-sm);
   }
 
- .timeline-card {
+  .timeline-card {
     min-height: 9.8rem;
     padding: 1.15rem 1.15rem;
     border-radius: 14px;
@@ -3081,7 +3078,7 @@ body.light-mode .footer-brand .brand-dot {
     height: auto;
     min-height: auto;
     padding: 4rem 4% 3rem;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 58px;
   }
 
   .skills-section .section-title {
@@ -3136,7 +3133,7 @@ body.light-mode .footer-brand .brand-dot {
     height: auto;
     min-height: auto;
     padding: 4rem 4% 4.5rem;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 58px;
   }
 
   .projects-section .section-title {
@@ -3339,7 +3336,7 @@ body.light-mode .footer-brand .brand-dot {
   /* Contact Section */
   .contact-section {
     padding: 4rem 4% 5.2rem;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 58px;
   }
 
   .contact-grid {
@@ -3427,40 +3424,10 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.04rem;
     line-height: 1.4;
   }
-  /* Sleek Compact Navbar on Mobile Portrait */
-  .header,
-  .navbar {
-    top: 0.7rem;
-    padding: 0.45rem 1.25rem;
-    min-height: 44px;
-    height: 44px;
-  }
-
-  .logo {
-    font-size: 1.55rem;
-  }
-
-  .theme-toggle {
-    width: 46px;
-    height: 24px;
-  }
-
-  .theme-toggle .toggle-thumb,
-  .theme-toggle::after {
-    width: 18px;
-    height: 18px;
-  }
-
-  .menu-toggle,
-  #menu-icon {
-    font-size: 1.55rem;
-  }
 }
+
 /* =========================================================
    MOBILE & COMPACT TABLET LANDSCAPE OPTIMIZATION
-========================================================= */
-/* =========================================================
-   LANDSCAPE — STEP 1: NAVBAR & HERO SECTION
 ========================================================= */
 @media (max-width: 1000px) and (max-height: 600px) and (orientation: landscape) {
   /* Hide Custom Scrollbar in Landscape */
@@ -3468,16 +3435,46 @@ body.light-mode .footer-brand .brand-dot {
     display: none !important;
   }
 
-  /* Compact Navbar */
+  /* Ultra-Sleek Compact Navbar in Landscape */
   .navbar {
     width: 92%;
-    top: 10px;
-    height: 4.6rem;
-    padding: 0 1.8rem;
+    top: 8px;
+    height: 3.8rem;
+    padding: 0 1.5rem;
   }
 
   .brand-logo {
-    font-size: 2.1rem;
+    font-size: 1.85rem;
+  }
+
+  .navigation-controls {
+    gap: 0.85rem;
+  }
+
+  .theme-toggle-track {
+    width: 4.3rem;
+    height: 2.2rem;
+  }
+
+  .theme-toggle-track::before,
+  .theme-toggle-track i {
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: 0.95rem;
+  }
+
+  .theme-toggle-input:checked + .theme-toggle-track::before {
+    transform: translateX(1.95rem);
+  }
+
+  .mobile-menu-toggle {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    top: 4.3rem;
   }
 
   /* Hero Section — Side-by-Side on One Screen */
@@ -3487,7 +3484,7 @@ body.light-mode .footer-brand .brand-dot {
     align-items: center;
     text-align: left;
     min-height: 100svh;
-    padding: 6.4rem 5% 2.4rem;
+    padding: 5.6rem 5% 2.2rem;
     gap: 2.4rem;
   }
 
@@ -3536,10 +3533,11 @@ body.light-mode .footer-brand .brand-dot {
     width: 85%;
     height: 85%;
   }
+
   /* About Section — Compact Landscape Fit */
   .about-section {
     padding: 2.2rem 5% 2.6rem;
-    scroll-margin-top: 52px;
+    scroll-margin-top: 46px;
   }
 
   .about-section .section-title {
@@ -3557,11 +3555,12 @@ body.light-mode .footer-brand .brand-dot {
     border-radius: 16px;
   }
 
-.about-role-title {
+  .about-role-title {
     font-size: 2rem;
     line-height: 1.12;
     margin: -1.4rem 0 1.2rem 0;
   }
+
   .about-description {
     font-size: 1.08rem;
     line-height: 1.42;
@@ -3626,10 +3625,11 @@ body.light-mode .footer-brand .brand-dot {
   .availability-banner::after {
     display: none;
   }
-/* Education Section — Balanced Font Size in Landscape */
+
+  /* Education Section — Balanced Font Size in Landscape */
   .education-section {
     padding: 2rem 5% 2.4rem;
-    scroll-margin-top: 52px;
+    scroll-margin-top: 46px;
   }
 
   .education-section .section-title {
@@ -3637,12 +3637,13 @@ body.light-mode .footer-brand .brand-dot {
     margin-bottom: 1.2rem;
   }
 
- .education-timeline {
+  .education-timeline {
     display: block;
     width: 100%;
     max-width: 490px;
     margin: 0 auto;
   }
+
   .education-timeline::before {
     display: block;
     left: 1.6rem;
@@ -3673,7 +3674,7 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.25rem;
   }
 
- .timeline-card {
+  .timeline-card {
     width: 100%;
     min-height: auto;
     padding: 1rem 1.4rem;
@@ -3682,6 +3683,7 @@ body.light-mode .footer-brand .brand-dot {
     flex-direction: column;
     justify-content: center;
   }
+
   .timeline-header {
     gap: 1rem;
     margin-bottom: 0.35rem;
@@ -3707,10 +3709,11 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 1.1rem;
     line-height: 1.34;
   }
- /* Skills Section — Exact 4 Top + 3 Bottom Centered Grid */
+
+  /* Skills Section — Exact 4 Top + 3 Bottom Centered Grid */
   .skills-section {
     padding: 1.8rem 5% 2rem;
-    scroll-margin-top: 50px;
+    scroll-margin-top: 46px;
   }
 
   .skills-section .section-title {
@@ -3734,7 +3737,6 @@ body.light-mode .footer-brand .brand-dot {
     padding-bottom: 1.4rem;
   }
 
-  /* Bottom 3 items centered under top 4 */
   .skill-item:nth-child(5) {
     grid-column: 2 / span 2;
   }
@@ -3778,318 +3780,11 @@ body.light-mode .footer-brand .brand-dot {
     font-size: 0.92rem;
     letter-spacing: 0.06rem;
   }
-  /* Projects Section — Exact Class-Matched Split Layout in Landscape */
-  .projects-section {
-    padding: 1.6rem 4% 1.8rem;
-    scroll-margin-top: 48px;
-  }
 
-  .projects-section .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .projects-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1.6rem;
-    padding: 0;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "bar bar"
-      "preview body";
-    border-radius: 15px;
-    overflow: hidden;
-  }
-
-  /* Browser Bar: Full Card Width, 3 Dots Left + URL Bar Right */
-  .browser-bar {
-    grid-area: bar;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    padding: 0.42rem 0.9rem;
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 7px;
-    height: 7px;
-  }
-
-  .browser-address {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    justify-content: flex-start;
-    font-size: 0.84rem;
-    padding: 0.16rem 0.7rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Clean Image Preview (Zero Top Empty Space) */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 192px;
-    max-height: 192px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview img {
-    position: static;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    margin: 0;
-    transform: none;
-  }
-
-  .preview-fade {
-    display: none;
-  }
-
-  /* Right Column: Content, Tabs, Tech Tags & Buttons */
-  .project-content {
-    grid-area: body;
-    padding: 0.85rem 1.15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 0;
-  }
-
-  .project-header {
-    margin-bottom: 0.35rem;
-  }
-
-  .project-header h3 {
-    font-size: 1.3rem;
-  }
-
-  .project-category {
-    font-size: 0.82rem;
-    padding: 0.15rem 0.55rem;
-  }
-
-  .project-tabs {
-    margin-bottom: 0.4rem;
-    padding: 0.18rem;
-  }
-
-  .project-tab-button {
-    font-size: 0.84rem;
-    padding: 0.24rem 0.42rem;
-  }
-
-  .project-tab-panels {
-    margin-bottom: 0.45rem;
-  }
-
-  .project-tab-panel {
-    font-size: 0.94rem;
-    line-height: 1.32;
-  }
-
-  .project-technologies {
-    gap: 0.32rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .technology-tag {
-    font-size: 0.8rem;
-    padding: 0.14rem 0.5rem;
-  }
-
-  .project-links {
-    gap: 0.6rem;
-  }
-
-  .project-button-live,
-  .project-button-code {
-    padding: 0.42rem 0.85rem;
-    font-size: 0.9rem;
-  }
-
-  /* Carousel Controls */
-  .carousel-controls {
-    display: flex;
-    margin-top: 0.65rem;
-    gap: 0.8rem;
-  }
-
-  .carousel-button {
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 1.05rem;
-  }
-
-  .carousel-hint {
-    display: none;
-  }
-  /* Left Column: Full-Height Preview + Smooth Top-to-Bottom Hover Scroll */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 215px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    margin: 0;
-    transform: translateY(0);
-    transition: transform 3.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 215px));
-  }
-
-  .preview-fade {
-    display: none;
-  }
-
-  /* Right Column: Balanced & Crisp Layout */
-  .project-content {
-    grid-area: body;
-    padding: 1rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.55rem;
-    min-width: 0;
-  }
-
-  .project-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.6rem;
-    margin-bottom: 0;
-  }
-
-  .project-header h3 {
-    font-size: 1.35rem;
-    margin: 0;
-  }
-
-  .project-category {
-    font-size: 0.82rem;
-    padding: 0.16rem 0.6rem;
-  }
-
-  .project-tabs {
-    margin-bottom: 0;
-    padding: 0.2rem;
-  }
-
-  .project-tab-button {
-    font-size: 0.85rem;
-    padding: 0.26rem 0.45rem;
-  }
-
-  .project-tab-panels {
-    margin-bottom: 0;
-  }
-
-  .project-tab-panel {
-    font-size: 0.95rem;
-    line-height: 1.36;
-  }
-
-  .project-technologies {
-    gap: 0.38rem;
-    padding-top: 0.45rem;
-    border-top: 1px solid var(--divider-line);
-    margin-bottom: 0.1rem;
-  }
-
-  .technology-tag {
-    font-size: 0.82rem;
-    padding: 0.16rem 0.55rem;
-  }
-
-  .project-links {
-    gap: 0.65rem;
-    margin-top: 0.1rem;
-  }
-
-  .project-button-live,
-  .project-button-code {
-    padding: 0.46rem 0.9rem;
-    font-size: 0.92rem;
-  }
-
-  /* Carousel Controls */
-  .carousel-controls {
-    display: flex;
-    margin-top: 0.65rem;
-    gap: 0.8rem;
-  }
-
-  .carousel-button {
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 1.05rem;
-  }
-
-  .carousel-hint {
-    display: none;
-  }
-  /* Projects Section — Compact Card with Side Prev/Next Buttons */
+  /* Projects Section — Final Clean 50/50 Split Card + Side Buttons */
   .projects-section {
     padding: 1.4rem 4% 1.6rem;
-    scroll-margin-top: 46px;
+    scroll-margin-top: 44px;
   }
 
   .projects-section .section-title {
@@ -4099,13 +3794,14 @@ body.light-mode .footer-brand .brand-dot {
 
   .projects-container {
     position: relative;
-    max-width: 720px;
+    width: 100%;
+    max-width: 650px;
     margin: 0 auto;
   }
 
   .projects-carousel {
     width: 100%;
-    max-width: 610px;
+    max-width: 540px;
     margin: 0 auto;
   }
 
@@ -4122,233 +3818,6 @@ body.light-mode .footer-brand .brand-dot {
     min-width: 100%;
     scroll-snap-align: center;
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "bar bar"
-      "preview body";
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  /* Browser Bar */
-  .browser-bar {
-    grid-area: bar;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.65rem;
-    padding: 0.34rem 0.8rem;
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .browser-address {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    justify-content: flex-start;
-    font-size: 0.8rem;
-    padding: 0.12rem 0.6rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Compact Preview + Hover Scroll */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 175px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    margin: 0;
-    transform: translateY(0);
-    transition: transform 3.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 175px));
-  }
-
-  .preview-fade {
-    display: none;
-  }
-
-  /* Right Column: Compact Height */
-  .project-content {
-    grid-area: body;
-    padding: 0.72rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.42rem;
-    min-width: 0;
-  }
-
-  .project-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .project-header h3 {
-    font-size: 1.22rem;
-    margin: 0;
-  }
-
-  .project-category {
-    font-size: 0.78rem;
-    padding: 0.12rem 0.52rem;
-  }
-
-  .project-tabs {
-    margin-bottom: 0;
-    padding: 0.16rem;
-  }
-
-  .project-tab-button {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.38rem;
-  }
-
-  .project-tab-panels {
-    margin-bottom: 0;
-  }
-
-  .project-tab-panel {
-    font-size: 0.88rem;
-    line-height: 1.28;
-  }
-
-  .project-technologies {
-    gap: 0.3rem;
-    padding-top: 0.35rem;
-    border-top: 1px solid var(--divider-line);
-    margin-bottom: 0;
-  }
-
-  .technology-tag {
-    font-size: 0.76rem;
-    padding: 0.12rem 0.46rem;
-  }
-
-  .project-links {
-    gap: 0.55rem;
-    margin-top: 0.05rem;
-  }
-
-  .project-button-live,
-  .project-button-code {
-    padding: 0.36rem 0.75rem;
-    font-size: 0.85rem;
-  }
-
-  /* Prev/Next Buttons Positioned on Left & Right Sides of Card */
-  .carousel-controls {
-    position: static;
-    margin: 0;
-  }
-
-  .carousel-button {
-    position: absolute;
-    top: 56%;
-    transform: translateY(-50%);
-    width: 2.9rem;
-    height: 2.9rem;
-    font-size: 1.05rem;
-    z-index: 5;
-  }
-
-  #carousel-previous {
-    left: 0.4rem;
-  }
-
-  #carousel-next {
-    right: 0.4rem;
-  }
-
-  .carousel-dots,
-  .carousel-hint {
-    display: none;
-  }
-  /* Left Column: Match Right Content Height */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 165px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 165px));
-  }
-
-  /* Right Column: Fill Full Card Height Evenly (Zero Top/Bottom Empty Space) */
-  .project-content {
-    grid-area: body;
-    padding: 0.95rem 1.15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.55rem;
-    min-width: 0;
-  }
-
-  .project-header h3 {
-    font-size: 1.32rem;
-    margin: 0;
-  }
-
-  .project-tab-panel {
-    font-size: 0.94rem;
-    line-height: 1.35;
-  }
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
@@ -4358,251 +3827,7 @@ body.light-mode .footer-brand .brand-dot {
     overflow: hidden;
   }
 
-  .browser-bar {
-    grid-area: bar;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.85rem;
-    padding: 0.36rem 0.9rem;
-    box-sizing: border-box;
-  }
-
-  .browser-address {
-    flex: 0 1 auto;
-    width: auto;
-    max-width: calc(100% - 4.5rem);
-    justify-content: flex-start;
-    font-size: 0.82rem;
-    padding: 0.14rem 0.85rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Exact 50% Width + Slightly Taller Height */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 195px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 195px));
-  }
-
-  /* Right Column: Exact 50% Width + Matching Height */
-  .project-content {
-    grid-area: body;
-    padding: 1.05rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.6rem;
-    min-width: 0;
-  }
-  /* Projects Section — Compact Browser Header on Left + Full-Height Details on Right */
-  .projects-container {
-    position: relative;
-    max-width: 760px;
-    margin: 0 auto;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "bar body"
-      "preview body";
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  /* Browser Bar fits snugly over Left Preview Column (Zero Empty Right Strip) */
-  .browser-bar {
-    grid-area: bar;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.55rem;
-    padding: 0.36rem 0.7rem;
-    border-right: 1px solid var(--divider-line);
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.28rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .browser-address {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    justify-content: flex-start;
-    font-size: 0.76rem;
-    padding: 0.12rem 0.55rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Taller Image Preview */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 195px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 195px));
-  }
-
-  /* Right Column: Full Card Height & Wider Details */
-  .project-content {
-    grid-area: body;
-    padding: 1.05rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.65rem;
-    min-width: 0;
-  }
-  /* Projects Section — Slim Top Browser Bar + Taller Bottom Content */
-  .projects-container {
-    position: relative;
-    max-width: 750px;
-    margin: 0 auto;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "bar bar"
-      "preview body";
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  /* Slimmer Browser Bar Height */
-  .browser-bar {
-    grid-area: bar;
-    width: 100%;
-    min-height: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.7rem;
-    padding: 0.24rem 0.85rem;
-    box-sizing: border-box;
-  }
-
-  .browser-dots {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    flex-shrink: 0;
-  }
-
-  .browser-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .browser-address {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    justify-content: flex-start;
-    font-size: 0.78rem;
-    line-height: 1.1;
-    padding: 0.1rem 0.65rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Left Column: Taller Image Preview */
-  .project-preview {
-    grid-area: preview;
-    position: relative;
-    height: 100%;
-    min-height: 210px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-right: 1px solid var(--divider-line);
-    display: block;
-  }
-
-  .project-preview:hover img,
-  .project-card:hover .project-preview img {
-    transform: translateY(calc(-100% + 210px));
-  }
-
-  /* Right Column: Taller Details Area */
-  .project-content {
-    grid-area: body;
-    padding: 1.05rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.65rem;
-    min-width: 0;
-  }
-  /* Ultra-Slim Browser Bar Height */
+  /* Ultra-Slim Browser Bar */
   .browser-bar {
     grid-area: bar;
     width: 100%;
@@ -4632,47 +3857,6 @@ body.light-mode .footer-brand .brand-dot {
   }
 
   .browser-address {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    height: 16px;
-    min-height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 0.74rem;
-    line-height: 1;
-    padding: 0 0.55rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .projects-container {
-    position: relative;
-    max-width: 710px;
-    margin: 0 auto;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 575px;
-    margin: 0 auto;
-  }
-  .projects-container {
-    position: relative;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-
-  .browser-address {
     flex: 0 1 auto;
     width: auto;
     max-width: 280px;
@@ -4688,26 +3872,211 @@ body.light-mode .footer-brand .brand-dot {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* Ultra-Sleek Navbar in Mobile Landscape */
-  .header,
-  .navbar {
-    top: 0.5rem;
-    padding: 0.35rem 1.2rem;
-    min-height: 38px;
-    height: 38px;
+
+  /* Left Column: Image Preview + Smooth Hover Scroll */
+  .project-preview {
+    grid-area: preview;
+    position: relative;
+    height: 100%;
+    min-height: 205px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right: 1px solid var(--divider-line);
+    display: block;
   }
 
-  .logo {
-    font-size: 1.4rem;
+  .project-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 3.8s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
-  .theme-toggle {
-    width: 42px;
-    height: 21px;
+  .project-preview:hover img,
+  .project-card:hover .project-preview img {
+    transform: translateY(calc(-100% + 205px));
   }
 
-  .menu-toggle,
-  #menu-icon {
-    font-size: 1.4rem;
+  .preview-fade {
+    display: none;
+  }
+
+  /* Right Column: Details Area */
+  .project-content {
+    grid-area: body;
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .project-header h3 {
+    font-size: 1.28rem;
+    margin: 0;
+  }
+
+  .project-category {
+    font-size: 0.78rem;
+    padding: 0.12rem 0.52rem;
+  }
+
+  .project-tabs {
+    margin-bottom: 0;
+    padding: 0.16rem;
+  }
+
+  .project-tab-button {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.38rem;
+  }
+
+  .project-tab-panels {
+    margin-bottom: 0;
+  }
+
+  .project-tab-panel {
+    font-size: 0.92rem;
+    line-height: 1.32;
+  }
+
+  .project-technologies {
+    gap: 0.3rem;
+    padding-top: 0.38rem;
+    border-top: 1px solid var(--divider-line);
+    margin-bottom: 0;
+  }
+
+  .technology-tag {
+    font-size: 0.76rem;
+    padding: 0.12rem 0.46rem;
+  }
+
+  .project-links {
+    gap: 0.55rem;
+    margin-top: 0.05rem;
+  }
+
+  .project-button-live,
+  .project-button-code {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Side Prev/Next Buttons */
+  .carousel-controls {
+    position: static;
+    margin: 0;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.05rem;
+    z-index: 5;
+  }
+
+  #carousel-previous {
+    left: 0.4rem;
+  }
+
+  #carousel-next {
+    right: 0.4rem;
+  }
+
+  .carousel-dots,
+  .carousel-hint {
+    display: none;
+  }
+
+  /* Contact Section — Compact Landscape Grid */
+  .contact-section {
+    padding: 2rem 5% 2.8rem;
+    scroll-margin-top: 44px;
+  }
+
+  .contact-section .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .contact-grid > *:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .contact-card {
+    width: auto;
+    min-height: 4.4rem;
+    padding: 0.7rem 1.3rem 0.7rem 0.85rem;
+    border-radius: 12px;
+    gap: 0.75rem;
+  }
+
+  .contact-card i {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+  }
+
+  .contact-card span {
+    font-size: 0.98rem;
+    letter-spacing: 0.04rem;
+  }
+
+  /* Footer — Compact Landscape Fit */
+  .footer {
+    padding: 2.6rem 5% 1.6rem;
+    margin-top: 1.6rem;
+  }
+
+  .scroll-top-button {
+    top: -18px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    gap: 0.45rem;
+  }
+
+  .footer-copyright {
+    font-size: 1.05rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
   }
 }
