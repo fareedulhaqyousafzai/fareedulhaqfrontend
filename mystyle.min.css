@@ -3516,6 +3516,13 @@ body.light-mode .footer-brand .brand-dot {
   .project-preview:hover img {
     transform: translateY(calc(-100% + 165px));
   }
+  .navbar {
+    width: 92%;
+    top: 16px;
+    height: 3.8rem;
+    min-height: 3.8rem;
+    padding: 0 1.4rem;
+  }
 }
 
 /* =========================================================
@@ -4213,5 +4220,11 @@ body.light-mode .footer-brand .brand-dot {
   .project-preview:hover::before {
     opacity: 0;
     transform: translateY(4px);
+  }
+  .navbar {
+    width: 92%;
+    top: 13px;
+    height: 3.8rem;
+    padding: 0 1.5rem;
   }
 }
