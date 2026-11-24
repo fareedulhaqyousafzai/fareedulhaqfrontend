@@ -5216,6 +5216,55 @@ body.light-mode .footer-brand .brand-dot {
     padding: 0.32rem 0.65rem;
     font-size: 0.82rem;
   }
+  /* About Section */
+  .about-section {
+    padding: 4.4rem 5% 1.4rem;
+    scroll-margin-top: 36px;
+  }
+
+  .about-section .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 0.55rem;
+  }
+
+  /* Education Section */
+  .education-section {
+    padding: 4.4rem 5% 1.4rem;
+    scroll-margin-top: 36px;
+  }
+
+  .education-section .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Skills Section */
+  .skills-section {
+    padding: 4.4rem 5% 1.4rem;
+    scroll-margin-top: 36px;
+  }
+
+  .skills-section .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Projects Section */
+  .projects-section {
+    padding: 4.4rem 4% 1.2rem;
+    scroll-margin-top: 36px;
+  }
+
+  .projects-section .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 4.4rem 5% 2rem;
+    scroll-margin-top: 36px;
+  }
 }
 
 /* =========================================================
