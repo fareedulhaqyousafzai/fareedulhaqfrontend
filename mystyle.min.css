@@ -4278,4 +4278,42 @@ body.light-mode .footer-brand .brand-dot {
   .carousel-hint {
     display: none;
   }
+  /* Left Column: Match Right Content Height */
+  .project-preview {
+    grid-area: preview;
+    position: relative;
+    height: 100%;
+    min-height: 165px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right: 1px solid var(--divider-line);
+    display: block;
+  }
+
+  .project-preview:hover img,
+  .project-card:hover .project-preview img {
+    transform: translateY(calc(-100% + 165px));
+  }
+
+  /* Right Column: Fill Full Card Height Evenly (Zero Top/Bottom Empty Space) */
+  .project-content {
+    grid-area: body;
+    padding: 0.95rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  .project-header h3 {
+    font-size: 1.32rem;
+    margin: 0;
+  }
+
+  .project-tab-panel {
+    font-size: 0.94rem;
+    line-height: 1.35;
+  }
 }
