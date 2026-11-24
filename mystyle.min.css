@@ -2801,7 +2801,52 @@ body.light-mode .footer-brand .brand-dot {
   .contact-card span {
     font-size: 1.16rem;
   }
+  /* =========================================================
+   15B. HD LAPTOP VIEWPORT HEIGHT FIT (1024px+ & max-height: 768px)
+========================================================= */
+@media (min-width: 1024px) and (max-height: 768px) {
+  .projects-section {
+    padding: 4.2rem 5% 3.5rem;
+    scroll-margin-top: 38px;
+  }
+
+  .projects-section .section-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .project-preview {
+    height: 142px;
+  }
+
+  .project-content {
+    padding: 1.1rem 1.45rem 1.25rem;
+  }
+
+  .project-header {
+    margin-bottom: 0.85rem;
+  }
+
+  .project-tabs {
+    margin-bottom: 0.9rem;
+  }
+
+  .project-tab-panels {
+    min-height: 52px;
+    margin-bottom: 0.7rem;
+  }
+
+  .project-technologies {
+    padding-top: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-button-live,
+  .project-button-code {
+    padding: 0.8rem;
+  }
 }
+}
+
 
 /* =========================================================
    17. TABLET PORTRAIT (768px - 1023px)
